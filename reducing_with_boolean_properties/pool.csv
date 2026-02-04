@@ -1,0 +1,800 @@
+NewQuestion,M
+Title,Reducing with Boolean Properties MAT
+QuestionText,Match the following expressions to their reduced forms.,NOT HTML
+Points,10
+Difficulty,1
+Scoring,EquallyWeighted
+Choice,1,bc
+Choice,2,a + b
+Choice,3,1
+Choice,4,(bc)'
+Match,1,(bc)(cb)
+Match,2,(a + b)(b + a)
+Match,3,a + a'(a' + c)
+Match,4,a'a + (bc)'
+
+
+NewQuestion,M
+Title,Reducing with Boolean Properties MAT
+QuestionText,Match the following expressions to their reduced forms.,NOT HTML
+Points,10
+Difficulty,1
+Scoring,EquallyWeighted
+Choice,1,b
+Choice,2,(bc)'
+Choice,3,a + b
+Choice,4,b'
+Match,1,b(a + b + c)
+Match,2,a'a + (bc)'
+Match,3,(a + b)(b + a)
+Match,4,b' * (a' + b + c' + c)
+
+
+NewQuestion,M
+Title,Reducing with Boolean Properties MAT
+QuestionText,Match the following expressions to their reduced forms.,NOT HTML
+Points,10
+Difficulty,1
+Scoring,EquallyWeighted
+Choice,1,b
+Choice,2,a'
+Choice,3,1
+Choice,4,a + b
+Match,1,b(a + b + c)
+Match,2,a' * (a' + b + c'c)
+Match,3,a + a'(a' + c)
+Match,4,(a + b)(b + a)
+
+
+NewQuestion,M
+Title,Reducing with Boolean Properties MAT
+QuestionText,Match the following expressions to their reduced forms.,NOT HTML
+Points,10
+Difficulty,1
+Scoring,EquallyWeighted
+Choice,1,a'(b' + c')
+Choice,2,a'
+Choice,3,0
+Choice,4,1
+Match,1,(a + b)' + (a + c)'
+Match,2,a' * (a' + b + c'c)
+Match,3,a'a * (b + c)
+Match,4,a + a'(a' + c)
+
+
+NewQuestion,M
+Title,Reducing with Boolean Properties MAT
+QuestionText,Match the following expressions to their reduced forms.,NOT HTML
+Points,10
+Difficulty,1
+Scoring,EquallyWeighted
+Choice,1,a'
+Choice,2,0
+Choice,3,b'
+Choice,4,c
+Match,1,a' * (a' + b + c'c)
+Match,2,a'a * (b + c)
+Match,3,b' * (a' + b + c' + c)
+Match,4,abc + c
+
+
+NewQuestion,M
+Title,Reducing with Boolean Properties MAT
+QuestionText,Match the following expressions to their reduced forms.,NOT HTML
+Points,10
+Difficulty,1
+Scoring,EquallyWeighted
+Choice,1,c
+Choice,2,(bc)'
+Choice,3,a'
+Choice,4,bc
+Match,1,abc + c
+Match,2,a'a + (bc)'
+Match,3,a' * (a' + b + c'c)
+Match,4,(bc)(cb)
+
+
+NewQuestion,M
+Title,Reducing with Boolean Properties MAT
+QuestionText,Match the following expressions to their reduced forms.,NOT HTML
+Points,10
+Difficulty,1
+Scoring,EquallyWeighted
+Choice,1,1
+Choice,2,0
+Choice,3,b
+Choice,4,a
+Match,1,a + a'(a' + c)
+Match,2,a'a * (b + c)
+Match,3,b(a + b + c)
+Match,4,a + abc
+
+
+NewQuestion,M
+Title,Reducing with Boolean Properties MAT
+QuestionText,Match the following expressions to their reduced forms.,NOT HTML
+Points,10
+Difficulty,1
+Scoring,EquallyWeighted
+Choice,1,bc
+Choice,2,(bc)'
+Choice,3,b'
+Choice,4,a'
+Match,1,(bc)(cb)
+Match,2,a'a + (bc)'
+Match,3,b' * (a' + b + c' + c)
+Match,4,a' * (a' + b + c'c)
+
+
+NewQuestion,M
+Title,Reducing with Boolean Properties MAT
+QuestionText,Match the following expressions to their reduced forms.,NOT HTML
+Points,10
+Difficulty,1
+Scoring,EquallyWeighted
+Choice,1,c
+Choice,2,a'
+Choice,3,0
+Choice,4,b'
+Match,1,abc + c
+Match,2,a' * (a' + b + c'c)
+Match,3,a'a * (b + c)
+Match,4,b' * (a' + b + c' + c)
+
+
+NewQuestion,M
+Title,Reducing with Boolean Properties MAT
+QuestionText,Match the following expressions to their reduced forms.,NOT HTML
+Points,10
+Difficulty,1
+Scoring,EquallyWeighted
+Choice,1,a(b' + c')
+Choice,2,1
+Choice,3,a'(b' + c')
+Choice,4,0
+Match,1,a(a' + b' + c')
+Match,2,a + a'(a' + c)
+Match,3,(a + b)' + (a + c)'
+Match,4,a'a * (b + c)
+
+
+NewQuestion,M
+Title,Reducing with Boolean Properties MAT
+QuestionText,Match the following expressions to their reduced forms.,NOT HTML
+Points,10
+Difficulty,1
+Scoring,EquallyWeighted
+Choice,1,a + b
+Choice,2,a'(b' + c')
+Choice,3,c
+Choice,4,a(b' + c')
+Match,1,(a + b)(b + a)
+Match,2,(a + b)' + (a + c)'
+Match,3,abc + c
+Match,4,a(a' + b' + c')
+
+
+NewQuestion,M
+Title,Reducing with Boolean Properties MAT
+QuestionText,Match the following expressions to their reduced forms.,NOT HTML
+Points,10
+Difficulty,1
+Scoring,EquallyWeighted
+Choice,1,bc
+Choice,2,a + b
+Choice,3,(bc)'
+Choice,4,b
+Match,1,(bc)(cb)
+Match,2,(a + b)(b + a)
+Match,3,a'a + (bc)'
+Match,4,b(a + b + c)
+
+
+NewQuestion,M
+Title,Reducing with Boolean Properties MAT
+QuestionText,Match the following expressions to their reduced forms.,NOT HTML
+Points,10
+Difficulty,1
+Scoring,EquallyWeighted
+Choice,1,c
+Choice,2,a + b
+Choice,3,a'(b' + c')
+Choice,4,a(b' + c')
+Match,1,abc + c
+Match,2,(a + b)(b + a)
+Match,3,(a + b)' + (a + c)'
+Match,4,a(a' + b' + c')
+
+
+NewQuestion,M
+Title,Reducing with Boolean Properties MAT
+QuestionText,Match the following expressions to their reduced forms.,NOT HTML
+Points,10
+Difficulty,1
+Scoring,EquallyWeighted
+Choice,1,a'(b' + c')
+Choice,2,a(b' + c')
+Choice,3,b
+Choice,4,(bc)'
+Match,1,(a + b)' + (a + c)'
+Match,2,a(a' + b' + c')
+Match,3,b(a + b + c)
+Match,4,a'a + (bc)'
+
+
+NewQuestion,M
+Title,Reducing with Boolean Properties MAT
+QuestionText,Match the following expressions to their reduced forms.,NOT HTML
+Points,10
+Difficulty,1
+Scoring,EquallyWeighted
+Choice,1,a
+Choice,2,b
+Choice,3,(bc)'
+Choice,4,a(b' + c')
+Match,1,a + abc
+Match,2,b(a + b + c)
+Match,3,a'a + (bc)'
+Match,4,a(a' + b' + c')
+
+
+NewQuestion,M
+Title,Reducing with Boolean Properties MAT
+QuestionText,Match the following expressions to their reduced forms.,NOT HTML
+Points,10
+Difficulty,1
+Scoring,EquallyWeighted
+Choice,1,a
+Choice,2,(bc)'
+Choice,3,b
+Choice,4,0
+Match,1,a + abc
+Match,2,a'a + (bc)'
+Match,3,b(a + b + c)
+Match,4,a'a * (b + c)
+
+
+NewQuestion,M
+Title,Reducing with Boolean Properties MAT
+QuestionText,Match the following expressions to their reduced forms.,NOT HTML
+Points,10
+Difficulty,1
+Scoring,EquallyWeighted
+Choice,1,b
+Choice,2,(bc)'
+Choice,3,c
+Choice,4,a'
+Match,1,b(a + b + c)
+Match,2,a'a + (bc)'
+Match,3,abc + c
+Match,4,a' * (a' + b + c'c)
+
+
+NewQuestion,M
+Title,Reducing with Boolean Properties MAT
+QuestionText,Match the following expressions to their reduced forms.,NOT HTML
+Points,10
+Difficulty,1
+Scoring,EquallyWeighted
+Choice,1,b'
+Choice,2,a(b' + c')
+Choice,3,b
+Choice,4,a'
+Match,1,b' * (a' + b + c' + c)
+Match,2,a(a' + b' + c')
+Match,3,b(a + b + c)
+Match,4,a' * (a' + b + c'c)
+
+
+NewQuestion,M
+Title,Reducing with Boolean Properties MAT
+QuestionText,Match the following expressions to their reduced forms.,NOT HTML
+Points,10
+Difficulty,1
+Scoring,EquallyWeighted
+Choice,1,(bc)'
+Choice,2,a'
+Choice,3,bc
+Choice,4,a + b
+Match,1,a'a + (bc)'
+Match,2,a' * (a' + b + c'c)
+Match,3,(bc)(cb)
+Match,4,(a + b)(b + a)
+
+
+NewQuestion,M
+Title,Reducing with Boolean Properties MAT
+QuestionText,Match the following expressions to their reduced forms.,NOT HTML
+Points,10
+Difficulty,1
+Scoring,EquallyWeighted
+Choice,1,0
+Choice,2,a(b' + c')
+Choice,3,1
+Choice,4,a'
+Match,1,a'a * (b + c)
+Match,2,a(a' + b' + c')
+Match,3,a + a'(a' + c)
+Match,4,a' * (a' + b + c'c)
+
+
+NewQuestion,M
+Title,Reducing with Boolean Properties MAT
+QuestionText,Match the following expressions to their reduced forms.,NOT HTML
+Points,10
+Difficulty,1
+Scoring,EquallyWeighted
+Choice,1,bc
+Choice,2,a + b
+Choice,3,(bc)'
+Choice,4,a'(b' + c')
+Match,1,(bc)(cb)
+Match,2,(a + b)(b + a)
+Match,3,a'a + (bc)'
+Match,4,(a + b)' + (a + c)'
+
+
+NewQuestion,M
+Title,Reducing with Boolean Properties MAT
+QuestionText,Match the following expressions to their reduced forms.,NOT HTML
+Points,10
+Difficulty,1
+Scoring,EquallyWeighted
+Choice,1,(bc)'
+Choice,2,1
+Choice,3,0
+Choice,4,b
+Match,1,a'a + (bc)'
+Match,2,a + a'(a' + c)
+Match,3,a'a * (b + c)
+Match,4,b(a + b + c)
+
+
+NewQuestion,M
+Title,Reducing with Boolean Properties MAT
+QuestionText,Match the following expressions to their reduced forms.,NOT HTML
+Points,10
+Difficulty,1
+Scoring,EquallyWeighted
+Choice,1,a
+Choice,2,a(b' + c')
+Choice,3,1
+Choice,4,a'(b' + c')
+Match,1,a + abc
+Match,2,a(a' + b' + c')
+Match,3,a + a'(a' + c)
+Match,4,(a + b)' + (a + c)'
+
+
+NewQuestion,M
+Title,Reducing with Boolean Properties MAT
+QuestionText,Match the following expressions to their reduced forms.,NOT HTML
+Points,10
+Difficulty,1
+Scoring,EquallyWeighted
+Choice,1,0
+Choice,2,a'(b' + c')
+Choice,3,b
+Choice,4,(bc)'
+Match,1,a'a * (b + c)
+Match,2,(a + b)' + (a + c)'
+Match,3,b(a + b + c)
+Match,4,a'a + (bc)'
+
+
+NewQuestion,M
+Title,Reducing with Boolean Properties MAT
+QuestionText,Match the following expressions to their reduced forms.,NOT HTML
+Points,10
+Difficulty,1
+Scoring,EquallyWeighted
+Choice,1,a
+Choice,2,a'
+Choice,3,a(b' + c')
+Choice,4,(bc)'
+Match,1,a + abc
+Match,2,a' * (a' + b + c'c)
+Match,3,a(a' + b' + c')
+Match,4,a'a + (bc)'
+
+
+NewQuestion,M
+Title,Reducing with Boolean Properties MAT
+QuestionText,Match the following expressions to their reduced forms.,NOT HTML
+Points,10
+Difficulty,1
+Scoring,EquallyWeighted
+Choice,1,0
+Choice,2,b'
+Choice,3,b
+Choice,4,a'
+Match,1,a'a * (b + c)
+Match,2,b' * (a' + b + c' + c)
+Match,3,b(a + b + c)
+Match,4,a' * (a' + b + c'c)
+
+
+NewQuestion,M
+Title,Reducing with Boolean Properties MAT
+QuestionText,Match the following expressions to their reduced forms.,NOT HTML
+Points,10
+Difficulty,1
+Scoring,EquallyWeighted
+Choice,1,1
+Choice,2,a
+Choice,3,a'(b' + c')
+Choice,4,bc
+Match,1,a + a'(a' + c)
+Match,2,a + abc
+Match,3,(a + b)' + (a + c)'
+Match,4,(bc)(cb)
+
+
+NewQuestion,M
+Title,Reducing with Boolean Properties MAT
+QuestionText,Match the following expressions to their reduced forms.,NOT HTML
+Points,10
+Difficulty,1
+Scoring,EquallyWeighted
+Choice,1,b'
+Choice,2,c
+Choice,3,0
+Choice,4,a + b
+Match,1,b' * (a' + b + c' + c)
+Match,2,abc + c
+Match,3,a'a * (b + c)
+Match,4,(a + b)(b + a)
+
+
+NewQuestion,M
+Title,Reducing with Boolean Properties MAT
+QuestionText,Match the following expressions to their reduced forms.,NOT HTML
+Points,10
+Difficulty,1
+Scoring,EquallyWeighted
+Choice,1,0
+Choice,2,a(b' + c')
+Choice,3,c
+Choice,4,b
+Match,1,a'a * (b + c)
+Match,2,a(a' + b' + c')
+Match,3,abc + c
+Match,4,b(a + b + c)
+
+
+NewQuestion,M
+Title,Reducing with Boolean Properties MAT
+QuestionText,Match the following expressions to their reduced forms.,NOT HTML
+Points,10
+Difficulty,1
+Scoring,EquallyWeighted
+Choice,1,a'
+Choice,2,(bc)'
+Choice,3,b'
+Choice,4,a'(b' + c')
+Match,1,a' * (a' + b + c'c)
+Match,2,a'a + (bc)'
+Match,3,b' * (a' + b + c' + c)
+Match,4,(a + b)' + (a + c)'
+
+
+NewQuestion,M
+Title,Reducing with Boolean Properties MAT
+QuestionText,Match the following expressions to their reduced forms.,NOT HTML
+Points,10
+Difficulty,1
+Scoring,EquallyWeighted
+Choice,1,b
+Choice,2,1
+Choice,3,(bc)'
+Choice,4,b'
+Match,1,b(a + b + c)
+Match,2,a + a'(a' + c)
+Match,3,a'a + (bc)'
+Match,4,b' * (a' + b + c' + c)
+
+
+NewQuestion,M
+Title,Reducing with Boolean Properties MAT
+QuestionText,Match the following expressions to their reduced forms.,NOT HTML
+Points,10
+Difficulty,1
+Scoring,EquallyWeighted
+Choice,1,a
+Choice,2,b'
+Choice,3,c
+Choice,4,0
+Match,1,a + abc
+Match,2,b' * (a' + b + c' + c)
+Match,3,abc + c
+Match,4,a'a * (b + c)
+
+
+NewQuestion,M
+Title,Reducing with Boolean Properties MAT
+QuestionText,Match the following expressions to their reduced forms.,NOT HTML
+Points,10
+Difficulty,1
+Scoring,EquallyWeighted
+Choice,1,c
+Choice,2,b'
+Choice,3,a'(b' + c')
+Choice,4,a + b
+Match,1,abc + c
+Match,2,b' * (a' + b + c' + c)
+Match,3,(a + b)' + (a + c)'
+Match,4,(a + b)(b + a)
+
+
+NewQuestion,M
+Title,Reducing with Boolean Properties MAT
+QuestionText,Match the following expressions to their reduced forms.,NOT HTML
+Points,10
+Difficulty,1
+Scoring,EquallyWeighted
+Choice,1,a'(b' + c')
+Choice,2,b
+Choice,3,1
+Choice,4,a + b
+Match,1,(a + b)' + (a + c)'
+Match,2,b(a + b + c)
+Match,3,a + a'(a' + c)
+Match,4,(a + b)(b + a)
+
+
+NewQuestion,M
+Title,Reducing with Boolean Properties MAT
+QuestionText,Match the following expressions to their reduced forms.,NOT HTML
+Points,10
+Difficulty,1
+Scoring,EquallyWeighted
+Choice,1,0
+Choice,2,b'
+Choice,3,c
+Choice,4,a(b' + c')
+Match,1,a'a * (b + c)
+Match,2,b' * (a' + b + c' + c)
+Match,3,abc + c
+Match,4,a(a' + b' + c')
+
+
+NewQuestion,M
+Title,Reducing with Boolean Properties MAT
+QuestionText,Match the following expressions to their reduced forms.,NOT HTML
+Points,10
+Difficulty,1
+Scoring,EquallyWeighted
+Choice,1,b
+Choice,2,a(b' + c')
+Choice,3,a
+Choice,4,0
+Match,1,b(a + b + c)
+Match,2,a(a' + b' + c')
+Match,3,a + abc
+Match,4,a'a * (b + c)
+
+
+NewQuestion,M
+Title,Reducing with Boolean Properties MAT
+QuestionText,Match the following expressions to their reduced forms.,NOT HTML
+Points,10
+Difficulty,1
+Scoring,EquallyWeighted
+Choice,1,a'(b' + c')
+Choice,2,a + b
+Choice,3,b'
+Choice,4,(bc)'
+Match,1,(a + b)' + (a + c)'
+Match,2,(a + b)(b + a)
+Match,3,b' * (a' + b + c' + c)
+Match,4,a'a + (bc)'
+
+
+NewQuestion,M
+Title,Reducing with Boolean Properties MAT
+QuestionText,Match the following expressions to their reduced forms.,NOT HTML
+Points,10
+Difficulty,1
+Scoring,EquallyWeighted
+Choice,1,c
+Choice,2,(bc)'
+Choice,3,a
+Choice,4,a'(b' + c')
+Match,1,abc + c
+Match,2,a'a + (bc)'
+Match,3,a + abc
+Match,4,(a + b)' + (a + c)'
+
+
+NewQuestion,M
+Title,Reducing with Boolean Properties MAT
+QuestionText,Match the following expressions to their reduced forms.,NOT HTML
+Points,10
+Difficulty,1
+Scoring,EquallyWeighted
+Choice,1,b'
+Choice,2,a'(b' + c')
+Choice,3,1
+Choice,4,c
+Match,1,b' * (a' + b + c' + c)
+Match,2,(a + b)' + (a + c)'
+Match,3,a + a'(a' + c)
+Match,4,abc + c
+
+
+NewQuestion,M
+Title,Reducing with Boolean Properties MAT
+QuestionText,Match the following expressions to their reduced forms.,NOT HTML
+Points,10
+Difficulty,1
+Scoring,EquallyWeighted
+Choice,1,a + b
+Choice,2,b'
+Choice,3,0
+Choice,4,(bc)'
+Match,1,(a + b)(b + a)
+Match,2,b' * (a' + b + c' + c)
+Match,3,a'a * (b + c)
+Match,4,a'a + (bc)'
+
+
+NewQuestion,M
+Title,Reducing with Boolean Properties MAT
+QuestionText,Match the following expressions to their reduced forms.,NOT HTML
+Points,10
+Difficulty,1
+Scoring,EquallyWeighted
+Choice,1,bc
+Choice,2,a'
+Choice,3,a + b
+Choice,4,a
+Match,1,(bc)(cb)
+Match,2,a' * (a' + b + c'c)
+Match,3,(a + b)(b + a)
+Match,4,a + abc
+
+
+NewQuestion,M
+Title,Reducing with Boolean Properties MAT
+QuestionText,Match the following expressions to their reduced forms.,NOT HTML
+Points,10
+Difficulty,1
+Scoring,EquallyWeighted
+Choice,1,a
+Choice,2,b'
+Choice,3,1
+Choice,4,c
+Match,1,a + abc
+Match,2,b' * (a' + b + c' + c)
+Match,3,a + a'(a' + c)
+Match,4,abc + c
+
+
+NewQuestion,M
+Title,Reducing with Boolean Properties MAT
+QuestionText,Match the following expressions to their reduced forms.,NOT HTML
+Points,10
+Difficulty,1
+Scoring,EquallyWeighted
+Choice,1,a
+Choice,2,b'
+Choice,3,0
+Choice,4,a'
+Match,1,a + abc
+Match,2,b' * (a' + b + c' + c)
+Match,3,a'a * (b + c)
+Match,4,a' * (a' + b + c'c)
+
+
+NewQuestion,M
+Title,Reducing with Boolean Properties MAT
+QuestionText,Match the following expressions to their reduced forms.,NOT HTML
+Points,10
+Difficulty,1
+Scoring,EquallyWeighted
+Choice,1,a'(b' + c')
+Choice,2,b
+Choice,3,a + b
+Choice,4,a(b' + c')
+Match,1,(a + b)' + (a + c)'
+Match,2,b(a + b + c)
+Match,3,(a + b)(b + a)
+Match,4,a(a' + b' + c')
+
+
+NewQuestion,M
+Title,Reducing with Boolean Properties MAT
+QuestionText,Match the following expressions to their reduced forms.,NOT HTML
+Points,10
+Difficulty,1
+Scoring,EquallyWeighted
+Choice,1,a(b' + c')
+Choice,2,bc
+Choice,3,c
+Choice,4,b'
+Match,1,a(a' + b' + c')
+Match,2,(bc)(cb)
+Match,3,abc + c
+Match,4,b' * (a' + b + c' + c)
+
+
+NewQuestion,M
+Title,Reducing with Boolean Properties MAT
+QuestionText,Match the following expressions to their reduced forms.,NOT HTML
+Points,10
+Difficulty,1
+Scoring,EquallyWeighted
+Choice,1,a + b
+Choice,2,1
+Choice,3,0
+Choice,4,a
+Match,1,(a + b)(b + a)
+Match,2,a + a'(a' + c)
+Match,3,a'a * (b + c)
+Match,4,a + abc
+
+
+NewQuestion,M
+Title,Reducing with Boolean Properties MAT
+QuestionText,Match the following expressions to their reduced forms.,NOT HTML
+Points,10
+Difficulty,1
+Scoring,EquallyWeighted
+Choice,1,c
+Choice,2,b
+Choice,3,a'(b' + c')
+Choice,4,a + b
+Match,1,abc + c
+Match,2,b(a + b + c)
+Match,3,(a + b)' + (a + c)'
+Match,4,(a + b)(b + a)
+
+
+NewQuestion,M
+Title,Reducing with Boolean Properties MAT
+QuestionText,Match the following expressions to their reduced forms.,NOT HTML
+Points,10
+Difficulty,1
+Scoring,EquallyWeighted
+Choice,1,b'
+Choice,2,a(b' + c')
+Choice,3,a'
+Choice,4,c
+Match,1,b' * (a' + b + c' + c)
+Match,2,a(a' + b' + c')
+Match,3,a' * (a' + b + c'c)
+Match,4,abc + c
+
+
+NewQuestion,M
+Title,Reducing with Boolean Properties MAT
+QuestionText,Match the following expressions to their reduced forms.,NOT HTML
+Points,10
+Difficulty,1
+Scoring,EquallyWeighted
+Choice,1,b'
+Choice,2,bc
+Choice,3,b
+Choice,4,a(b' + c')
+Match,1,b' * (a' + b + c' + c)
+Match,2,(bc)(cb)
+Match,3,b(a + b + c)
+Match,4,a(a' + b' + c')
+
+
+NewQuestion,M
+Title,Reducing with Boolean Properties MAT
+QuestionText,Match the following expressions to their reduced forms.,NOT HTML
+Points,10
+Difficulty,1
+Scoring,EquallyWeighted
+Choice,1,(bc)'
+Choice,2,b'
+Choice,3,a
+Choice,4,a + b
+Match,1,a'a + (bc)'
+Match,2,b' * (a' + b + c' + c)
+Match,3,a + abc
+Match,4,(a + b)(b + a)
+
+

@@ -1,0 +1,6 @@
+# ignore all pycache
+__pycache__/
+
+# all old stuff that isnt needed for 351
+old_questions/
+fsm_demo/
