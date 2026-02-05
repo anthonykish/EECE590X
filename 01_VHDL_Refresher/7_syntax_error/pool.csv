@@ -1,0 +1,120 @@
+NewQuestion,MS
+Title,Find the syntax error in signal assignment
+QuestionText,"The signal assignment below appears in the VHDL description of a
+    circuit. The assignment is flagged as having a syntax error. Which of the
+    following could be wrong with the signal assignment? Select all that could be
+    wrong. Recall that a syntax error is a violation of the rules of a language,
+    not a logical bug.
+
+    sig_a <= 0;
+    ",NOT HTML
+Points,10
+Difficulty,1
+Scoring,RightAnswers
+OPTION,1,"sig_a has type std_logic_vector, which doesn't match the type of the literal 0",HTML
+OPTION,1,sig_a has already been assigned a driver  somewhere else,HTML
+OPTION,1,sig_a was never defined as a port or a signal.,HTML
+OPTION,0,sig_a is an invalid identifier,HTML
+OPTION,1,"sig_a has type std_logic, which doesn't match the type of the literal 0",HTML
+
+
+NewQuestion,MS
+Title,Find the syntax error in signal assignment
+QuestionText,"The signal assignment below appears in the VHDL description of a
+    circuit. The assignment is flagged as having a syntax error. Which of the
+    following could be wrong with the signal assignment? Select all that could be
+    wrong. Recall that a syntax error is a violation of the rules of a language,
+    not a logical bug.
+
+    sig_a <= 0;
+    ",NOT HTML
+Points,10
+Difficulty,1
+Scoring,RightAnswers
+OPTION,0,sig_a is an invalid identifier,HTML
+OPTION,1,sig_a was never defined as a port or a signal.,HTML
+OPTION,1,"sig_a has type std_logic_vector, which doesn't match the type of the literal 0",HTML
+OPTION,1,sig_a has already been assigned a driver  somewhere else,HTML
+OPTION,1,"sig_a has type std_logic, which doesn't match the type of the literal 0",HTML
+
+
+NewQuestion,MS
+Title,Find the syntax error in signal assignment
+QuestionText,"The signal assignment below appears in the VHDL description of a
+    circuit. The assignment is flagged as having a syntax error. Which of the
+    following could be wrong with the signal assignment? Select all that could be
+    wrong. Recall that a syntax error is a violation of the rules of a language,
+    not a logical bug.
+
+    sig_a <= 0;
+    ",NOT HTML
+Points,10
+Difficulty,1
+Scoring,RightAnswers
+OPTION,1,"sig_a has type std_logic_vector, which doesn't match the type of the literal 0",HTML
+OPTION,0,sig_a is an invalid identifier,HTML
+OPTION,0,<= is nto a valid assignment operator in VHDL,HTML
+OPTION,1,sig_a has already been assigned a driver  somewhere else,HTML
+OPTION,1,sig_a was never defined as a port or a signal.,HTML
+
+
+NewQuestion,MS
+Title,Find the syntax error in signal assignment
+QuestionText,"The signal assignment below appears in the VHDL description of a
+    circuit. The assignment is flagged as having a syntax error. Which of the
+    following could be wrong with the signal assignment? Select all that could be
+    wrong. Recall that a syntax error is a violation of the rules of a language,
+    not a logical bug.
+
+    sig_a <= 0;
+    ",NOT HTML
+Points,10
+Difficulty,1
+Scoring,RightAnswers
+OPTION,1,"sig_a has type std_logic, which doesn't match the type of the literal 0",HTML
+OPTION,1,"sig_a has type std_logic_vector, which doesn't match the type of the literal 0",HTML
+OPTION,1,sig_a has already been assigned a driver  somewhere else,HTML
+OPTION,0,<= is nto a valid assignment operator in VHDL,HTML
+OPTION,0,sig_a is an invalid identifier,HTML
+
+
+NewQuestion,MS
+Title,Find the syntax error in signal assignment
+QuestionText,"The signal assignment below appears in the VHDL description of a
+    circuit. The assignment is flagged as having a syntax error. Which of the
+    following could be wrong with the signal assignment? Select all that could be
+    wrong. Recall that a syntax error is a violation of the rules of a language,
+    not a logical bug.
+
+    sig_a <= 0;
+    ",NOT HTML
+Points,10
+Difficulty,1
+Scoring,RightAnswers
+OPTION,1,"sig_a has type std_logic_vector, which doesn't match the type of the literal 0",HTML
+OPTION,1,sig_a has already been assigned a driver  somewhere else,HTML
+OPTION,0,<= is nto a valid assignment operator in VHDL,HTML
+OPTION,1,sig_a was never defined as a port or a signal.,HTML
+OPTION,1,"sig_a has type std_logic, which doesn't match the type of the literal 0",HTML
+
+
+NewQuestion,MS
+Title,Find the syntax error in signal assignment
+QuestionText,"The signal assignment below appears in the VHDL description of a
+    circuit. The assignment is flagged as having a syntax error. Which of the
+    following could be wrong with the signal assignment? Select all that could be
+    wrong. Recall that a syntax error is a violation of the rules of a language,
+    not a logical bug.
+
+    sig_a <= 0;
+    ",NOT HTML
+Points,10
+Difficulty,1
+Scoring,RightAnswers
+OPTION,0,sig_a is an invalid identifier,HTML
+OPTION,1,"sig_a has type std_logic, which doesn't match the type of the literal 0",HTML
+OPTION,0,<= is nto a valid assignment operator in VHDL,HTML
+OPTION,1,"sig_a has type std_logic_vector, which doesn't match the type of the literal 0",HTML
+OPTION,1,sig_a has already been assigned a driver  somewhere else,HTML
+
+

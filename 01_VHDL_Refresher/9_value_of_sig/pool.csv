@@ -1,0 +1,270 @@
+NewQuestion,SA
+Title,VHDL Aggregate Split (Fill in)
+QuestionText,"<p>Assume sig_a has type std_logic_vector(7 downto 0), sig_b has type std_logic_vector(4 downto 0), sig_c has type std_logic, and sig_d has type std_logic_vector(1 downto 0).&nbsp; Given the following concurrent signal assignments:</p><pre>sig_a <= ""10000101"";
+(sig_b, sig_c, sig_d) <= sig_a;
+</pre><p>The value of sig_b, in binary, is ____<br>The value of sig_c, in binary, is ____<br>The value of sig_d, in binary, is ____<br><br><em>Enter your answers as: sig_b sig_c sig_d (separated by spaces or new lines).</em></p>",HTML
+Points,10
+Difficulty,1
+ANSWER,100,10000 1 01
+ANSWER,100,"10000
+1
+01"
+ANSWER,100,"10000
+1
+01"
+ANSWER,100,"10000,1,01"
+ANSWER,100,"10000, 1, 01"
+
+
+NewQuestion,SA
+Title,VHDL Aggregate Split (Fill in)
+QuestionText,"<p>Assume sig_a has type std_logic_vector(7 downto 0), sig_b has type std_logic_vector(0 downto 0), sig_c has type std_logic_vector(1 downto 0), and sig_d has type std_logic_vector(4 downto 0).&nbsp; Given the following concurrent signal assignments:</p><pre>sig_a <= ""01101101"";
+(sig_b, sig_c, sig_d) <= sig_a;
+</pre><p>The value of sig_b, in binary, is ____<br>The value of sig_c, in binary, is ____<br>The value of sig_d, in binary, is ____<br><br><em>Enter your answers as: sig_b sig_c sig_d (separated by spaces or new lines).</em></p>",HTML
+Points,10
+Difficulty,1
+ANSWER,100,0 11 01101
+ANSWER,100,"0
+11
+01101"
+ANSWER,100,"0
+11
+01101"
+ANSWER,100,"0,11,01101"
+ANSWER,100,"0, 11, 01101"
+
+
+NewQuestion,SA
+Title,VHDL Aggregate Split (Fill in)
+QuestionText,"<p>Assume sig_a has type std_logic_vector(7 downto 0), sig_b has type std_logic_vector(0 downto 0), sig_c has type std_logic, and sig_d has type std_logic_vector(5 downto 0).&nbsp; Given the following concurrent signal assignments:</p><pre>sig_a <= ""10111111"";
+(sig_b, sig_c, sig_d) <= sig_a;
+</pre><p>The value of sig_b, in binary, is ____<br>The value of sig_c, in binary, is ____<br>The value of sig_d, in binary, is ____<br><br><em>Enter your answers as: sig_b sig_c sig_d (separated by spaces or new lines).</em></p>",HTML
+Points,10
+Difficulty,1
+ANSWER,100,1 0 111111
+ANSWER,100,"1
+0
+111111"
+ANSWER,100,"1
+0
+111111"
+ANSWER,100,"1,0,111111"
+ANSWER,100,"1, 0, 111111"
+
+
+NewQuestion,SA
+Title,VHDL Aggregate Split (Fill in)
+QuestionText,"<p>Assume sig_a has type std_logic_vector(7 downto 0), sig_b has type std_logic_vector(1 downto 0), sig_c has type std_logic_vector(3 downto 0), and sig_d has type std_logic_vector(1 downto 0).&nbsp; Given the following concurrent signal assignments:</p><pre>sig_a <= ""00010010"";
+(sig_b, sig_c, sig_d) <= sig_a;
+</pre><p>The value of sig_b, in binary, is ____<br>The value of sig_c, in binary, is ____<br>The value of sig_d, in binary, is ____<br><br><em>Enter your answers as: sig_b sig_c sig_d (separated by spaces or new lines).</em></p>",HTML
+Points,10
+Difficulty,1
+ANSWER,100,00 0100 10
+ANSWER,100,"00
+0100
+10"
+ANSWER,100,"00
+0100
+10"
+ANSWER,100,"00,0100,10"
+ANSWER,100,"00, 0100, 10"
+
+
+NewQuestion,SA
+Title,VHDL Aggregate Split (Fill in)
+QuestionText,"<p>Assume sig_a has type std_logic_vector(7 downto 0), sig_b has type std_logic_vector(3 downto 0), sig_c has type std_logic_vector(1 downto 0), and sig_d has type std_logic_vector(1 downto 0).&nbsp; Given the following concurrent signal assignments:</p><pre>sig_a <= ""11101110"";
+(sig_b, sig_c, sig_d) <= sig_a;
+</pre><p>The value of sig_b, in binary, is ____<br>The value of sig_c, in binary, is ____<br>The value of sig_d, in binary, is ____<br><br><em>Enter your answers as: sig_b sig_c sig_d (separated by spaces or new lines).</em></p>",HTML
+Points,10
+Difficulty,1
+ANSWER,100,1110 11 10
+ANSWER,100,"1110
+11
+10"
+ANSWER,100,"1110
+11
+10"
+ANSWER,100,"1110,11,10"
+ANSWER,100,"1110, 11, 10"
+
+
+NewQuestion,SA
+Title,VHDL Aggregate Split (Fill in)
+QuestionText,"<p>Assume sig_a has type std_logic_vector(7 downto 0), sig_b has type std_logic_vector(0 downto 0), sig_c has type std_logic_vector(3 downto 0), and sig_d has type std_logic_vector(2 downto 0).&nbsp; Given the following concurrent signal assignments:</p><pre>sig_a <= ""00110000"";
+(sig_b, sig_c, sig_d) <= sig_a;
+</pre><p>The value of sig_b, in binary, is ____<br>The value of sig_c, in binary, is ____<br>The value of sig_d, in binary, is ____<br><br><em>Enter your answers as: sig_b sig_c sig_d (separated by spaces or new lines).</em></p>",HTML
+Points,10
+Difficulty,1
+ANSWER,100,0 0110 000
+ANSWER,100,"0
+0110
+000"
+ANSWER,100,"0
+0110
+000"
+ANSWER,100,"0,0110,000"
+ANSWER,100,"0, 0110, 000"
+
+
+NewQuestion,SA
+Title,VHDL Aggregate Split (Fill in)
+QuestionText,"<p>Assume sig_a has type std_logic_vector(7 downto 0), sig_b has type std_logic_vector(3 downto 0), sig_c has type std_logic_vector(2 downto 0), and sig_d has type std_logic_vector(0 downto 0).&nbsp; Given the following concurrent signal assignments:</p><pre>sig_a <= ""00101001"";
+(sig_b, sig_c, sig_d) <= sig_a;
+</pre><p>The value of sig_b, in binary, is ____<br>The value of sig_c, in binary, is ____<br>The value of sig_d, in binary, is ____<br><br><em>Enter your answers as: sig_b sig_c sig_d (separated by spaces or new lines).</em></p>",HTML
+Points,10
+Difficulty,1
+ANSWER,100,0010 100 1
+ANSWER,100,"0010
+100
+1"
+ANSWER,100,"0010
+100
+1"
+ANSWER,100,"0010,100,1"
+ANSWER,100,"0010, 100, 1"
+
+
+NewQuestion,SA
+Title,VHDL Aggregate Split (Fill in)
+QuestionText,"<p>Assume sig_a has type std_logic_vector(7 downto 0), sig_b has type std_logic_vector(0 downto 0), sig_c has type std_logic_vector(4 downto 0), and sig_d has type std_logic_vector(1 downto 0).&nbsp; Given the following concurrent signal assignments:</p><pre>sig_a <= ""00011110"";
+(sig_b, sig_c, sig_d) <= sig_a;
+</pre><p>The value of sig_b, in binary, is ____<br>The value of sig_c, in binary, is ____<br>The value of sig_d, in binary, is ____<br><br><em>Enter your answers as: sig_b sig_c sig_d (separated by spaces or new lines).</em></p>",HTML
+Points,10
+Difficulty,1
+ANSWER,100,0 00111 10
+ANSWER,100,"0
+00111
+10"
+ANSWER,100,"0
+00111
+10"
+ANSWER,100,"0,00111,10"
+ANSWER,100,"0, 00111, 10"
+
+
+NewQuestion,SA
+Title,VHDL Aggregate Split (Fill in)
+QuestionText,"<p>Assume sig_a has type std_logic_vector(7 downto 0), sig_b has type std_logic_vector(3 downto 0), sig_c has type std_logic, and sig_d has type std_logic_vector(2 downto 0).&nbsp; Given the following concurrent signal assignments:</p><pre>sig_a <= ""00111100"";
+(sig_b, sig_c, sig_d) <= sig_a;
+</pre><p>The value of sig_b, in binary, is ____<br>The value of sig_c, in binary, is ____<br>The value of sig_d, in binary, is ____<br><br><em>Enter your answers as: sig_b sig_c sig_d (separated by spaces or new lines).</em></p>",HTML
+Points,10
+Difficulty,1
+ANSWER,100,0011 1 100
+ANSWER,100,"0011
+1
+100"
+ANSWER,100,"0011
+1
+100"
+ANSWER,100,"0011,1,100"
+ANSWER,100,"0011, 1, 100"
+
+
+NewQuestion,SA
+Title,VHDL Aggregate Split (Fill in)
+QuestionText,"<p>Assume sig_a has type std_logic_vector(7 downto 0), sig_b has type std_logic_vector(3 downto 0), sig_c has type std_logic_vector(1 downto 0), and sig_d has type std_logic_vector(1 downto 0).&nbsp; Given the following concurrent signal assignments:</p><pre>sig_a <= ""10110101"";
+(sig_b, sig_c, sig_d) <= sig_a;
+</pre><p>The value of sig_b, in binary, is ____<br>The value of sig_c, in binary, is ____<br>The value of sig_d, in binary, is ____<br><br><em>Enter your answers as: sig_b sig_c sig_d (separated by spaces or new lines).</em></p>",HTML
+Points,10
+Difficulty,1
+ANSWER,100,1011 01 01
+ANSWER,100,"1011
+01
+01"
+ANSWER,100,"1011
+01
+01"
+ANSWER,100,"1011,01,01"
+ANSWER,100,"1011, 01, 01"
+
+
+NewQuestion,SA
+Title,VHDL Aggregate Split (Fill in)
+QuestionText,"<p>Assume sig_a has type std_logic_vector(7 downto 0), sig_b has type std_logic_vector(4 downto 0), sig_c has type std_logic, and sig_d has type std_logic_vector(1 downto 0).&nbsp; Given the following concurrent signal assignments:</p><pre>sig_a <= ""01011011"";
+(sig_b, sig_c, sig_d) <= sig_a;
+</pre><p>The value of sig_b, in binary, is ____<br>The value of sig_c, in binary, is ____<br>The value of sig_d, in binary, is ____<br><br><em>Enter your answers as: sig_b sig_c sig_d (separated by spaces or new lines).</em></p>",HTML
+Points,10
+Difficulty,1
+ANSWER,100,01011 0 11
+ANSWER,100,"01011
+0
+11"
+ANSWER,100,"01011
+0
+11"
+ANSWER,100,"01011,0,11"
+ANSWER,100,"01011, 0, 11"
+
+
+NewQuestion,SA
+Title,VHDL Aggregate Split (Fill in)
+QuestionText,"<p>Assume sig_a has type std_logic_vector(7 downto 0), sig_b has type std_logic_vector(3 downto 0), sig_c has type std_logic, and sig_d has type std_logic_vector(2 downto 0).&nbsp; Given the following concurrent signal assignments:</p><pre>sig_a <= ""10010101"";
+(sig_b, sig_c, sig_d) <= sig_a;
+</pre><p>The value of sig_b, in binary, is ____<br>The value of sig_c, in binary, is ____<br>The value of sig_d, in binary, is ____<br><br><em>Enter your answers as: sig_b sig_c sig_d (separated by spaces or new lines).</em></p>",HTML
+Points,10
+Difficulty,1
+ANSWER,100,1001 0 101
+ANSWER,100,"1001
+0
+101"
+ANSWER,100,"1001
+0
+101"
+ANSWER,100,"1001,0,101"
+ANSWER,100,"1001, 0, 101"
+
+
+NewQuestion,SA
+Title,VHDL Aggregate Split (Fill in)
+QuestionText,"<p>Assume sig_a has type std_logic_vector(7 downto 0), sig_b has type std_logic_vector(5 downto 0), sig_c has type std_logic, and sig_d has type std_logic_vector(0 downto 0).&nbsp; Given the following concurrent signal assignments:</p><pre>sig_a <= ""00000010"";
+(sig_b, sig_c, sig_d) <= sig_a;
+</pre><p>The value of sig_b, in binary, is ____<br>The value of sig_c, in binary, is ____<br>The value of sig_d, in binary, is ____<br><br><em>Enter your answers as: sig_b sig_c sig_d (separated by spaces or new lines).</em></p>",HTML
+Points,10
+Difficulty,1
+ANSWER,100,000000 1 0
+ANSWER,100,"000000
+1
+0"
+ANSWER,100,"000000
+1
+0"
+ANSWER,100,"000000,1,0"
+ANSWER,100,"000000, 1, 0"
+
+
+NewQuestion,SA
+Title,VHDL Aggregate Split (Fill in)
+QuestionText,"<p>Assume sig_a has type std_logic_vector(7 downto 0), sig_b has type std_logic_vector(5 downto 0), sig_c has type std_logic, and sig_d has type std_logic_vector(0 downto 0).&nbsp; Given the following concurrent signal assignments:</p><pre>sig_a <= ""00101010"";
+(sig_b, sig_c, sig_d) <= sig_a;
+</pre><p>The value of sig_b, in binary, is ____<br>The value of sig_c, in binary, is ____<br>The value of sig_d, in binary, is ____<br><br><em>Enter your answers as: sig_b sig_c sig_d (separated by spaces or new lines).</em></p>",HTML
+Points,10
+Difficulty,1
+ANSWER,100,001010 1 0
+ANSWER,100,"001010
+1
+0"
+ANSWER,100,"001010
+1
+0"
+ANSWER,100,"001010,1,0"
+ANSWER,100,"001010, 1, 0"
+
+
+NewQuestion,SA
+Title,VHDL Aggregate Split (Fill in)
+QuestionText,"<p>Assume sig_a has type std_logic_vector(7 downto 0), sig_b has type std_logic_vector(3 downto 0), sig_c has type std_logic_vector(2 downto 0), and sig_d has type std_logic_vector(0 downto 0).&nbsp; Given the following concurrent signal assignments:</p><pre>sig_a <= ""11001111"";
+(sig_b, sig_c, sig_d) <= sig_a;
+</pre><p>The value of sig_b, in binary, is ____<br>The value of sig_c, in binary, is ____<br>The value of sig_d, in binary, is ____<br><br><em>Enter your answers as: sig_b sig_c sig_d (separated by spaces or new lines).</em></p>",HTML
+Points,10
+Difficulty,1
+ANSWER,100,1100 111 1
+ANSWER,100,"1100
+111
+1"
+ANSWER,100,"1100
+111
+1"
+ANSWER,100,"1100,111,1"
+ANSWER,100,"1100, 111, 1"
+
+

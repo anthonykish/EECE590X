@@ -1,0 +1,132 @@
+NewQuestion,MS
+Title,True statements about VHDL
+QuestionText,Which of the following are true statements about the VHDL landuage?,NOT HTML
+Points,10
+Difficulty,1
+Scoring,RightAnswers
+OPTION,1,VHDL is strongly typed,HTML
+OPTION,0,You can start an identifier with a number in VHDL,HTML
+OPTION,0,"VHDL requires indentation, similar to languages like Python",HTML
+OPTION,0,VHDL always infers hardware exactly as written,HTML
+
+
+NewQuestion,MS
+Title,True statements about VHDL
+QuestionText,Which of the following are true statements about the VHDL landuage?,NOT HTML
+Points,10
+Difficulty,1
+Scoring,RightAnswers
+OPTION,0,begin is optional in VHDL architectures,HTML
+OPTION,1,VHDL is commonly used to model and design digital hardware,HTML
+OPTION,0,"VHDL requires indentation, similar to languages like Python",HTML
+OPTION,1,VHDL allows multi-line comments using /* ... */,HTML
+
+
+NewQuestion,MS
+Title,True statements about VHDL
+QuestionText,Which of the following are true statements about the VHDL landuage?,NOT HTML
+Points,10
+Difficulty,1
+Scoring,RightAnswers
+OPTION,1,All VHDL language standards have inline comments that begin with --,HTML
+OPTION,0,VHDL always infers hardware exactly as written,HTML
+OPTION,1,Not all VHDL code is synthesizable,HTML
+OPTION,0,begin is optional in VHDL architectures,HTML
+
+
+NewQuestion,MS
+Title,True statements about VHDL
+QuestionText,Which of the following are true statements about the VHDL landuage?,NOT HTML
+Points,10
+Difficulty,1
+Scoring,RightAnswers
+OPTION,0,begin is optional in VHDL architectures,HTML
+OPTION,1,"Generics can parameterize designs (like width, depth, constants)",HTML
+OPTION,1,VHDL supports user-defined types,HTML
+OPTION,0,The := operator assigns to signals,HTML
+
+
+NewQuestion,MS
+Title,True statements about VHDL
+QuestionText,Which of the following are true statements about the VHDL landuage?,NOT HTML
+Points,10
+Difficulty,1
+Scoring,RightAnswers
+OPTION,1,Entity/architecture separate interface from implementation,HTML
+OPTION,0,VHDL always infers hardware exactly as written,HTML
+OPTION,0,"VHDL requires indentation, similar to languages like Python",HTML
+OPTION,0,VHDL is dynamically typed,HTML
+
+
+NewQuestion,MS
+Title,True statements about VHDL
+QuestionText,Which of the following are true statements about the VHDL landuage?,NOT HTML
+Points,10
+Difficulty,1
+Scoring,RightAnswers
+OPTION,1,"Generics can parameterize designs (like width, depth, constants)",HTML
+OPTION,1,Entity/architecture separate interface from implementation,HTML
+OPTION,1,VHDL is strongly typed,HTML
+OPTION,0,The := operator assigns to signals,HTML
+
+
+NewQuestion,MS
+Title,True statements about VHDL
+QuestionText,Which of the following are true statements about the VHDL landuage?,NOT HTML
+Points,10
+Difficulty,1
+Scoring,RightAnswers
+OPTION,0,You can start an identifier with a number in VHDL,HTML
+OPTION,1,VHDL is commonly used to model and design digital hardware,HTML
+OPTION,0,VHDL is dynamically typed,HTML
+OPTION,0,VHDL always infers hardware exactly as written,HTML
+
+
+NewQuestion,MS
+Title,True statements about VHDL
+QuestionText,Which of the following are true statements about the VHDL landuage?,NOT HTML
+Points,10
+Difficulty,1
+Scoring,RightAnswers
+OPTION,1,VHDL allows multi-line comments using /* ... */,HTML
+OPTION,0,All VHDL designs must use std_logic,HTML
+OPTION,0,begin is optional in VHDL architectures,HTML
+OPTION,0,VHDL is dynamically typed,HTML
+
+
+NewQuestion,MS
+Title,True statements about VHDL
+QuestionText,Which of the following are true statements about the VHDL landuage?,NOT HTML
+Points,10
+Difficulty,1
+Scoring,RightAnswers
+OPTION,0,VHDL is mainly used for analog circuit design,HTML
+OPTION,1,Not all VHDL code is synthesizable,HTML
+OPTION,1,Entity/architecture separate interface from implementation,HTML
+OPTION,0,"VHDL requires indentation, similar to languages like Python",HTML
+
+
+NewQuestion,MS
+Title,True statements about VHDL
+QuestionText,Which of the following are true statements about the VHDL landuage?,NOT HTML
+Points,10
+Difficulty,1
+Scoring,RightAnswers
+OPTION,1,"Generics can parameterize designs (like width, depth, constants)",HTML
+OPTION,1,All VHDL language standards have inline comments that begin with --,HTML
+OPTION,0,begin is optional in VHDL architectures,HTML
+OPTION,0,VHDL is mainly used for analog circuit design,HTML
+
+
+NewQuestion,MS
+Title,True statements about VHDL
+QuestionText,Which of the following are true statements about the VHDL landuage?,NOT HTML
+Points,10
+Difficulty,1
+Scoring,RightAnswers
+OPTION,1,"VHDL is a freeform language, meaning that the type of whitespace you use is irrelevant",HTML
+OPTION,0,VHDL automatically converts types for you (like integer <-> std_logic_vector without conversion),HTML
+OPTION,0,VHDL always infers hardware exactly as written,HTML
+OPTION,1,VHDL is case insensitive,HTML
+
+

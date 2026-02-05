@@ -1,0 +1,390 @@
+NewQuestion,M
+Title,VHDL Slice Types
+QuestionText,"<p>A VHDL description contains the concurrent signal assignments below.&nbsp; You know that sig_a has type std_logic_vector(7 downto 0).&nbsp; Determine the type of the other signals.</p><pre>sig_b <= sig_a;
+sig_c <= sig_a(6 downto 0);
+sig_d <= sig_a(1) & sig_a(1) & sig_a(5 downto 2);
+sig_e <= (sig_a(7 downto 7), sig_a(6 downto 0));
+sig_f <= sig_a(7);
+</pre>",HTML
+Points,10
+Difficulty,1
+Scoring,EquallyWeighted
+Choice,1,std_logic_vector(4 downto 0)
+Choice,2,std_logic
+Choice,3,std_logic_vector(6 downto 0)
+Choice,4,std_logic_vector(2 downto 0)
+Choice,5,std_logic_vector(5 downto 0)
+Choice,6,std_logic_vector(7 downto 0)
+Choice,7,std_logic_vector(3 downto 0)
+Choice,8,std_logic_vector(1 downto 0)
+Match,6,sig_b
+Match,3,sig_c
+Match,5,sig_d
+Match,6,sig_e
+Match,2,sig_f
+
+
+NewQuestion,M
+Title,VHDL Slice Types
+QuestionText,"<p>A VHDL description contains the concurrent signal assignments below.&nbsp; You know that sig_a has type std_logic_vector(7 downto 0).&nbsp; Determine the type of the other signals.</p><pre>sig_b <= sig_a;
+sig_c <= sig_a(4 downto 0);
+sig_d <= sig_a(5) & sig_a(5) & sig_a(4 downto 3);
+sig_e <= (sig_a(2 downto 0), sig_a(7 downto 3));
+sig_f <= sig_a(0);
+</pre>",HTML
+Points,10
+Difficulty,1
+Scoring,EquallyWeighted
+Choice,1,std_logic_vector(1 downto 0)
+Choice,2,std_logic
+Choice,3,std_logic_vector(5 downto 0)
+Choice,4,std_logic_vector(7 downto 0)
+Choice,5,std_logic_vector(2 downto 0)
+Choice,6,std_logic_vector(4 downto 0)
+Choice,7,std_logic_vector(6 downto 0)
+Choice,8,std_logic_vector(3 downto 0)
+Match,4,sig_b
+Match,6,sig_c
+Match,8,sig_d
+Match,4,sig_e
+Match,2,sig_f
+
+
+NewQuestion,M
+Title,VHDL Slice Types
+QuestionText,"<p>A VHDL description contains the concurrent signal assignments below.&nbsp; You know that sig_a has type std_logic_vector(7 downto 0).&nbsp; Determine the type of the other signals.</p><pre>sig_b <= sig_a;
+sig_c <= sig_a(7 downto 6);
+sig_d <= sig_a(0) & sig_a(0) & sig_a(6 downto 3);
+sig_e <= (sig_a(0 downto 0), sig_a(7 downto 1));
+sig_f <= sig_a(3);
+</pre>",HTML
+Points,10
+Difficulty,1
+Scoring,EquallyWeighted
+Choice,1,std_logic_vector(4 downto 0)
+Choice,2,std_logic_vector(2 downto 0)
+Choice,3,std_logic_vector(6 downto 0)
+Choice,4,std_logic
+Choice,5,std_logic_vector(5 downto 0)
+Choice,6,std_logic_vector(1 downto 0)
+Choice,7,std_logic_vector(3 downto 0)
+Choice,8,std_logic_vector(7 downto 0)
+Match,8,sig_b
+Match,6,sig_c
+Match,5,sig_d
+Match,8,sig_e
+Match,4,sig_f
+
+
+NewQuestion,M
+Title,VHDL Slice Types
+QuestionText,"<p>A VHDL description contains the concurrent signal assignments below.&nbsp; You know that sig_a has type std_logic_vector(7 downto 0).&nbsp; Determine the type of the other signals.</p><pre>sig_b <= sig_a;
+sig_c <= sig_a(5 downto 4);
+sig_d <= sig_a(1) & sig_a(1) & sig_a(7 downto 3);
+sig_e <= (sig_a(7 downto 5), sig_a(4 downto 0));
+sig_f <= sig_a(3);
+</pre>",HTML
+Points,10
+Difficulty,1
+Scoring,EquallyWeighted
+Choice,1,std_logic_vector(1 downto 0)
+Choice,2,std_logic_vector(7 downto 0)
+Choice,3,std_logic_vector(3 downto 0)
+Choice,4,std_logic
+Choice,5,std_logic_vector(4 downto 0)
+Choice,6,std_logic_vector(6 downto 0)
+Choice,7,std_logic_vector(2 downto 0)
+Choice,8,std_logic_vector(5 downto 0)
+Match,2,sig_b
+Match,1,sig_c
+Match,6,sig_d
+Match,2,sig_e
+Match,4,sig_f
+
+
+NewQuestion,M
+Title,VHDL Slice Types
+QuestionText,"<p>A VHDL description contains the concurrent signal assignments below.&nbsp; You know that sig_a has type std_logic_vector(7 downto 0).&nbsp; Determine the type of the other signals.</p><pre>sig_b <= sig_a;
+sig_c <= sig_a(4 downto 0);
+sig_d <= sig_a(2) & sig_a(2) & sig_a(5 downto 0);
+sig_e <= (sig_a(7 downto 4), sig_a(3 downto 0));
+sig_f <= sig_a(4);
+</pre>",HTML
+Points,10
+Difficulty,1
+Scoring,EquallyWeighted
+Choice,1,std_logic_vector(5 downto 0)
+Choice,2,std_logic
+Choice,3,std_logic_vector(4 downto 0)
+Choice,4,std_logic_vector(1 downto 0)
+Choice,5,std_logic_vector(6 downto 0)
+Choice,6,std_logic_vector(3 downto 0)
+Choice,7,std_logic_vector(2 downto 0)
+Choice,8,std_logic_vector(7 downto 0)
+Match,8,sig_b
+Match,3,sig_c
+Match,8,sig_d
+Match,8,sig_e
+Match,2,sig_f
+
+
+NewQuestion,M
+Title,VHDL Slice Types
+QuestionText,"<p>A VHDL description contains the concurrent signal assignments below.&nbsp; You know that sig_a has type std_logic_vector(7 downto 0).&nbsp; Determine the type of the other signals.</p><pre>sig_b <= sig_a;
+sig_c <= sig_a(5 downto 0);
+sig_d <= sig_a(3) & sig_a(3) & sig_a(7 downto 2);
+sig_e <= (sig_a(7 downto 2), sig_a(1 downto 0));
+sig_f <= sig_a(4);
+</pre>",HTML
+Points,10
+Difficulty,1
+Scoring,EquallyWeighted
+Choice,1,std_logic_vector(5 downto 0)
+Choice,2,std_logic_vector(2 downto 0)
+Choice,3,std_logic_vector(6 downto 0)
+Choice,4,std_logic_vector(3 downto 0)
+Choice,5,std_logic_vector(7 downto 0)
+Choice,6,std_logic_vector(4 downto 0)
+Choice,7,std_logic_vector(1 downto 0)
+Choice,8,std_logic
+Match,5,sig_b
+Match,1,sig_c
+Match,5,sig_d
+Match,5,sig_e
+Match,8,sig_f
+
+
+NewQuestion,M
+Title,VHDL Slice Types
+QuestionText,"<p>A VHDL description contains the concurrent signal assignments below.&nbsp; You know that sig_a has type std_logic_vector(7 downto 0).&nbsp; Determine the type of the other signals.</p><pre>sig_b <= sig_a;
+sig_c <= sig_a(5 downto 3);
+sig_d <= sig_a(0) & sig_a(0) & sig_a(7 downto 2);
+sig_e <= (sig_a(7 downto 6), sig_a(5 downto 0));
+sig_f <= sig_a(0);
+</pre>",HTML
+Points,10
+Difficulty,1
+Scoring,EquallyWeighted
+Choice,1,std_logic_vector(3 downto 0)
+Choice,2,std_logic_vector(5 downto 0)
+Choice,3,std_logic_vector(1 downto 0)
+Choice,4,std_logic_vector(6 downto 0)
+Choice,5,std_logic_vector(4 downto 0)
+Choice,6,std_logic_vector(7 downto 0)
+Choice,7,std_logic
+Choice,8,std_logic_vector(2 downto 0)
+Match,6,sig_b
+Match,8,sig_c
+Match,6,sig_d
+Match,6,sig_e
+Match,7,sig_f
+
+
+NewQuestion,M
+Title,VHDL Slice Types
+QuestionText,"<p>A VHDL description contains the concurrent signal assignments below.&nbsp; You know that sig_a has type std_logic_vector(7 downto 0).&nbsp; Determine the type of the other signals.</p><pre>sig_b <= sig_a;
+sig_c <= sig_a(4 downto 2);
+sig_d <= sig_a(5) & sig_a(5) & sig_a(6 downto 4);
+sig_e <= (sig_a(7 downto 3), sig_a(2 downto 0));
+sig_f <= sig_a(1);
+</pre>",HTML
+Points,10
+Difficulty,1
+Scoring,EquallyWeighted
+Choice,1,std_logic_vector(5 downto 0)
+Choice,2,std_logic_vector(4 downto 0)
+Choice,3,std_logic_vector(6 downto 0)
+Choice,4,std_logic_vector(2 downto 0)
+Choice,5,std_logic_vector(7 downto 0)
+Choice,6,std_logic_vector(3 downto 0)
+Choice,7,std_logic
+Choice,8,std_logic_vector(1 downto 0)
+Match,5,sig_b
+Match,4,sig_c
+Match,2,sig_d
+Match,5,sig_e
+Match,7,sig_f
+
+
+NewQuestion,M
+Title,VHDL Slice Types
+QuestionText,"<p>A VHDL description contains the concurrent signal assignments below.&nbsp; You know that sig_a has type std_logic_vector(7 downto 0).&nbsp; Determine the type of the other signals.</p><pre>sig_b <= sig_a;
+sig_c <= sig_a(6 downto 0);
+sig_d <= sig_a(1) & sig_a(1) & sig_a(3 downto 0);
+sig_e <= (sig_a(7 downto 6), sig_a(5 downto 0));
+sig_f <= sig_a(2);
+</pre>",HTML
+Points,10
+Difficulty,1
+Scoring,EquallyWeighted
+Choice,1,std_logic_vector(6 downto 0)
+Choice,2,std_logic_vector(3 downto 0)
+Choice,3,std_logic
+Choice,4,std_logic_vector(5 downto 0)
+Choice,5,std_logic_vector(2 downto 0)
+Choice,6,std_logic_vector(4 downto 0)
+Choice,7,std_logic_vector(1 downto 0)
+Choice,8,std_logic_vector(7 downto 0)
+Match,8,sig_b
+Match,1,sig_c
+Match,4,sig_d
+Match,8,sig_e
+Match,3,sig_f
+
+
+NewQuestion,M
+Title,VHDL Slice Types
+QuestionText,"<p>A VHDL description contains the concurrent signal assignments below.&nbsp; You know that sig_a has type std_logic_vector(7 downto 0).&nbsp; Determine the type of the other signals.</p><pre>sig_b <= sig_a;
+sig_c <= sig_a(4 downto 1);
+sig_d <= sig_a(1) & sig_a(1) & sig_a(7 downto 3);
+sig_e <= (sig_a(4 downto 0), sig_a(7 downto 5));
+sig_f <= sig_a(4);
+</pre>",HTML
+Points,10
+Difficulty,1
+Scoring,EquallyWeighted
+Choice,1,std_logic_vector(6 downto 0)
+Choice,2,std_logic_vector(5 downto 0)
+Choice,3,std_logic_vector(1 downto 0)
+Choice,4,std_logic
+Choice,5,std_logic_vector(7 downto 0)
+Choice,6,std_logic_vector(4 downto 0)
+Choice,7,std_logic_vector(2 downto 0)
+Choice,8,std_logic_vector(3 downto 0)
+Match,5,sig_b
+Match,8,sig_c
+Match,1,sig_d
+Match,5,sig_e
+Match,4,sig_f
+
+
+NewQuestion,M
+Title,VHDL Slice Types
+QuestionText,"<p>A VHDL description contains the concurrent signal assignments below.&nbsp; You know that sig_a has type std_logic_vector(7 downto 0).&nbsp; Determine the type of the other signals.</p><pre>sig_b <= sig_a;
+sig_c <= sig_a(5 downto 1);
+sig_d <= sig_a(0) & sig_a(0) & sig_a(2 downto 1);
+sig_e <= (sig_a(6 downto 0), sig_a(7 downto 7));
+sig_f <= sig_a(3);
+</pre>",HTML
+Points,10
+Difficulty,1
+Scoring,EquallyWeighted
+Choice,1,std_logic_vector(2 downto 0)
+Choice,2,std_logic_vector(7 downto 0)
+Choice,3,std_logic_vector(4 downto 0)
+Choice,4,std_logic_vector(5 downto 0)
+Choice,5,std_logic
+Choice,6,std_logic_vector(1 downto 0)
+Choice,7,std_logic_vector(6 downto 0)
+Choice,8,std_logic_vector(3 downto 0)
+Match,2,sig_b
+Match,3,sig_c
+Match,8,sig_d
+Match,2,sig_e
+Match,5,sig_f
+
+
+NewQuestion,M
+Title,VHDL Slice Types
+QuestionText,"<p>A VHDL description contains the concurrent signal assignments below.&nbsp; You know that sig_a has type std_logic_vector(7 downto 0).&nbsp; Determine the type of the other signals.</p><pre>sig_b <= sig_a;
+sig_c <= sig_a(7 downto 1);
+sig_d <= sig_a(6) & sig_a(6) & sig_a(6 downto 2);
+sig_e <= (sig_a(3 downto 0), sig_a(7 downto 4));
+sig_f <= sig_a(7);
+</pre>",HTML
+Points,10
+Difficulty,1
+Scoring,EquallyWeighted
+Choice,1,std_logic_vector(6 downto 0)
+Choice,2,std_logic_vector(2 downto 0)
+Choice,3,std_logic_vector(1 downto 0)
+Choice,4,std_logic_vector(5 downto 0)
+Choice,5,std_logic_vector(4 downto 0)
+Choice,6,std_logic_vector(7 downto 0)
+Choice,7,std_logic
+Choice,8,std_logic_vector(3 downto 0)
+Match,6,sig_b
+Match,1,sig_c
+Match,1,sig_d
+Match,6,sig_e
+Match,7,sig_f
+
+
+NewQuestion,M
+Title,VHDL Slice Types
+QuestionText,"<p>A VHDL description contains the concurrent signal assignments below.&nbsp; You know that sig_a has type std_logic_vector(7 downto 0).&nbsp; Determine the type of the other signals.</p><pre>sig_b <= sig_a;
+sig_c <= sig_a(5 downto 3);
+sig_d <= sig_a(5) & sig_a(5) & sig_a(7 downto 4);
+sig_e <= (sig_a(7 downto 2), sig_a(1 downto 0));
+sig_f <= sig_a(6);
+</pre>",HTML
+Points,10
+Difficulty,1
+Scoring,EquallyWeighted
+Choice,1,std_logic_vector(7 downto 0)
+Choice,2,std_logic_vector(4 downto 0)
+Choice,3,std_logic_vector(1 downto 0)
+Choice,4,std_logic_vector(2 downto 0)
+Choice,5,std_logic_vector(6 downto 0)
+Choice,6,std_logic_vector(5 downto 0)
+Choice,7,std_logic
+Choice,8,std_logic_vector(3 downto 0)
+Match,1,sig_b
+Match,4,sig_c
+Match,6,sig_d
+Match,1,sig_e
+Match,7,sig_f
+
+
+NewQuestion,M
+Title,VHDL Slice Types
+QuestionText,"<p>A VHDL description contains the concurrent signal assignments below.&nbsp; You know that sig_a has type std_logic_vector(7 downto 0).&nbsp; Determine the type of the other signals.</p><pre>sig_b <= sig_a;
+sig_c <= sig_a(1 downto 0);
+sig_d <= sig_a(5) & sig_a(5) & sig_a(7 downto 2);
+sig_e <= (sig_a(7 downto 4), sig_a(3 downto 0));
+sig_f <= sig_a(3);
+</pre>",HTML
+Points,10
+Difficulty,1
+Scoring,EquallyWeighted
+Choice,1,std_logic_vector(6 downto 0)
+Choice,2,std_logic_vector(4 downto 0)
+Choice,3,std_logic_vector(5 downto 0)
+Choice,4,std_logic
+Choice,5,std_logic_vector(3 downto 0)
+Choice,6,std_logic_vector(7 downto 0)
+Choice,7,std_logic_vector(1 downto 0)
+Choice,8,std_logic_vector(2 downto 0)
+Match,6,sig_b
+Match,7,sig_c
+Match,6,sig_d
+Match,6,sig_e
+Match,4,sig_f
+
+
+NewQuestion,M
+Title,VHDL Slice Types
+QuestionText,"<p>A VHDL description contains the concurrent signal assignments below.&nbsp; You know that sig_a has type std_logic_vector(7 downto 0).&nbsp; Determine the type of the other signals.</p><pre>sig_b <= sig_a;
+sig_c <= sig_a(4 downto 2);
+sig_d <= sig_a(2) & sig_a(2) & sig_a(7 downto 6);
+sig_e <= (sig_a(2 downto 0), sig_a(7 downto 3));
+sig_f <= sig_a(3);
+</pre>",HTML
+Points,10
+Difficulty,1
+Scoring,EquallyWeighted
+Choice,1,std_logic_vector(1 downto 0)
+Choice,2,std_logic_vector(7 downto 0)
+Choice,3,std_logic_vector(6 downto 0)
+Choice,4,std_logic_vector(5 downto 0)
+Choice,5,std_logic_vector(2 downto 0)
+Choice,6,std_logic
+Choice,7,std_logic_vector(3 downto 0)
+Choice,8,std_logic_vector(4 downto 0)
+Match,2,sig_b
+Match,5,sig_c
+Match,7,sig_d
+Match,2,sig_e
+Match,6,sig_f
+
+

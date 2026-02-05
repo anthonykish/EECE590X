@@ -1,0 +1,112 @@
+NewQuestion,MS
+Title,HDL Advantages
+QuestionText,Which of the following is are an advantage of  using a HDL over directly designing circuits at  the gate level.,NOT HTML
+Points,10
+Difficulty,1
+Scoring,RightAnswers
+OPTION,0,It allows the designers to choose the exact circuit structure of the resulting implementation,HTML
+OPTION,0,"HDL Guarantees a one-to-one correspondence between the written code and the synthesized hardware, decreasing the risk of unintended hardware such as latches",HTML
+OPTION,1,It allows one design to be implemented in any suitable technology,HTML
+OPTION,0,"It is visually intuitive, allowing the user to view logic as it's being built",HTML
+OPTION,1,It provides a uniform language to communicate designs,HTML
+OPTION,1,It allows the designer to work at a higher level of abstraction,HTML
+
+
+NewQuestion,MS
+Title,HDL Advantages
+QuestionText,Which of the following is are an advantage of  using a HDL over directly designing circuits at  the gate level.,NOT HTML
+Points,10
+Difficulty,1
+Scoring,RightAnswers
+OPTION,1,It allows one design to be implemented in any suitable technology,HTML
+OPTION,0,"HDL Guarantees a one-to-one correspondence between the written code and the synthesized hardware, decreasing the risk of unintended hardware such as latches",HTML
+OPTION,1,"It enables testing, debugging, and simulation of a system before any hardware is built",HTML
+OPTION,0,"It is visually intuitive, allowing the user to view logic as it's being built",HTML
+OPTION,1,It allows the designer to work at a higher level of abstraction,HTML
+OPTION,1,It provides a uniform language to communicate designs,HTML
+
+
+NewQuestion,MS
+Title,HDL Advantages
+QuestionText,Which of the following is are an advantage of  using a HDL over directly designing circuits at  the gate level.,NOT HTML
+Points,10
+Difficulty,1
+Scoring,RightAnswers
+OPTION,1,"It enables testing, debugging, and simulation of a system before any hardware is built",HTML
+OPTION,1,It is easier to maintain/update/modify design,HTML
+OPTION,0,"It is visually intuitive, allowing the user to view logic as it's being built",HTML
+OPTION,1,It provides a uniform language to communicate designs,HTML
+OPTION,0,It is easier for beginners to understand,HTML
+OPTION,0,It allows the designers to choose the exact circuit structure of the resulting implementation,HTML
+
+
+NewQuestion,MS
+Title,HDL Advantages
+QuestionText,Which of the following is are an advantage of  using a HDL over directly designing circuits at  the gate level.,NOT HTML
+Points,10
+Difficulty,1
+Scoring,RightAnswers
+OPTION,1,It provides a uniform language to communicate designs,HTML
+OPTION,0,It allows the designers to choose the exact circuit structure of the resulting implementation,HTML
+OPTION,0,"HDL Guarantees a one-to-one correspondence between the written code and the synthesized hardware, decreasing the risk of unintended hardware such as latches",HTML
+OPTION,1,It allows one design to be implemented in any suitable technology,HTML
+OPTION,1,It is easier to maintain/update/modify design,HTML
+OPTION,0,It is easier for beginners to understand,HTML
+
+
+NewQuestion,MS
+Title,HDL Advantages
+QuestionText,Which of the following is are an advantage of  using a HDL over directly designing circuits at  the gate level.,NOT HTML
+Points,10
+Difficulty,1
+Scoring,RightAnswers
+OPTION,0,"It is visually intuitive, allowing the user to view logic as it's being built",HTML
+OPTION,1,It is easier to maintain/update/modify design,HTML
+OPTION,1,It provides a uniform language to communicate designs,HTML
+OPTION,0,"HDL Guarantees a one-to-one correspondence between the written code and the synthesized hardware, decreasing the risk of unintended hardware such as latches",HTML
+OPTION,1,"It enables testing, debugging, and simulation of a system before any hardware is built",HTML
+OPTION,1,It allows the designer to work at a higher level of abstraction,HTML
+
+
+NewQuestion,MS
+Title,HDL Advantages
+QuestionText,Which of the following is are an advantage of  using a HDL over directly designing circuits at  the gate level.,NOT HTML
+Points,10
+Difficulty,1
+Scoring,RightAnswers
+OPTION,0,It is easier for beginners to understand,HTML
+OPTION,0,"HDL Guarantees a one-to-one correspondence between the written code and the synthesized hardware, decreasing the risk of unintended hardware such as latches",HTML
+OPTION,0,It allows the designers to choose the exact circuit structure of the resulting implementation,HTML
+OPTION,1,It provides a uniform language to communicate designs,HTML
+OPTION,1,It allows one design to be implemented in any suitable technology,HTML
+OPTION,1,It allows the designer to work at a higher level of abstraction,HTML
+
+
+NewQuestion,MS
+Title,HDL Advantages
+QuestionText,Which of the following is are an advantage of  using a HDL over directly designing circuits at  the gate level.,NOT HTML
+Points,10
+Difficulty,1
+Scoring,RightAnswers
+OPTION,1,It allows one design to be implemented in any suitable technology,HTML
+OPTION,1,It provides a uniform language to communicate designs,HTML
+OPTION,1,It allows the designer to work at a higher level of abstraction,HTML
+OPTION,0,It allows the designers to choose the exact circuit structure of the resulting implementation,HTML
+OPTION,1,It is easier to maintain/update/modify design,HTML
+OPTION,0,"It is visually intuitive, allowing the user to view logic as it's being built",HTML
+
+
+NewQuestion,MS
+Title,HDL Advantages
+QuestionText,Which of the following is are an advantage of  using a HDL over directly designing circuits at  the gate level.,NOT HTML
+Points,10
+Difficulty,1
+Scoring,RightAnswers
+OPTION,1,It allows the designer to work at a higher level of abstraction,HTML
+OPTION,0,"It is visually intuitive, allowing the user to view logic as it's being built",HTML
+OPTION,0,"HDL Guarantees a one-to-one correspondence between the written code and the synthesized hardware, decreasing the risk of unintended hardware such as latches",HTML
+OPTION,1,It provides a uniform language to communicate designs,HTML
+OPTION,1,It is easier to maintain/update/modify design,HTML
+OPTION,1,"It enables testing, debugging, and simulation of a system before any hardware is built",HTML
+
+

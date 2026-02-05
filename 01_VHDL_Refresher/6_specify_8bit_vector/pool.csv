@@ -1,0 +1,170 @@
+NewQuestion,MS
+Title,Valid ways in VHDL to specify 8-bit std_logic_vectors
+QuestionText,Which of the following are valid ways in VHDL to specify an 8-bit std_logic_vector literal with value equal to decimal 100?,NOT HTML
+Points,10
+Difficulty,1
+Scoring,RightAnswers
+OPTION,1,"""0100100""",HTML
+OPTION,0,"B""1100100""",HTML
+OPTION,1,"8b""1100100""",HTML
+OPTION,1,"8B""01100100""",HTML
+OPTION,0,"""100""",HTML
+OPTION,1,"B""01100100""",HTML
+OPTION,0,100,HTML
+OPTION,0,"""_01100100""",HTML
+OPTION,1,"""0110_0100""",HTML
+
+
+NewQuestion,MS
+Title,Valid ways in VHDL to specify 8-bit std_logic_vectors
+QuestionText,Which of the following are valid ways in VHDL to specify an 8-bit std_logic_vector literal with value equal to decimal 100?,NOT HTML
+Points,10
+Difficulty,1
+Scoring,RightAnswers
+OPTION,1,"8b""1100100""",HTML
+OPTION,0,"""00000100""",HTML
+OPTION,0,"""_01100100""",HTML
+OPTION,1,"8B""1100100""",HTML
+OPTION,0,"B""1100100""",HTML
+OPTION,0,"""100""",HTML
+OPTION,0,100,HTML
+OPTION,0,"""0110__0100""",HTML
+OPTION,0,"""1100100""",HTML
+
+
+NewQuestion,MS
+Title,Valid ways in VHDL to specify 8-bit std_logic_vectors
+QuestionText,Which of the following are valid ways in VHDL to specify an 8-bit std_logic_vector literal with value equal to decimal 100?,NOT HTML
+Points,10
+Difficulty,1
+Scoring,RightAnswers
+OPTION,0,"""0110__0100""",HTML
+OPTION,1,"""0110_0100""",HTML
+OPTION,0,"""100""",HTML
+OPTION,0,100,HTML
+OPTION,1,"8d""100""",HTML
+OPTION,0,"""1100100""",HTML
+OPTION,1,"8B""01100100""",HTML
+OPTION,1,"8b""1100100""",HTML
+OPTION,1,"8h""64""",HTML
+
+
+NewQuestion,MS
+Title,Valid ways in VHDL to specify 8-bit std_logic_vectors
+QuestionText,Which of the following are valid ways in VHDL to specify an 8-bit std_logic_vector literal with value equal to decimal 100?,NOT HTML
+Points,10
+Difficulty,1
+Scoring,RightAnswers
+OPTION,0,"""0110__0100""",HTML
+OPTION,0,"""100""",HTML
+OPTION,0,"""00000100""",HTML
+OPTION,0,100,HTML
+OPTION,0,"B""1100100""",HTML
+OPTION,1,"8B""01100100""",HTML
+OPTION,1,"8b""1100100""",HTML
+OPTION,1,"""0100100""",HTML
+OPTION,0,"""_01100100""",HTML
+
+
+NewQuestion,MS
+Title,Valid ways in VHDL to specify 8-bit std_logic_vectors
+QuestionText,Which of the following are valid ways in VHDL to specify an 8-bit std_logic_vector literal with value equal to decimal 100?,NOT HTML
+Points,10
+Difficulty,1
+Scoring,RightAnswers
+OPTION,1,"""0100100""",HTML
+OPTION,0,"""0110__0100""",HTML
+OPTION,0,"""1100100""",HTML
+OPTION,0,"""00000100""",HTML
+OPTION,1,"8h""64""",HTML
+OPTION,0,"""_01100100""",HTML
+OPTION,1,"8B""1100100""",HTML
+OPTION,1,"8d""100""",HTML
+OPTION,0,100,HTML
+
+
+NewQuestion,MS
+Title,Valid ways in VHDL to specify 8-bit std_logic_vectors
+QuestionText,Which of the following are valid ways in VHDL to specify an 8-bit std_logic_vector literal with value equal to decimal 100?,NOT HTML
+Points,10
+Difficulty,1
+Scoring,RightAnswers
+OPTION,1,"B""01100100""",HTML
+OPTION,1,"8B""01100100""",HTML
+OPTION,0,"""1100100""",HTML
+OPTION,0,100,HTML
+OPTION,1,"8h""64""",HTML
+OPTION,0,"B""1100100""",HTML
+OPTION,0,"""100""",HTML
+OPTION,1,"8b""1100100""",HTML
+OPTION,0,"""00000100""",HTML
+
+
+NewQuestion,MS
+Title,Valid ways in VHDL to specify 8-bit std_logic_vectors
+QuestionText,Which of the following are valid ways in VHDL to specify an 8-bit std_logic_vector literal with value equal to decimal 100?,NOT HTML
+Points,10
+Difficulty,1
+Scoring,RightAnswers
+OPTION,0,"""_01100100""",HTML
+OPTION,1,"""0110_0100""",HTML
+OPTION,1,"8h""64""",HTML
+OPTION,0,"""100""",HTML
+OPTION,0,"B""1100100""",HTML
+OPTION,0,"""00000100""",HTML
+OPTION,0,"""0110__0100""",HTML
+OPTION,0,"""1100100""",HTML
+OPTION,1,"8B""1100100""",HTML
+
+
+NewQuestion,MS
+Title,Valid ways in VHDL to specify 8-bit std_logic_vectors
+QuestionText,Which of the following are valid ways in VHDL to specify an 8-bit std_logic_vector literal with value equal to decimal 100?,NOT HTML
+Points,10
+Difficulty,1
+Scoring,RightAnswers
+OPTION,0,100,HTML
+OPTION,1,"8b""1100100""",HTML
+OPTION,1,"""0110_0100""",HTML
+OPTION,0,"""00000100""",HTML
+OPTION,1,"8B""1100100""",HTML
+OPTION,1,"8h""64""",HTML
+OPTION,0,"""0110__0100""",HTML
+OPTION,1,"8d""100""",HTML
+OPTION,0,"""1100100""",HTML
+
+
+NewQuestion,MS
+Title,Valid ways in VHDL to specify 8-bit std_logic_vectors
+QuestionText,Which of the following are valid ways in VHDL to specify an 8-bit std_logic_vector literal with value equal to decimal 100?,NOT HTML
+Points,10
+Difficulty,1
+Scoring,RightAnswers
+OPTION,0,100,HTML
+OPTION,1,"B""01100100""",HTML
+OPTION,1,"8h""64""",HTML
+OPTION,0,"B""1100100""",HTML
+OPTION,1,"8B""1100100""",HTML
+OPTION,1,"""0100100""",HTML
+OPTION,1,"8d""100""",HTML
+OPTION,1,"8B""01100100""",HTML
+OPTION,0,"""_01100100""",HTML
+
+
+NewQuestion,MS
+Title,Valid ways in VHDL to specify 8-bit std_logic_vectors
+QuestionText,Which of the following are valid ways in VHDL to specify an 8-bit std_logic_vector literal with value equal to decimal 100?,NOT HTML
+Points,10
+Difficulty,1
+Scoring,RightAnswers
+OPTION,0,"""100""",HTML
+OPTION,1,"8b""1100100""",HTML
+OPTION,1,"B""01100100""",HTML
+OPTION,1,"8B""01100100""",HTML
+OPTION,1,"8d""100""",HTML
+OPTION,0,100,HTML
+OPTION,1,"8h""64""",HTML
+OPTION,1,"""0100100""",HTML
+OPTION,0,"""0110__0100""",HTML
+
+

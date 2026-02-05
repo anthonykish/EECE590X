@@ -1,0 +1,165 @@
+NewQuestion,MS
+Title,Determine valid signal names
+QuestionText,Which of the following are valid names for VDHL signals?,NOT HTML
+Points,10
+Difficulty,1
+Scoring,RightAnswers
+OPTION,1,b2,HTML
+OPTION,1,a_b_c,HTML
+OPTION,0,1signal,HTML
+OPTION,1,three_a,HTML
+OPTION,0,newSig!,HTML
+OPTION,1,divisor2,HTML
+OPTION,1,divisor_1,HTML
+
+
+NewQuestion,MS
+Title,Determine valid signal names
+QuestionText,Which of the following are valid names for VDHL signals?,NOT HTML
+Points,10
+Difficulty,1
+Scoring,RightAnswers
+OPTION,1,b2,HTML
+OPTION,0,sig__c,HTML
+OPTION,0,newSig!,HTML
+OPTION,1,divisor2,HTML
+OPTION,0,one-two,HTML
+OPTION,1,sig_b,HTML
+OPTION,1,a_b_c,HTML
+
+
+NewQuestion,MS
+Title,Determine valid signal names
+QuestionText,Which of the following are valid names for VDHL signals?,NOT HTML
+Points,10
+Difficulty,1
+Scoring,RightAnswers
+OPTION,0,3a,HTML
+OPTION,1,b2,HTML
+OPTION,0,one-two,HTML
+OPTION,0,1signal,HTML
+OPTION,1,divisor2,HTML
+OPTION,1,sig_b,HTML
+OPTION,1,divisor_1,HTML
+
+
+NewQuestion,MS
+Title,Determine valid signal names
+QuestionText,Which of the following are valid names for VDHL signals?,NOT HTML
+Points,10
+Difficulty,1
+Scoring,RightAnswers
+OPTION,0,one-two,HTML
+OPTION,1,three_a,HTML
+OPTION,1,a_b_c,HTML
+OPTION,1,divisor2,HTML
+OPTION,0,sig__c,HTML
+OPTION,1,sig_b,HTML
+OPTION,0,newSig!,HTML
+
+
+NewQuestion,MS
+Title,Determine valid signal names
+QuestionText,Which of the following are valid names for VDHL signals?,NOT HTML
+Points,10
+Difficulty,1
+Scoring,RightAnswers
+OPTION,1,three_a,HTML
+OPTION,1,divisor2,HTML
+OPTION,1,sig_b,HTML
+OPTION,0,sig__c,HTML
+OPTION,0,newSig!,HTML
+OPTION,1,b2,HTML
+OPTION,0,1signal,HTML
+
+
+NewQuestion,MS
+Title,Determine valid signal names
+QuestionText,Which of the following are valid names for VDHL signals?,NOT HTML
+Points,10
+Difficulty,1
+Scoring,RightAnswers
+OPTION,0,sig__c,HTML
+OPTION,1,divisor_1,HTML
+OPTION,0,one-two,HTML
+OPTION,0,1signal,HTML
+OPTION,1,divisor2,HTML
+OPTION,1,a_b_c,HTML
+OPTION,0,3a,HTML
+
+
+NewQuestion,MS
+Title,Determine valid signal names
+QuestionText,Which of the following are valid names for VDHL signals?,NOT HTML
+Points,10
+Difficulty,1
+Scoring,RightAnswers
+OPTION,1,three_a,HTML
+OPTION,0,newSig!,HTML
+OPTION,1,divisor2,HTML
+OPTION,0,sig__c,HTML
+OPTION,0,3a,HTML
+OPTION,1,divisor_1,HTML
+OPTION,0,1signal,HTML
+
+
+NewQuestion,MS
+Title,Determine valid signal names
+QuestionText,Which of the following are valid names for VDHL signals?,NOT HTML
+Points,10
+Difficulty,1
+Scoring,RightAnswers
+OPTION,1,divisor2,HTML
+OPTION,0,3a,HTML
+OPTION,0,_sig_a,HTML
+OPTION,1,b2,HTML
+OPTION,1,a_b_c,HTML
+OPTION,1,divisor_1,HTML
+OPTION,0,one-two,HTML
+
+
+NewQuestion,MS
+Title,Determine valid signal names
+QuestionText,Which of the following are valid names for VDHL signals?,NOT HTML
+Points,10
+Difficulty,1
+Scoring,RightAnswers
+OPTION,0,_sig_a,HTML
+OPTION,0,3a,HTML
+OPTION,1,divisor_1,HTML
+OPTION,1,divisor2,HTML
+OPTION,1,a_b_c,HTML
+OPTION,0,one-two,HTML
+OPTION,0,1signal,HTML
+
+
+NewQuestion,MS
+Title,Determine valid signal names
+QuestionText,Which of the following are valid names for VDHL signals?,NOT HTML
+Points,10
+Difficulty,1
+Scoring,RightAnswers
+OPTION,0,newSig!,HTML
+OPTION,0,one-two,HTML
+OPTION,0,1signal,HTML
+OPTION,1,divisor2,HTML
+OPTION,1,sig_b,HTML
+OPTION,0,3a,HTML
+OPTION,1,b2,HTML
+
+
+NewQuestion,MS
+Title,Determine valid signal names
+QuestionText,Which of the following are valid names for VDHL signals?,NOT HTML
+Points,10
+Difficulty,1
+Scoring,RightAnswers
+OPTION,1,divisor_1,HTML
+OPTION,0,sig__c,HTML
+OPTION,0,3a,HTML
+OPTION,1,three_a,HTML
+OPTION,0,one-two,HTML
+OPTION,1,b2,HTML
+OPTION,0,1signal,HTML
+
+
