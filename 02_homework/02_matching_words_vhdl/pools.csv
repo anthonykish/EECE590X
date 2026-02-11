@@ -1,0 +1,160 @@
+NewQuestion,M
+Title,Match the words with their descriptions
+QuestionText,"<p> A <u>(a)</u>, in the context of FPGA <u>(b)</u>, is a text-based representation of a <u>(c)</u> after its HDL description has been synthesized, that describes the <u>(d)</u> that will be used to implement the circuit and how they are interconnected. </p>",HTML
+Points,10
+Difficulty,1
+Scoring,EquallyWeighted
+Choice,1,(c)
+Choice,2,(b)
+Choice,3,(d)
+Choice,4,(a)
+Match,4,netlist
+Match,2,synthesis
+Match,1,circuit
+Match,3,logic primitives
+
+
+NewQuestion,M
+Title,Match the words with their descriptions
+QuestionText,"<p> A <u>(a)</u>, in the context of FPGA <u>(b)</u>, is a text-based representation of a <u>(c)</u> after its HDL description has been synthesized, that describes the <u>(d)</u> that will be used to implement the circuit and how they are interconnected. </p>",HTML
+Points,10
+Difficulty,1
+Scoring,EquallyWeighted
+Choice,1,(c)
+Choice,2,(b)
+Choice,3,(a)
+Choice,4,(d)
+Match,4,logic primitives
+Match,3,netlist
+Match,1,circuit
+Match,2,synthesis
+
+
+NewQuestion,M
+Title,Match the words with their descriptions
+QuestionText,"<p> A <u>(a)</u>, in the context of FPGA <u>(b)</u>, is a text-based representation of a <u>(c)</u> after its HDL description has been synthesized, that describes the <u>(d)</u> that will be used to implement the circuit and how they are interconnected. </p>",HTML
+Points,10
+Difficulty,1
+Scoring,EquallyWeighted
+Choice,1,(b)
+Choice,2,(c)
+Choice,3,(a)
+Choice,4,(d)
+Match,3,netlist
+Match,4,logic primitives
+Match,2,circuit
+Match,1,synthesis
+
+
+NewQuestion,M
+Title,Match the words with their descriptions
+QuestionText,"<p> A <u>(a)</u>, in the context of FPGA <u>(b)</u>, is a text-based representation of a <u>(c)</u> after its HDL description has been synthesized, that describes the <u>(d)</u> that will be used to implement the circuit and how they are interconnected. </p>",HTML
+Points,10
+Difficulty,1
+Scoring,EquallyWeighted
+Choice,1,(b)
+Choice,2,(c)
+Choice,3,(a)
+Choice,4,(d)
+Match,4,logic primitives
+Match,1,synthesis
+Match,2,circuit
+Match,3,netlist
+
+
+NewQuestion,M
+Title,Match the words with their descriptions
+QuestionText,"<p> A <u>(a)</u>, in the context of FPGA <u>(b)</u>, is a text-based representation of a <u>(c)</u> after its HDL description has been synthesized, that describes the <u>(d)</u> that will be used to implement the circuit and how they are interconnected. </p>",HTML
+Points,10
+Difficulty,1
+Scoring,EquallyWeighted
+Choice,1,(c)
+Choice,2,(a)
+Choice,3,(d)
+Choice,4,(b)
+Match,3,logic primitives
+Match,2,netlist
+Match,4,synthesis
+Match,1,circuit
+
+
+NewQuestion,M
+Title,Match the words with their descriptions
+QuestionText,"<p> A <u>(a)</u>, in the context of FPGA <u>(b)</u>, is a text-based representation of a <u>(c)</u> after its HDL description has been synthesized, that describes the <u>(d)</u> that will be used to implement the circuit and how they are interconnected. </p>",HTML
+Points,10
+Difficulty,1
+Scoring,EquallyWeighted
+Choice,1,(a)
+Choice,2,(b)
+Choice,3,(d)
+Choice,4,(c)
+Match,4,circuit
+Match,3,logic primitives
+Match,1,netlist
+Match,2,synthesis
+
+
+NewQuestion,M
+Title,Match the words with their descriptions
+QuestionText,"<p> A <u>(a)</u>, in the context of FPGA <u>(b)</u>, is a text-based representation of a <u>(c)</u> after its HDL description has been synthesized, that describes the <u>(d)</u> that will be used to implement the circuit and how they are interconnected. </p>",HTML
+Points,10
+Difficulty,1
+Scoring,EquallyWeighted
+Choice,1,(c)
+Choice,2,(d)
+Choice,3,(a)
+Choice,4,(b)
+Match,1,circuit
+Match,3,netlist
+Match,4,synthesis
+Match,2,logic primitives
+
+
+NewQuestion,M
+Title,Match the words with their descriptions
+QuestionText,"<p> A <u>(a)</u>, in the context of FPGA <u>(b)</u>, is a text-based representation of a <u>(c)</u> after its HDL description has been synthesized, that describes the <u>(d)</u> that will be used to implement the circuit and how they are interconnected. </p>",HTML
+Points,10
+Difficulty,1
+Scoring,EquallyWeighted
+Choice,1,(d)
+Choice,2,(a)
+Choice,3,(c)
+Choice,4,(b)
+Match,1,logic primitives
+Match,3,circuit
+Match,4,synthesis
+Match,2,netlist
+
+
+NewQuestion,M
+Title,Match the words with their descriptions
+QuestionText,"<p> A <u>(a)</u>, in the context of FPGA <u>(b)</u>, is a text-based representation of a <u>(c)</u> after its HDL description has been synthesized, that describes the <u>(d)</u> that will be used to implement the circuit and how they are interconnected. </p>",HTML
+Points,10
+Difficulty,1
+Scoring,EquallyWeighted
+Choice,1,(a)
+Choice,2,(d)
+Choice,3,(c)
+Choice,4,(b)
+Match,4,synthesis
+Match,2,logic primitives
+Match,1,netlist
+Match,3,circuit
+
+
+NewQuestion,M
+Title,Match the words with their descriptions
+QuestionText,"<p> A <u>(a)</u>, in the context of FPGA <u>(b)</u>, is a text-based representation of a <u>(c)</u> after its HDL description has been synthesized, that describes the <u>(d)</u> that will be used to implement the circuit and how they are interconnected. </p>",HTML
+Points,10
+Difficulty,1
+Scoring,EquallyWeighted
+Choice,1,(a)
+Choice,2,(c)
+Choice,3,(b)
+Choice,4,(d)
+Match,3,synthesis
+Match,2,circuit
+Match,4,logic primitives
+Match,1,netlist
+
+

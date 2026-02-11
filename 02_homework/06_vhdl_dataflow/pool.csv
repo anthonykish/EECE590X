@@ -1,0 +1,280 @@
+NewQuestion,MS
+Title,Valid VHDL Dataflows
+QuestionText,Which VHDL dataflow statements are valid? Select all that apply.,NOT HTML
+Points,10
+Difficulty,1
+Scoring,RightAnswers
+OPTION,0,f15 <= a XOR XOR b;,HTML
+OPTION,0,f13 <= a AND;,HTML
+OPTION,0,f17 <= (a AND b;,HTML
+OPTION,1,f4 <= a XNOR b XNOR d XNOR e;,HTML
+OPTION,1,f11 <= (a OR b) AND (NOT c);,HTML
+OPTION,0,f16 <= (a OR b)) AND c;,HTML
+
+
+NewQuestion,MS
+Title,Valid VHDL Dataflows
+QuestionText,Which VHDL dataflow statements are valid? Select all that apply.,NOT HTML
+Points,10
+Difficulty,1
+Scoring,RightAnswers
+OPTION,0,f14 <= NOT;,HTML
+OPTION,0,f5 <= a NAND b NAND c;,HTML
+OPTION,1,f12 <= (a XOR b) AND (d OR e);,HTML
+OPTION,1,f11 <= (a OR b) AND (NOT c);,HTML
+OPTION,0,f13 <= a AND;,HTML
+OPTION,0,f16 <= (a OR b)) AND c;,HTML
+
+
+NewQuestion,MS
+Title,Valid VHDL Dataflows
+QuestionText,Which VHDL dataflow statements are valid? Select all that apply.,NOT HTML
+Points,10
+Difficulty,1
+Scoring,RightAnswers
+OPTION,1,f12 <= (a XOR b) AND (d OR e);,HTML
+OPTION,0,f5 <= a NAND b NAND c;,HTML
+OPTION,0,f14 <= NOT;,HTML
+OPTION,0,f17 <= (a AND b;,HTML
+OPTION,0,f2 <= a AND b AND c OR d;,HTML
+OPTION,0,f16 <= (a OR b)) AND c;,HTML
+
+
+NewQuestion,MS
+Title,Valid VHDL Dataflows
+QuestionText,Which VHDL dataflow statements are valid? Select all that apply.,NOT HTML
+Points,10
+Difficulty,1
+Scoring,RightAnswers
+OPTION,1,f6 <= c NOR (d NOR e);,HTML
+OPTION,0,f17 <= (a AND b;,HTML
+OPTION,1,f3 <= a XOR b XOR x XOR d;,HTML
+OPTION,0,f18 <= a AND (b OR);,HTML
+OPTION,1,f8 <= NOT (a AND b);,HTML
+OPTION,1,f9 <= (a AND b) OR (c AND d);,HTML
+
+
+NewQuestion,MS
+Title,Valid VHDL Dataflows
+QuestionText,Which VHDL dataflow statements are valid? Select all that apply.,NOT HTML
+Points,10
+Difficulty,1
+Scoring,RightAnswers
+OPTION,0,f17 <= (a AND b;,HTML
+OPTION,0,f13 <= a AND;,HTML
+OPTION,1,f6 <= c NOR (d NOR e);,HTML
+OPTION,0,f14 <= NOT;,HTML
+OPTION,0,f16 <= (a OR b)) AND c;,HTML
+OPTION,0,f2 <= a AND b AND c OR d;,HTML
+
+
+NewQuestion,MS
+Title,Valid VHDL Dataflows
+QuestionText,Which VHDL dataflow statements are valid? Select all that apply.,NOT HTML
+Points,10
+Difficulty,1
+Scoring,RightAnswers
+OPTION,0,f2 <= a AND b AND c OR d;,HTML
+OPTION,1,f12 <= (a XOR b) AND (d OR e);,HTML
+OPTION,1,f8 <= NOT (a AND b);,HTML
+OPTION,1,f4 <= a XNOR b XNOR d XNOR e;,HTML
+OPTION,1,f3 <= a XOR b XOR x XOR d;,HTML
+OPTION,1,f1 <= a AND b AND NOT c AND NOT e;,HTML
+
+
+NewQuestion,MS
+Title,Valid VHDL Dataflows
+QuestionText,Which VHDL dataflow statements are valid? Select all that apply.,NOT HTML
+Points,10
+Difficulty,1
+Scoring,RightAnswers
+OPTION,1,f10 <= (a NAND b) OR (c NAND d);,HTML
+OPTION,0,f17 <= (a AND b;,HTML
+OPTION,1,f7 <= (a NAND (b AND c)) AND d;,HTML
+OPTION,1,f8 <= NOT (a AND b);,HTML
+OPTION,1,f1 <= a AND b AND NOT c AND NOT e;,HTML
+OPTION,1,f4 <= a XNOR b XNOR d XNOR e;,HTML
+
+
+NewQuestion,MS
+Title,Valid VHDL Dataflows
+QuestionText,Which VHDL dataflow statements are valid? Select all that apply.,NOT HTML
+Points,10
+Difficulty,1
+Scoring,RightAnswers
+OPTION,0,f5 <= a NAND b NAND c;,HTML
+OPTION,1,f12 <= (a XOR b) AND (d OR e);,HTML
+OPTION,1,f9 <= (a AND b) OR (c AND d);,HTML
+OPTION,1,f8 <= NOT (a AND b);,HTML
+OPTION,1,f1 <= a AND b AND NOT c AND NOT e;,HTML
+OPTION,1,f3 <= a XOR b XOR x XOR d;,HTML
+
+
+NewQuestion,MS
+Title,Valid VHDL Dataflows
+QuestionText,Which VHDL dataflow statements are valid? Select all that apply.,NOT HTML
+Points,10
+Difficulty,1
+Scoring,RightAnswers
+OPTION,1,f8 <= NOT (a AND b);,HTML
+OPTION,1,f4 <= a XNOR b XNOR d XNOR e;,HTML
+OPTION,1,f12 <= (a XOR b) AND (d OR e);,HTML
+OPTION,1,f10 <= (a NAND b) OR (c NAND d);,HTML
+OPTION,0,f16 <= (a OR b)) AND c;,HTML
+OPTION,1,f9 <= (a AND b) OR (c AND d);,HTML
+
+
+NewQuestion,MS
+Title,Valid VHDL Dataflows
+QuestionText,Which VHDL dataflow statements are valid? Select all that apply.,NOT HTML
+Points,10
+Difficulty,1
+Scoring,RightAnswers
+OPTION,1,f9 <= (a AND b) OR (c AND d);,HTML
+OPTION,1,f8 <= NOT (a AND b);,HTML
+OPTION,0,f5 <= a NAND b NAND c;,HTML
+OPTION,0,f13 <= a AND;,HTML
+OPTION,0,f16 <= (a OR b)) AND c;,HTML
+OPTION,0,f17 <= (a AND b;,HTML
+
+
+NewQuestion,MS
+Title,Valid VHDL Dataflows
+QuestionText,Which VHDL dataflow statements are valid? Select all that apply.,NOT HTML
+Points,10
+Difficulty,1
+Scoring,RightAnswers
+OPTION,0,f5 <= a NAND b NAND c;,HTML
+OPTION,1,f7 <= (a NAND (b AND c)) AND d;,HTML
+OPTION,1,f4 <= a XNOR b XNOR d XNOR e;,HTML
+OPTION,1,f12 <= (a XOR b) AND (d OR e);,HTML
+OPTION,0,f17 <= (a AND b;,HTML
+OPTION,1,f8 <= NOT (a AND b);,HTML
+
+
+NewQuestion,MS
+Title,Valid VHDL Dataflows
+QuestionText,Which VHDL dataflow statements are valid? Select all that apply.,NOT HTML
+Points,10
+Difficulty,1
+Scoring,RightAnswers
+OPTION,0,f13 <= a AND;,HTML
+OPTION,0,f17 <= (a AND b;,HTML
+OPTION,1,f3 <= a XOR b XOR x XOR d;,HTML
+OPTION,0,f5 <= a NAND b NAND c;,HTML
+OPTION,0,f14 <= NOT;,HTML
+OPTION,0,f15 <= a XOR XOR b;,HTML
+
+
+NewQuestion,MS
+Title,Valid VHDL Dataflows
+QuestionText,Which VHDL dataflow statements are valid? Select all that apply.,NOT HTML
+Points,10
+Difficulty,1
+Scoring,RightAnswers
+OPTION,0,f2 <= a AND b AND c OR d;,HTML
+OPTION,0,f16 <= (a OR b)) AND c;,HTML
+OPTION,1,f7 <= (a NAND (b AND c)) AND d;,HTML
+OPTION,1,f6 <= c NOR (d NOR e);,HTML
+OPTION,0,f15 <= a XOR XOR b;,HTML
+OPTION,0,f14 <= NOT;,HTML
+
+
+NewQuestion,MS
+Title,Valid VHDL Dataflows
+QuestionText,Which VHDL dataflow statements are valid? Select all that apply.,NOT HTML
+Points,10
+Difficulty,1
+Scoring,RightAnswers
+OPTION,1,f4 <= a XNOR b XNOR d XNOR e;,HTML
+OPTION,1,f9 <= (a AND b) OR (c AND d);,HTML
+OPTION,1,f3 <= a XOR b XOR x XOR d;,HTML
+OPTION,0,f16 <= (a OR b)) AND c;,HTML
+OPTION,1,f7 <= (a NAND (b AND c)) AND d;,HTML
+OPTION,1,f11 <= (a OR b) AND (NOT c);,HTML
+
+
+NewQuestion,MS
+Title,Valid VHDL Dataflows
+QuestionText,Which VHDL dataflow statements are valid? Select all that apply.,NOT HTML
+Points,10
+Difficulty,1
+Scoring,RightAnswers
+OPTION,1,f1 <= a AND b AND NOT c AND NOT e;,HTML
+OPTION,0,f15 <= a XOR XOR b;,HTML
+OPTION,0,f13 <= a AND;,HTML
+OPTION,0,f16 <= (a OR b)) AND c;,HTML
+OPTION,0,f18 <= a AND (b OR);,HTML
+OPTION,0,f5 <= a NAND b NAND c;,HTML
+
+
+NewQuestion,MS
+Title,Valid VHDL Dataflows
+QuestionText,Which VHDL dataflow statements are valid? Select all that apply.,NOT HTML
+Points,10
+Difficulty,1
+Scoring,RightAnswers
+OPTION,1,f4 <= a XNOR b XNOR d XNOR e;,HTML
+OPTION,0,f5 <= a NAND b NAND c;,HTML
+OPTION,1,f8 <= NOT (a AND b);,HTML
+OPTION,0,f18 <= a AND (b OR);,HTML
+OPTION,1,f11 <= (a OR b) AND (NOT c);,HTML
+OPTION,0,f2 <= a AND b AND c OR d;,HTML
+
+
+NewQuestion,MS
+Title,Valid VHDL Dataflows
+QuestionText,Which VHDL dataflow statements are valid? Select all that apply.,NOT HTML
+Points,10
+Difficulty,1
+Scoring,RightAnswers
+OPTION,0,f18 <= a AND (b OR);,HTML
+OPTION,0,f5 <= a NAND b NAND c;,HTML
+OPTION,0,f16 <= (a OR b)) AND c;,HTML
+OPTION,1,f11 <= (a OR b) AND (NOT c);,HTML
+OPTION,0,f2 <= a AND b AND c OR d;,HTML
+OPTION,0,f14 <= NOT;,HTML
+
+
+NewQuestion,MS
+Title,Valid VHDL Dataflows
+QuestionText,Which VHDL dataflow statements are valid? Select all that apply.,NOT HTML
+Points,10
+Difficulty,1
+Scoring,RightAnswers
+OPTION,0,f16 <= (a OR b)) AND c;,HTML
+OPTION,0,f17 <= (a AND b;,HTML
+OPTION,0,f5 <= a NAND b NAND c;,HTML
+OPTION,1,f10 <= (a NAND b) OR (c NAND d);,HTML
+OPTION,0,f2 <= a AND b AND c OR d;,HTML
+OPTION,0,f13 <= a AND;,HTML
+
+
+NewQuestion,MS
+Title,Valid VHDL Dataflows
+QuestionText,Which VHDL dataflow statements are valid? Select all that apply.,NOT HTML
+Points,10
+Difficulty,1
+Scoring,RightAnswers
+OPTION,1,f3 <= a XOR b XOR x XOR d;,HTML
+OPTION,1,f1 <= a AND b AND NOT c AND NOT e;,HTML
+OPTION,0,f14 <= NOT;,HTML
+OPTION,1,f6 <= c NOR (d NOR e);,HTML
+OPTION,1,f8 <= NOT (a AND b);,HTML
+OPTION,1,f9 <= (a AND b) OR (c AND d);,HTML
+
+
+NewQuestion,MS
+Title,Valid VHDL Dataflows
+QuestionText,Which VHDL dataflow statements are valid? Select all that apply.,NOT HTML
+Points,10
+Difficulty,1
+Scoring,RightAnswers
+OPTION,0,f15 <= a XOR XOR b;,HTML
+OPTION,1,f7 <= (a NAND (b AND c)) AND d;,HTML
+OPTION,1,f12 <= (a XOR b) AND (d OR e);,HTML
+OPTION,1,f10 <= (a NAND b) OR (c NAND d);,HTML
+OPTION,0,f17 <= (a AND b;,HTML
+OPTION,1,f3 <= a XOR b XOR x XOR d;,HTML
+
+
