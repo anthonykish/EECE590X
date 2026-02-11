@@ -1,0 +1,800 @@
+NewQuestion,M
+Title,VHDL slicing + reductions (randomized matching)
+QuestionText,"<p><b>Given the following signal declarations and concurrent signal assignments:</b></p><pre style='margin:0; padding:0; background:transparent; border:none; font-family:monospace; white-space:pre;'>signal h, a, g, e: std_logic;
+signal d, f: std_logic_vector(3 downto 0);
+signal b, c: std_logic_vector(7 downto 0);
+
+b &lt;= &quot;00100110&quot;;
+c &lt;= b(2 downto 0) &amp; b(7 downto 3);
+(d, f) &lt;= (b(7 downto 4), b(3 downto 0));
+h &lt;= XOR(b);
+a &lt;= XNOR(b(5 downto 2));
+(g, e) &lt;= b(3 downto 2);</pre><p><b>Using correct VHDL notation for literals, match each signal to its value.</b></p><p><b>Values:</b></p><pre style='margin:0; padding:0; background:transparent; border:none; font-family:monospace; white-space:pre;'>(a) &quot;0010&quot;
+(b) &#x27;1&#x27;
+(c) &quot;11000100&quot;
+(d) &quot;0110&quot;
+(e) &quot;00100110&quot;
+(f) &#x27;0&#x27;
+(g) &#x27;1&#x27;
+(h) &#x27;1&#x27;</pre>",HTML
+Points,10
+Difficulty,1
+Scoring,EquallyWeighted
+Choice,1,(h)
+Choice,2,(b)
+Choice,3,(e)
+Choice,4,(g)
+Choice,5,(c)
+Choice,6,(d)
+Choice,7,(a)
+Choice,8,(f)
+Match,2,a
+Match,3,b
+Match,5,c
+Match,7,d
+Match,4,e
+Match,6,f
+Match,8,g
+Match,1,h
+
+
+NewQuestion,M
+Title,VHDL slicing + reductions (randomized matching)
+QuestionText,"<p><b>Given the following signal declarations and concurrent signal assignments:</b></p><pre style='margin:0; padding:0; background:transparent; border:none; font-family:monospace; white-space:pre;'>signal a, h, g, b: std_logic;
+signal f, c: std_logic_vector(3 downto 0);
+signal e, d: std_logic_vector(7 downto 0);
+
+e &lt;= &quot;11110001&quot;;
+d &lt;= e(3 downto 0) &amp; e(7 downto 4);
+(f, c) &lt;= (e(7 downto 4), e(3 downto 0));
+a &lt;= XOR(e);
+h &lt;= XNOR(e(5 downto 0));
+(g, b) &lt;= e(7 downto 6);</pre><p><b>Using correct VHDL notation for literals, match each signal to its value.</b></p><p><b>Values:</b></p><pre style='margin:0; padding:0; background:transparent; border:none; font-family:monospace; white-space:pre;'>(a) &#x27;1&#x27;
+(b) &#x27;0&#x27;
+(c) &quot;1111&quot;
+(d) &quot;11110001&quot;
+(e) &quot;00011111&quot;
+(f) &#x27;1&#x27;
+(g) &quot;0001&quot;
+(h) &#x27;1&#x27;</pre>",HTML
+Points,10
+Difficulty,1
+Scoring,EquallyWeighted
+Choice,1,(e)
+Choice,2,(b)
+Choice,3,(f)
+Choice,4,(h)
+Choice,5,(a)
+Choice,6,(d)
+Choice,7,(g)
+Choice,8,(c)
+Match,3,a
+Match,4,b
+Match,7,c
+Match,1,d
+Match,6,e
+Match,8,f
+Match,5,g
+Match,2,h
+
+
+NewQuestion,M
+Title,VHDL slicing + reductions (randomized matching)
+QuestionText,"<p><b>Given the following signal declarations and concurrent signal assignments:</b></p><pre style='margin:0; padding:0; background:transparent; border:none; font-family:monospace; white-space:pre;'>signal b, e, g, h: std_logic;
+signal c, a: std_logic_vector(3 downto 0);
+signal f, d: std_logic_vector(7 downto 0);
+
+f &lt;= &quot;01110010&quot;;
+d &lt;= f(5 downto 0) &amp; f(7 downto 6);
+(c, a) &lt;= (f(3 downto 0), f(7 downto 4));
+b &lt;= XOR(f);
+e &lt;= XNOR(f(6 downto 5));
+(g, h) &lt;= f(2 downto 1);</pre><p><b>Using correct VHDL notation for literals, match each signal to its value.</b></p><p><b>Values:</b></p><pre style='margin:0; padding:0; background:transparent; border:none; font-family:monospace; white-space:pre;'>(a) &#x27;0&#x27;
+(b) &quot;0111&quot;
+(c) &quot;01110010&quot;
+(d) &quot;0010&quot;
+(e) &quot;11001001&quot;
+(f) &#x27;0&#x27;
+(g) &#x27;1&#x27;
+(h) &#x27;1&#x27;</pre>",HTML
+Points,10
+Difficulty,1
+Scoring,EquallyWeighted
+Choice,1,(e)
+Choice,2,(f)
+Choice,3,(g)
+Choice,4,(b)
+Choice,5,(d)
+Choice,6,(a)
+Choice,7,(h)
+Choice,8,(c)
+Match,4,a
+Match,6,b
+Match,5,c
+Match,1,d
+Match,3,e
+Match,8,f
+Match,2,g
+Match,7,h
+
+
+NewQuestion,M
+Title,VHDL slicing + reductions (randomized matching)
+QuestionText,"<p><b>Given the following signal declarations and concurrent signal assignments:</b></p><pre style='margin:0; padding:0; background:transparent; border:none; font-family:monospace; white-space:pre;'>signal h, b, e, c: std_logic;
+signal d, a: std_logic_vector(3 downto 0);
+signal f, g: std_logic_vector(7 downto 0);
+
+f &lt;= &quot;10100101&quot;;
+g &lt;= f(2 downto 0) &amp; f(7 downto 3);
+(d, a) &lt;= (f(3 downto 0), f(7 downto 4));
+h &lt;= XOR(f);
+b &lt;= XNOR(f(5 downto 3));
+(e, c) &lt;= f(5 downto 4);</pre><p><b>Using correct VHDL notation for literals, match each signal to its value.</b></p><p><b>Values:</b></p><pre style='margin:0; padding:0; background:transparent; border:none; font-family:monospace; white-space:pre;'>(a) &#x27;0&#x27;
+(b) &#x27;1&#x27;
+(c) &quot;10100101&quot;
+(d) &quot;1010&quot;
+(e) &quot;0101&quot;
+(f) &quot;10110100&quot;
+(g) &#x27;0&#x27;
+(h) &#x27;0&#x27;</pre>",HTML
+Points,10
+Difficulty,1
+Scoring,EquallyWeighted
+Choice,1,(a)
+Choice,2,(e)
+Choice,3,(h)
+Choice,4,(f)
+Choice,5,(b)
+Choice,6,(c)
+Choice,7,(d)
+Choice,8,(g)
+Match,7,a
+Match,3,b
+Match,8,c
+Match,2,d
+Match,5,e
+Match,6,f
+Match,4,g
+Match,1,h
+
+
+NewQuestion,M
+Title,VHDL slicing + reductions (randomized matching)
+QuestionText,"<p><b>Given the following signal declarations and concurrent signal assignments:</b></p><pre style='margin:0; padding:0; background:transparent; border:none; font-family:monospace; white-space:pre;'>signal g, a, d, e: std_logic;
+signal c, f: std_logic_vector(3 downto 0);
+signal b, h: std_logic_vector(7 downto 0);
+
+b &lt;= &quot;11011000&quot;;
+h &lt;= b(3 downto 0) &amp; b(7 downto 4);
+(c, f) &lt;= (b(7 downto 4), b(3 downto 0));
+g &lt;= XOR(b);
+a &lt;= XNOR(b(6 downto 0));
+(d, e) &lt;= b(2 downto 1);</pre><p><b>Using correct VHDL notation for literals, match each signal to its value.</b></p><p><b>Values:</b></p><pre style='margin:0; padding:0; background:transparent; border:none; font-family:monospace; white-space:pre;'>(a) &#x27;0&#x27;
+(b) &#x27;0&#x27;
+(c) &quot;11011000&quot;
+(d) &quot;1000&quot;
+(e) &quot;10001101&quot;
+(f) &#x27;0&#x27;
+(g) &quot;1101&quot;
+(h) &#x27;0&#x27;</pre>",HTML
+Points,10
+Difficulty,1
+Scoring,EquallyWeighted
+Choice,1,(h)
+Choice,2,(a)
+Choice,3,(e)
+Choice,4,(f)
+Choice,5,(b)
+Choice,6,(d)
+Choice,7,(c)
+Choice,8,(g)
+Match,2,a
+Match,7,b
+Match,8,c
+Match,5,d
+Match,1,e
+Match,6,f
+Match,4,g
+Match,3,h
+
+
+NewQuestion,M
+Title,VHDL slicing + reductions (randomized matching)
+QuestionText,"<p><b>Given the following signal declarations and concurrent signal assignments:</b></p><pre style='margin:0; padding:0; background:transparent; border:none; font-family:monospace; white-space:pre;'>signal d, e, g, c: std_logic;
+signal h, a: std_logic_vector(3 downto 0);
+signal b, f: std_logic_vector(7 downto 0);
+
+b &lt;= &quot;00000101&quot;;
+f &lt;= b(2 downto 0) &amp; b(7 downto 3);
+(h, a) &lt;= (b(7 downto 4), b(3 downto 0));
+d &lt;= XOR(b);
+e &lt;= XNOR(b(6 downto 0));
+(g, c) &lt;= b(7 downto 6);</pre><p><b>Using correct VHDL notation for literals, match each signal to its value.</b></p><p><b>Values:</b></p><pre style='margin:0; padding:0; background:transparent; border:none; font-family:monospace; white-space:pre;'>(a) &quot;00000101&quot;
+(b) &quot;0000&quot;
+(c) &quot;10100000&quot;
+(d) &#x27;0&#x27;
+(e) &#x27;0&#x27;
+(f) &#x27;0&#x27;
+(g) &quot;0101&quot;
+(h) &#x27;1&#x27;</pre>",HTML
+Points,10
+Difficulty,1
+Scoring,EquallyWeighted
+Choice,1,(h)
+Choice,2,(b)
+Choice,3,(f)
+Choice,4,(c)
+Choice,5,(a)
+Choice,6,(g)
+Choice,7,(d)
+Choice,8,(e)
+Match,6,a
+Match,5,b
+Match,8,c
+Match,7,d
+Match,1,e
+Match,4,f
+Match,3,g
+Match,2,h
+
+
+NewQuestion,M
+Title,VHDL slicing + reductions (randomized matching)
+QuestionText,"<p><b>Given the following signal declarations and concurrent signal assignments:</b></p><pre style='margin:0; padding:0; background:transparent; border:none; font-family:monospace; white-space:pre;'>signal h, d, g, c: std_logic;
+signal a, e: std_logic_vector(3 downto 0);
+signal b, f: std_logic_vector(7 downto 0);
+
+b &lt;= &quot;11111000&quot;;
+f &lt;= b(0 downto 0) &amp; b(7 downto 1);
+(a, e) &lt;= (b(3 downto 0), b(7 downto 4));
+h &lt;= XOR(b);
+d &lt;= XNOR(b(2 downto 1));
+(g, c) &lt;= b(7 downto 6);</pre><p><b>Using correct VHDL notation for literals, match each signal to its value.</b></p><p><b>Values:</b></p><pre style='margin:0; padding:0; background:transparent; border:none; font-family:monospace; white-space:pre;'>(a) &#x27;1&#x27;
+(b) &quot;01111100&quot;
+(c) &quot;1111&quot;
+(d) &#x27;1&#x27;
+(e) &quot;1000&quot;
+(f) &quot;11111000&quot;
+(g) &#x27;1&#x27;
+(h) &#x27;1&#x27;</pre>",HTML
+Points,10
+Difficulty,1
+Scoring,EquallyWeighted
+Choice,1,(b)
+Choice,2,(d)
+Choice,3,(c)
+Choice,4,(f)
+Choice,5,(e)
+Choice,6,(h)
+Choice,7,(g)
+Choice,8,(a)
+Match,5,a
+Match,4,b
+Match,2,c
+Match,6,d
+Match,3,e
+Match,1,f
+Match,8,g
+Match,7,h
+
+
+NewQuestion,M
+Title,VHDL slicing + reductions (randomized matching)
+QuestionText,"<p><b>Given the following signal declarations and concurrent signal assignments:</b></p><pre style='margin:0; padding:0; background:transparent; border:none; font-family:monospace; white-space:pre;'>signal h, a, b, f: std_logic;
+signal g, e: std_logic_vector(3 downto 0);
+signal d, c: std_logic_vector(7 downto 0);
+
+d &lt;= &quot;01111000&quot;;
+c &lt;= d(4 downto 0) &amp; d(7 downto 5);
+(g, e) &lt;= (d(3 downto 0), d(7 downto 4));
+h &lt;= XOR(d);
+a &lt;= XNOR(d(5 downto 1));
+(b, f) &lt;= d(5 downto 4);</pre><p><b>Using correct VHDL notation for literals, match each signal to its value.</b></p><p><b>Values:</b></p><pre style='margin:0; padding:0; background:transparent; border:none; font-family:monospace; white-space:pre;'>(a) &quot;11000011&quot;
+(b) &quot;0111&quot;
+(c) &quot;01111000&quot;
+(d) &#x27;0&#x27;
+(e) &#x27;1&#x27;
+(f) &#x27;0&#x27;
+(g) &quot;1000&quot;
+(h) &#x27;1&#x27;</pre>",HTML
+Points,10
+Difficulty,1
+Scoring,EquallyWeighted
+Choice,1,(e)
+Choice,2,(f)
+Choice,3,(h)
+Choice,4,(c)
+Choice,5,(b)
+Choice,6,(a)
+Choice,7,(d)
+Choice,8,(g)
+Match,2,a
+Match,1,b
+Match,6,c
+Match,4,d
+Match,5,e
+Match,3,f
+Match,8,g
+Match,7,h
+
+
+NewQuestion,M
+Title,VHDL slicing + reductions (randomized matching)
+QuestionText,"<p><b>Given the following signal declarations and concurrent signal assignments:</b></p><pre style='margin:0; padding:0; background:transparent; border:none; font-family:monospace; white-space:pre;'>signal f, a, e, g: std_logic;
+signal b, d: std_logic_vector(3 downto 0);
+signal h, c: std_logic_vector(7 downto 0);
+
+h &lt;= &quot;01000000&quot;;
+c &lt;= h(4 downto 0) &amp; h(7 downto 5);
+(b, d) &lt;= (h(3 downto 0), h(7 downto 4));
+f &lt;= XOR(h);
+a &lt;= XNOR(h(4 downto 2));
+(e, g) &lt;= h(4 downto 3);</pre><p><b>Using correct VHDL notation for literals, match each signal to its value.</b></p><p><b>Values:</b></p><pre style='margin:0; padding:0; background:transparent; border:none; font-family:monospace; white-space:pre;'>(a) &quot;0000&quot;
+(b) &quot;00000010&quot;
+(c) &quot;01000000&quot;
+(d) &#x27;0&#x27;
+(e) &#x27;1&#x27;
+(f) &#x27;0&#x27;
+(g) &quot;0100&quot;
+(h) &#x27;1&#x27;</pre>",HTML
+Points,10
+Difficulty,1
+Scoring,EquallyWeighted
+Choice,1,(e)
+Choice,2,(g)
+Choice,3,(d)
+Choice,4,(h)
+Choice,5,(c)
+Choice,6,(a)
+Choice,7,(f)
+Choice,8,(b)
+Match,4,a
+Match,6,b
+Match,8,c
+Match,2,d
+Match,3,e
+Match,1,f
+Match,7,g
+Match,5,h
+
+
+NewQuestion,M
+Title,VHDL slicing + reductions (randomized matching)
+QuestionText,"<p><b>Given the following signal declarations and concurrent signal assignments:</b></p><pre style='margin:0; padding:0; background:transparent; border:none; font-family:monospace; white-space:pre;'>signal f, d, e, a: std_logic;
+signal g, b: std_logic_vector(3 downto 0);
+signal h, c: std_logic_vector(7 downto 0);
+
+h &lt;= &quot;10010000&quot;;
+c &lt;= h(4 downto 0) &amp; h(7 downto 5);
+(g, b) &lt;= (h(7 downto 4), h(3 downto 0));
+f &lt;= XOR(h);
+d &lt;= XNOR(h(2 downto 0));
+(e, a) &lt;= h(1 downto 0);</pre><p><b>Using correct VHDL notation for literals, match each signal to its value.</b></p><p><b>Values:</b></p><pre style='margin:0; padding:0; background:transparent; border:none; font-family:monospace; white-space:pre;'>(a) &quot;1001&quot;
+(b) &#x27;1&#x27;
+(c) &quot;10000100&quot;
+(d) &#x27;0&#x27;
+(e) &quot;10010000&quot;
+(f) &quot;0000&quot;
+(g) &#x27;0&#x27;
+(h) &#x27;0&#x27;</pre>",HTML
+Points,10
+Difficulty,1
+Scoring,EquallyWeighted
+Choice,1,(b)
+Choice,2,(d)
+Choice,3,(c)
+Choice,4,(a)
+Choice,5,(g)
+Choice,6,(h)
+Choice,7,(e)
+Choice,8,(f)
+Match,6,a
+Match,8,b
+Match,3,c
+Match,1,d
+Match,2,e
+Match,5,f
+Match,4,g
+Match,7,h
+
+
+NewQuestion,M
+Title,VHDL slicing + reductions (randomized matching)
+QuestionText,"<p><b>Given the following signal declarations and concurrent signal assignments:</b></p><pre style='margin:0; padding:0; background:transparent; border:none; font-family:monospace; white-space:pre;'>signal f, h, c, d: std_logic;
+signal e, a: std_logic_vector(3 downto 0);
+signal g, b: std_logic_vector(7 downto 0);
+
+g &lt;= &quot;01110111&quot;;
+b &lt;= g(6 downto 0) &amp; g(7 downto 7);
+(e, a) &lt;= (g(7 downto 4), g(3 downto 0));
+f &lt;= XOR(g);
+h &lt;= XNOR(g(1 downto 0));
+(c, d) &lt;= g(3 downto 2);</pre><p><b>Using correct VHDL notation for literals, match each signal to its value.</b></p><p><b>Values:</b></p><pre style='margin:0; padding:0; background:transparent; border:none; font-family:monospace; white-space:pre;'>(a) &#x27;0&#x27;
+(b) &quot;11101110&quot;
+(c) &#x27;1&#x27;
+(d) &#x27;0&#x27;
+(e) &quot;01110111&quot;
+(f) &#x27;1&#x27;
+(g) &quot;0111&quot;
+(h) &quot;0111&quot;</pre>",HTML
+Points,10
+Difficulty,1
+Scoring,EquallyWeighted
+Choice,1,(h)
+Choice,2,(f)
+Choice,3,(d)
+Choice,4,(a)
+Choice,5,(e)
+Choice,6,(g)
+Choice,7,(c)
+Choice,8,(b)
+Match,1,a
+Match,8,b
+Match,3,c
+Match,7,d
+Match,6,e
+Match,4,f
+Match,5,g
+Match,2,h
+
+
+NewQuestion,M
+Title,VHDL slicing + reductions (randomized matching)
+QuestionText,"<p><b>Given the following signal declarations and concurrent signal assignments:</b></p><pre style='margin:0; padding:0; background:transparent; border:none; font-family:monospace; white-space:pre;'>signal a, d, g, c: std_logic;
+signal h, e: std_logic_vector(3 downto 0);
+signal f, b: std_logic_vector(7 downto 0);
+
+f &lt;= &quot;10010000&quot;;
+b &lt;= f(3 downto 0) &amp; f(7 downto 4);
+(h, e) &lt;= (f(7 downto 4), f(3 downto 0));
+a &lt;= XOR(f);
+d &lt;= XNOR(f(5 downto 2));
+(g, c) &lt;= f(4 downto 3);</pre><p><b>Using correct VHDL notation for literals, match each signal to its value.</b></p><p><b>Values:</b></p><pre style='margin:0; padding:0; background:transparent; border:none; font-family:monospace; white-space:pre;'>(a) &#x27;0&#x27;
+(b) &quot;1001&quot;
+(c) &#x27;0&#x27;
+(d) &#x27;0&#x27;
+(e) &#x27;1&#x27;
+(f) &quot;0000&quot;
+(g) &quot;10010000&quot;
+(h) &quot;00001001&quot;</pre>",HTML
+Points,10
+Difficulty,1
+Scoring,EquallyWeighted
+Choice,1,(g)
+Choice,2,(c)
+Choice,3,(h)
+Choice,4,(a)
+Choice,5,(f)
+Choice,6,(e)
+Choice,7,(d)
+Choice,8,(b)
+Match,7,a
+Match,3,b
+Match,2,c
+Match,4,d
+Match,5,e
+Match,1,f
+Match,6,g
+Match,8,h
+
+
+NewQuestion,M
+Title,VHDL slicing + reductions (randomized matching)
+QuestionText,"<p><b>Given the following signal declarations and concurrent signal assignments:</b></p><pre style='margin:0; padding:0; background:transparent; border:none; font-family:monospace; white-space:pre;'>signal d, e, h, g: std_logic;
+signal b, c: std_logic_vector(3 downto 0);
+signal f, a: std_logic_vector(7 downto 0);
+
+f &lt;= &quot;11110111&quot;;
+a &lt;= f(6 downto 0) &amp; f(7 downto 7);
+(b, c) &lt;= (f(3 downto 0), f(7 downto 4));
+d &lt;= XOR(f);
+e &lt;= XNOR(f(6 downto 4));
+(h, g) &lt;= f(5 downto 4);</pre><p><b>Using correct VHDL notation for literals, match each signal to its value.</b></p><p><b>Values:</b></p><pre style='margin:0; padding:0; background:transparent; border:none; font-family:monospace; white-space:pre;'>(a) &quot;0111&quot;
+(b) &#x27;1&#x27;
+(c) &quot;11110111&quot;
+(d) &quot;1111&quot;
+(e) &#x27;1&#x27;
+(f) &#x27;0&#x27;
+(g) &quot;11101111&quot;
+(h) &#x27;1&#x27;</pre>",HTML
+Points,10
+Difficulty,1
+Scoring,EquallyWeighted
+Choice,1,(f)
+Choice,2,(c)
+Choice,3,(a)
+Choice,4,(e)
+Choice,5,(g)
+Choice,6,(b)
+Choice,7,(h)
+Choice,8,(d)
+Match,5,a
+Match,3,b
+Match,8,c
+Match,6,d
+Match,1,e
+Match,2,f
+Match,4,g
+Match,7,h
+
+
+NewQuestion,M
+Title,VHDL slicing + reductions (randomized matching)
+QuestionText,"<p><b>Given the following signal declarations and concurrent signal assignments:</b></p><pre style='margin:0; padding:0; background:transparent; border:none; font-family:monospace; white-space:pre;'>signal a, h, f, c: std_logic;
+signal g, e: std_logic_vector(3 downto 0);
+signal b, d: std_logic_vector(7 downto 0);
+
+b &lt;= &quot;11001110&quot;;
+d &lt;= b(3 downto 0) &amp; b(7 downto 4);
+(g, e) &lt;= (b(3 downto 0), b(7 downto 4));
+a &lt;= XOR(b);
+h &lt;= XNOR(b(6 downto 5));
+(f, c) &lt;= b(5 downto 4);</pre><p><b>Using correct VHDL notation for literals, match each signal to its value.</b></p><p><b>Values:</b></p><pre style='margin:0; padding:0; background:transparent; border:none; font-family:monospace; white-space:pre;'>(a) &#x27;0&#x27;
+(b) &#x27;0&#x27;
+(c) &#x27;1&#x27;
+(d) &quot;11001110&quot;
+(e) &quot;1100&quot;
+(f) &#x27;0&#x27;
+(g) &quot;11101100&quot;
+(h) &quot;1110&quot;</pre>",HTML
+Points,10
+Difficulty,1
+Scoring,EquallyWeighted
+Choice,1,(c)
+Choice,2,(f)
+Choice,3,(e)
+Choice,4,(h)
+Choice,5,(g)
+Choice,6,(b)
+Choice,7,(a)
+Choice,8,(d)
+Match,1,a
+Match,8,b
+Match,6,c
+Match,5,d
+Match,3,e
+Match,7,f
+Match,4,g
+Match,2,h
+
+
+NewQuestion,M
+Title,VHDL slicing + reductions (randomized matching)
+QuestionText,"<p><b>Given the following signal declarations and concurrent signal assignments:</b></p><pre style='margin:0; padding:0; background:transparent; border:none; font-family:monospace; white-space:pre;'>signal b, e, c, h: std_logic;
+signal a, f: std_logic_vector(3 downto 0);
+signal g, d: std_logic_vector(7 downto 0);
+
+g &lt;= &quot;00011011&quot;;
+d &lt;= g(3 downto 0) &amp; g(7 downto 4);
+(a, f) &lt;= (g(7 downto 4), g(3 downto 0));
+b &lt;= XOR(g);
+e &lt;= XNOR(g(4 downto 1));
+(c, h) &lt;= g(2 downto 1);</pre><p><b>Using correct VHDL notation for literals, match each signal to its value.</b></p><p><b>Values:</b></p><pre style='margin:0; padding:0; background:transparent; border:none; font-family:monospace; white-space:pre;'>(a) &#x27;1&#x27;
+(b) &#x27;0&#x27;
+(c) &#x27;0&#x27;
+(d) &quot;1011&quot;
+(e) &quot;10110001&quot;
+(f) &quot;00011011&quot;
+(g) &quot;0001&quot;
+(h) &#x27;0&#x27;</pre>",HTML
+Points,10
+Difficulty,1
+Scoring,EquallyWeighted
+Choice,1,(h)
+Choice,2,(e)
+Choice,3,(f)
+Choice,4,(a)
+Choice,5,(b)
+Choice,6,(d)
+Choice,7,(g)
+Choice,8,(c)
+Match,7,a
+Match,1,b
+Match,8,c
+Match,2,d
+Match,5,e
+Match,6,f
+Match,3,g
+Match,4,h
+
+
+NewQuestion,M
+Title,VHDL slicing + reductions (randomized matching)
+QuestionText,"<p><b>Given the following signal declarations and concurrent signal assignments:</b></p><pre style='margin:0; padding:0; background:transparent; border:none; font-family:monospace; white-space:pre;'>signal c, g, f, h: std_logic;
+signal e, d: std_logic_vector(3 downto 0);
+signal b, a: std_logic_vector(7 downto 0);
+
+b &lt;= &quot;10110011&quot;;
+a &lt;= b(1 downto 0) &amp; b(7 downto 2);
+(e, d) &lt;= (b(7 downto 4), b(3 downto 0));
+c &lt;= XOR(b);
+g &lt;= XNOR(b(3 downto 2));
+(f, h) &lt;= b(1 downto 0);</pre><p><b>Using correct VHDL notation for literals, match each signal to its value.</b></p><p><b>Values:</b></p><pre style='margin:0; padding:0; background:transparent; border:none; font-family:monospace; white-space:pre;'>(a) &#x27;1&#x27;
+(b) &quot;0011&quot;
+(c) &quot;10110011&quot;
+(d) &#x27;1&#x27;
+(e) &quot;1011&quot;
+(f) &#x27;1&#x27;
+(g) &#x27;1&#x27;
+(h) &quot;11101100&quot;</pre>",HTML
+Points,10
+Difficulty,1
+Scoring,EquallyWeighted
+Choice,1,(e)
+Choice,2,(c)
+Choice,3,(f)
+Choice,4,(d)
+Choice,5,(h)
+Choice,6,(g)
+Choice,7,(b)
+Choice,8,(a)
+Match,5,a
+Match,2,b
+Match,3,c
+Match,7,d
+Match,1,e
+Match,4,f
+Match,6,g
+Match,8,h
+
+
+NewQuestion,M
+Title,VHDL slicing + reductions (randomized matching)
+QuestionText,"<p><b>Given the following signal declarations and concurrent signal assignments:</b></p><pre style='margin:0; padding:0; background:transparent; border:none; font-family:monospace; white-space:pre;'>signal a, c, f, g: std_logic;
+signal h, b: std_logic_vector(3 downto 0);
+signal e, d: std_logic_vector(7 downto 0);
+
+e &lt;= &quot;11001100&quot;;
+d &lt;= e(4 downto 0) &amp; e(7 downto 5);
+(h, b) &lt;= (e(3 downto 0), e(7 downto 4));
+a &lt;= XOR(e);
+c &lt;= XNOR(e(5 downto 3));
+(f, g) &lt;= e(3 downto 2);</pre><p><b>Using correct VHDL notation for literals, match each signal to its value.</b></p><p><b>Values:</b></p><pre style='margin:0; padding:0; background:transparent; border:none; font-family:monospace; white-space:pre;'>(a) &quot;1100&quot;
+(b) &quot;01100110&quot;
+(c) &#x27;1&#x27;
+(d) &quot;11001100&quot;
+(e) &quot;1100&quot;
+(f) &#x27;0&#x27;
+(g) &#x27;1&#x27;
+(h) &#x27;0&#x27;</pre>",HTML
+Points,10
+Difficulty,1
+Scoring,EquallyWeighted
+Choice,1,(c)
+Choice,2,(h)
+Choice,3,(a)
+Choice,4,(d)
+Choice,5,(b)
+Choice,6,(e)
+Choice,7,(g)
+Choice,8,(f)
+Match,8,a
+Match,6,b
+Match,2,c
+Match,5,d
+Match,4,e
+Match,7,f
+Match,1,g
+Match,3,h
+
+
+NewQuestion,M
+Title,VHDL slicing + reductions (randomized matching)
+QuestionText,"<p><b>Given the following signal declarations and concurrent signal assignments:</b></p><pre style='margin:0; padding:0; background:transparent; border:none; font-family:monospace; white-space:pre;'>signal e, g, c, d: std_logic;
+signal h, b: std_logic_vector(3 downto 0);
+signal a, f: std_logic_vector(7 downto 0);
+
+a &lt;= &quot;01111011&quot;;
+f &lt;= a(2 downto 0) &amp; a(7 downto 3);
+(h, b) &lt;= (a(7 downto 4), a(3 downto 0));
+e &lt;= XOR(a);
+g &lt;= XNOR(a(6 downto 4));
+(c, d) &lt;= a(6 downto 5);</pre><p><b>Using correct VHDL notation for literals, match each signal to its value.</b></p><p><b>Values:</b></p><pre style='margin:0; padding:0; background:transparent; border:none; font-family:monospace; white-space:pre;'>(a) &#x27;1&#x27;
+(b) &#x27;1&#x27;
+(c) &quot;0111&quot;
+(d) &quot;01101111&quot;
+(e) &quot;01111011&quot;
+(f) &#x27;0&#x27;
+(g) &#x27;0&#x27;
+(h) &quot;1011&quot;</pre>",HTML
+Points,10
+Difficulty,1
+Scoring,EquallyWeighted
+Choice,1,(b)
+Choice,2,(d)
+Choice,3,(a)
+Choice,4,(h)
+Choice,5,(f)
+Choice,6,(e)
+Choice,7,(c)
+Choice,8,(g)
+Match,6,a
+Match,4,b
+Match,3,c
+Match,1,d
+Match,5,e
+Match,2,f
+Match,8,g
+Match,7,h
+
+
+NewQuestion,M
+Title,VHDL slicing + reductions (randomized matching)
+QuestionText,"<p><b>Given the following signal declarations and concurrent signal assignments:</b></p><pre style='margin:0; padding:0; background:transparent; border:none; font-family:monospace; white-space:pre;'>signal b, g, e, h: std_logic;
+signal a, c: std_logic_vector(3 downto 0);
+signal f, d: std_logic_vector(7 downto 0);
+
+f &lt;= &quot;11101000&quot;;
+d &lt;= f(5 downto 0) &amp; f(7 downto 6);
+(a, c) &lt;= (f(7 downto 4), f(3 downto 0));
+b &lt;= XOR(f);
+g &lt;= XNOR(f(3 downto 0));
+(e, h) &lt;= f(5 downto 4);</pre><p><b>Using correct VHDL notation for literals, match each signal to its value.</b></p><p><b>Values:</b></p><pre style='margin:0; padding:0; background:transparent; border:none; font-family:monospace; white-space:pre;'>(a) &#x27;0&#x27;
+(b) &quot;1000&quot;
+(c) &quot;11101000&quot;
+(d) &#x27;1&#x27;
+(e) &quot;10100011&quot;
+(f) &quot;1110&quot;
+(g) &#x27;0&#x27;
+(h) &#x27;0&#x27;</pre>",HTML
+Points,10
+Difficulty,1
+Scoring,EquallyWeighted
+Choice,1,(c)
+Choice,2,(b)
+Choice,3,(a)
+Choice,4,(g)
+Choice,5,(h)
+Choice,6,(e)
+Choice,7,(f)
+Choice,8,(d)
+Match,7,a
+Match,3,b
+Match,2,c
+Match,6,d
+Match,8,e
+Match,1,f
+Match,4,g
+Match,5,h
+
+
+NewQuestion,M
+Title,VHDL slicing + reductions (randomized matching)
+QuestionText,"<p><b>Given the following signal declarations and concurrent signal assignments:</b></p><pre style='margin:0; padding:0; background:transparent; border:none; font-family:monospace; white-space:pre;'>signal g, c, f, a: std_logic;
+signal e, h: std_logic_vector(3 downto 0);
+signal b, d: std_logic_vector(7 downto 0);
+
+b &lt;= &quot;11011100&quot;;
+d &lt;= b(2 downto 0) &amp; b(7 downto 3);
+(e, h) &lt;= (b(7 downto 4), b(3 downto 0));
+g &lt;= XOR(b);
+c &lt;= XNOR(b(2 downto 1));
+(f, a) &lt;= b(4 downto 3);</pre><p><b>Using correct VHDL notation for literals, match each signal to its value.</b></p><p><b>Values:</b></p><pre style='margin:0; padding:0; background:transparent; border:none; font-family:monospace; white-space:pre;'>(a) &#x27;1&#x27;
+(b) &quot;11011100&quot;
+(c) &#x27;1&#x27;
+(d) &#x27;0&#x27;
+(e) &quot;1101&quot;
+(f) &quot;1100&quot;
+(g) &quot;10011011&quot;
+(h) &#x27;1&#x27;</pre>",HTML
+Points,10
+Difficulty,1
+Scoring,EquallyWeighted
+Choice,1,(f)
+Choice,2,(a)
+Choice,3,(g)
+Choice,4,(c)
+Choice,5,(h)
+Choice,6,(e)
+Choice,7,(b)
+Choice,8,(d)
+Match,2,a
+Match,7,b
+Match,8,c
+Match,3,d
+Match,6,e
+Match,4,f
+Match,5,g
+Match,1,h
+
+

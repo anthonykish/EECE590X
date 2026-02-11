@@ -1,26 +1,30 @@
 NewQuestion,SA
 Title,Valid ways in VHDL to specify 8-bit std_logic_vectors
-QuestionText,"<p>Given the VHDL process below. Assume the value of signal <code>a</code> is '<code>0</code>'. What is the value of signal <code>f</code>?</p><pre style='background:#f6f8fa;padding:10px;border-radius:6px;font-family:monospace;white-space:pre;'><code>
-    process( ALL ) begin
-        f &lt;= ""0101"";
-        if a = '1' then
-            f &lt;= ""1010"";
-        end if;
-    end process;</code></pre>",HTML
+QuestionText,"<p>Given the VHDL process below. Assume the value of signal <code>a</code> is '<code>0</code>'. What is the value of signal <code>f</code>?</p><pre style='margin:0; padding:0; background:transparent; border:none;font-family:monospace; white-space:pre; line-height:1.2; tab-size:4;'>process(ALL)&nbsp;begin<br/>&nbsp;&nbsp;&nbsp;&nbsp;f&nbsp;&lt;=&nbsp;""1111"";<br/>&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;a&nbsp;=&nbsp;'1'&nbsp;then<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;f&nbsp;&lt;=&nbsp;""1010"";<br/>&nbsp;&nbsp;&nbsp;&nbsp;end&nbsp;if;<br/>end&nbsp;process;<br/></pre>",HTML
 Points,10
 Difficulty,1
-ANSWER,100,[01]*0101$,regexp
+ANSWER,100,[01]*1111$,regexp
 
 
 NewQuestion,SA
 Title,Valid ways in VHDL to specify 8-bit std_logic_vectors
-QuestionText,"<p>Given the VHDL process below. Assume the value of signal <code>a</code> is '<code>1</code>'. What is the value of signal <code>f</code>?</p><pre style='background:#f6f8fa;padding:10px;border-radius:6px;font-family:monospace;white-space:pre;'><code>
-    process( ALL ) begin
-        f &lt;= ""1110"";
-        if a = '0' then
-            f &lt;= ""1101"";
-        end if;
-    end process;</code></pre>",HTML
+QuestionText,"<p>Given the VHDL process below. Assume the value of signal <code>a</code> is '<code>1</code>'. What is the value of signal <code>f</code>?</p><pre style='margin:0; padding:0; background:transparent; border:none;font-family:monospace; white-space:pre; line-height:1.2; tab-size:4;'>process(ALL)&nbsp;begin<br/>&nbsp;&nbsp;&nbsp;&nbsp;f&nbsp;&lt;=&nbsp;""0110"";<br/>&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;a&nbsp;=&nbsp;'1'&nbsp;then<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;f&nbsp;&lt;=&nbsp;""0110"";<br/>&nbsp;&nbsp;&nbsp;&nbsp;end&nbsp;if;<br/>end&nbsp;process;<br/></pre>",HTML
+Points,10
+Difficulty,1
+ANSWER,100,[01]*0110$,regexp
+
+
+NewQuestion,SA
+Title,Valid ways in VHDL to specify 8-bit std_logic_vectors
+QuestionText,"<p>Given the VHDL process below. Assume the value of signal <code>a</code> is '<code>0</code>'. What is the value of signal <code>f</code>?</p><pre style='margin:0; padding:0; background:transparent; border:none;font-family:monospace; white-space:pre; line-height:1.2; tab-size:4;'>process(ALL)&nbsp;begin<br/>&nbsp;&nbsp;&nbsp;&nbsp;f&nbsp;&lt;=&nbsp;""0011"";<br/>&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;a&nbsp;=&nbsp;'0'&nbsp;then<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;f&nbsp;&lt;=&nbsp;""1000"";<br/>&nbsp;&nbsp;&nbsp;&nbsp;end&nbsp;if;<br/>end&nbsp;process;<br/></pre>",HTML
+Points,10
+Difficulty,1
+ANSWER,100,[01]*1000$,regexp
+
+
+NewQuestion,SA
+Title,Valid ways in VHDL to specify 8-bit std_logic_vectors
+QuestionText,"<p>Given the VHDL process below. Assume the value of signal <code>a</code> is '<code>0</code>'. What is the value of signal <code>f</code>?</p><pre style='margin:0; padding:0; background:transparent; border:none;font-family:monospace; white-space:pre; line-height:1.2; tab-size:4;'>process(ALL)&nbsp;begin<br/>&nbsp;&nbsp;&nbsp;&nbsp;f&nbsp;&lt;=&nbsp;""1110"";<br/>&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;a&nbsp;=&nbsp;'1'&nbsp;then<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;f&nbsp;&lt;=&nbsp;""0101"";<br/>&nbsp;&nbsp;&nbsp;&nbsp;end&nbsp;if;<br/>end&nbsp;process;<br/></pre>",HTML
 Points,10
 Difficulty,1
 ANSWER,100,[01]*1110$,regexp
@@ -28,97 +32,7 @@ ANSWER,100,[01]*1110$,regexp
 
 NewQuestion,SA
 Title,Valid ways in VHDL to specify 8-bit std_logic_vectors
-QuestionText,"<p>Given the VHDL process below. Assume the value of signal <code>a</code> is '<code>0</code>'. What is the value of signal <code>f</code>?</p><pre style='background:#f6f8fa;padding:10px;border-radius:6px;font-family:monospace;white-space:pre;'><code>
-    process( ALL ) begin
-        f &lt;= ""1010"";
-        if a = '1' then
-            f &lt;= ""1101"";
-        end if;
-    end process;</code></pre>",HTML
-Points,10
-Difficulty,1
-ANSWER,100,[01]*1010$,regexp
-
-
-NewQuestion,SA
-Title,Valid ways in VHDL to specify 8-bit std_logic_vectors
-QuestionText,"<p>Given the VHDL process below. Assume the value of signal <code>a</code> is '<code>0</code>'. What is the value of signal <code>f</code>?</p><pre style='background:#f6f8fa;padding:10px;border-radius:6px;font-family:monospace;white-space:pre;'><code>
-    process( ALL ) begin
-        f &lt;= ""1011"";
-        if a = '0' then
-            f &lt;= ""0010"";
-        end if;
-    end process;</code></pre>",HTML
-Points,10
-Difficulty,1
-ANSWER,100,[01]*0010$,regexp
-
-
-NewQuestion,SA
-Title,Valid ways in VHDL to specify 8-bit std_logic_vectors
-QuestionText,"<p>Given the VHDL process below. Assume the value of signal <code>a</code> is '<code>0</code>'. What is the value of signal <code>f</code>?</p><pre style='background:#f6f8fa;padding:10px;border-radius:6px;font-family:monospace;white-space:pre;'><code>
-    process( ALL ) begin
-        f &lt;= ""1100"";
-        if a = '0' then
-            f &lt;= ""0101"";
-        end if;
-    end process;</code></pre>",HTML
-Points,10
-Difficulty,1
-ANSWER,100,[01]*0101$,regexp
-
-
-NewQuestion,SA
-Title,Valid ways in VHDL to specify 8-bit std_logic_vectors
-QuestionText,"<p>Given the VHDL process below. Assume the value of signal <code>a</code> is '<code>1</code>'. What is the value of signal <code>f</code>?</p><pre style='background:#f6f8fa;padding:10px;border-radius:6px;font-family:monospace;white-space:pre;'><code>
-    process( ALL ) begin
-        f &lt;= ""0101"";
-        if a = '1' then
-            f &lt;= ""0100"";
-        end if;
-    end process;</code></pre>",HTML
-Points,10
-Difficulty,1
-ANSWER,100,[01]*0100$,regexp
-
-
-NewQuestion,SA
-Title,Valid ways in VHDL to specify 8-bit std_logic_vectors
-QuestionText,"<p>Given the VHDL process below. Assume the value of signal <code>a</code> is '<code>0</code>'. What is the value of signal <code>f</code>?</p><pre style='background:#f6f8fa;padding:10px;border-radius:6px;font-family:monospace;white-space:pre;'><code>
-    process( ALL ) begin
-        f &lt;= ""1011"";
-        if a = '0' then
-            f &lt;= ""0010"";
-        end if;
-    end process;</code></pre>",HTML
-Points,10
-Difficulty,1
-ANSWER,100,[01]*0010$,regexp
-
-
-NewQuestion,SA
-Title,Valid ways in VHDL to specify 8-bit std_logic_vectors
-QuestionText,"<p>Given the VHDL process below. Assume the value of signal <code>a</code> is '<code>0</code>'. What is the value of signal <code>f</code>?</p><pre style='background:#f6f8fa;padding:10px;border-radius:6px;font-family:monospace;white-space:pre;'><code>
-    process( ALL ) begin
-        f &lt;= ""1100"";
-        if a = '0' then
-            f &lt;= ""1001"";
-        end if;
-    end process;</code></pre>",HTML
-Points,10
-Difficulty,1
-ANSWER,100,[01]*1001$,regexp
-
-
-NewQuestion,SA
-Title,Valid ways in VHDL to specify 8-bit std_logic_vectors
-QuestionText,"<p>Given the VHDL process below. Assume the value of signal <code>a</code> is '<code>1</code>'. What is the value of signal <code>f</code>?</p><pre style='background:#f6f8fa;padding:10px;border-radius:6px;font-family:monospace;white-space:pre;'><code>
-    process( ALL ) begin
-        f &lt;= ""0000"";
-        if a = '0' then
-            f &lt;= ""0010"";
-        end if;
-    end process;</code></pre>",HTML
+QuestionText,"<p>Given the VHDL process below. Assume the value of signal <code>a</code> is '<code>0</code>'. What is the value of signal <code>f</code>?</p><pre style='margin:0; padding:0; background:transparent; border:none;font-family:monospace; white-space:pre; line-height:1.2; tab-size:4;'>process(ALL)&nbsp;begin<br/>&nbsp;&nbsp;&nbsp;&nbsp;f&nbsp;&lt;=&nbsp;""0000"";<br/>&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;a&nbsp;=&nbsp;'1'&nbsp;then<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;f&nbsp;&lt;=&nbsp;""0011"";<br/>&nbsp;&nbsp;&nbsp;&nbsp;end&nbsp;if;<br/>end&nbsp;process;<br/></pre>",HTML
 Points,10
 Difficulty,1
 ANSWER,100,[01]*0000$,regexp
@@ -126,13 +40,47 @@ ANSWER,100,[01]*0000$,regexp
 
 NewQuestion,SA
 Title,Valid ways in VHDL to specify 8-bit std_logic_vectors
-QuestionText,"<p>Given the VHDL process below. Assume the value of signal <code>a</code> is '<code>1</code>'. What is the value of signal <code>f</code>?</p><pre style='background:#f6f8fa;padding:10px;border-radius:6px;font-family:monospace;white-space:pre;'><code>
-    process( ALL ) begin
-        f &lt;= ""0011"";
-        if a = '0' then
-            f &lt;= ""0101"";
-        end if;
-    end process;</code></pre>",HTML
+QuestionText,"<p>Given the VHDL process below. Assume the value of signal <code>a</code> is '<code>0</code>'. What is the value of signal <code>f</code>?</p><pre style='margin:0; padding:0; background:transparent; border:none;font-family:monospace; white-space:pre; line-height:1.2; tab-size:4;'>process(ALL)&nbsp;begin<br/>&nbsp;&nbsp;&nbsp;&nbsp;f&nbsp;&lt;=&nbsp;""1010"";<br/>&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;a&nbsp;=&nbsp;'1'&nbsp;then<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;f&nbsp;&lt;=&nbsp;""1000"";<br/>&nbsp;&nbsp;&nbsp;&nbsp;end&nbsp;if;<br/>end&nbsp;process;<br/></pre>",HTML
+Points,10
+Difficulty,1
+ANSWER,100,[01]*1010$,regexp
+
+
+NewQuestion,SA
+Title,Valid ways in VHDL to specify 8-bit std_logic_vectors
+QuestionText,"<p>Given the VHDL process below. Assume the value of signal <code>a</code> is '<code>1</code>'. What is the value of signal <code>f</code>?</p><pre style='margin:0; padding:0; background:transparent; border:none;font-family:monospace; white-space:pre; line-height:1.2; tab-size:4;'>process(ALL)&nbsp;begin<br/>&nbsp;&nbsp;&nbsp;&nbsp;f&nbsp;&lt;=&nbsp;""0011"";<br/>&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;a&nbsp;=&nbsp;'1'&nbsp;then<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;f&nbsp;&lt;=&nbsp;""1110"";<br/>&nbsp;&nbsp;&nbsp;&nbsp;end&nbsp;if;<br/>end&nbsp;process;<br/></pre>",HTML
+Points,10
+Difficulty,1
+ANSWER,100,[01]*1110$,regexp
+
+
+NewQuestion,SA
+Title,Valid ways in VHDL to specify 8-bit std_logic_vectors
+QuestionText,"<p>Given the VHDL process below. Assume the value of signal <code>a</code> is '<code>0</code>'. What is the value of signal <code>f</code>?</p><pre style='margin:0; padding:0; background:transparent; border:none;font-family:monospace; white-space:pre; line-height:1.2; tab-size:4;'>process(ALL)&nbsp;begin<br/>&nbsp;&nbsp;&nbsp;&nbsp;f&nbsp;&lt;=&nbsp;""1110"";<br/>&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;a&nbsp;=&nbsp;'0'&nbsp;then<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;f&nbsp;&lt;=&nbsp;""1111"";<br/>&nbsp;&nbsp;&nbsp;&nbsp;end&nbsp;if;<br/>end&nbsp;process;<br/></pre>",HTML
+Points,10
+Difficulty,1
+ANSWER,100,[01]*1111$,regexp
+
+
+NewQuestion,SA
+Title,Valid ways in VHDL to specify 8-bit std_logic_vectors
+QuestionText,"<p>Given the VHDL process below. Assume the value of signal <code>a</code> is '<code>0</code>'. What is the value of signal <code>f</code>?</p><pre style='margin:0; padding:0; background:transparent; border:none;font-family:monospace; white-space:pre; line-height:1.2; tab-size:4;'>process(ALL)&nbsp;begin<br/>&nbsp;&nbsp;&nbsp;&nbsp;f&nbsp;&lt;=&nbsp;""0111"";<br/>&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;a&nbsp;=&nbsp;'0'&nbsp;then<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;f&nbsp;&lt;=&nbsp;""0110"";<br/>&nbsp;&nbsp;&nbsp;&nbsp;end&nbsp;if;<br/>end&nbsp;process;<br/></pre>",HTML
+Points,10
+Difficulty,1
+ANSWER,100,[01]*0110$,regexp
+
+
+NewQuestion,SA
+Title,Valid ways in VHDL to specify 8-bit std_logic_vectors
+QuestionText,"<p>Given the VHDL process below. Assume the value of signal <code>a</code> is '<code>1</code>'. What is the value of signal <code>f</code>?</p><pre style='margin:0; padding:0; background:transparent; border:none;font-family:monospace; white-space:pre; line-height:1.2; tab-size:4;'>process(ALL)&nbsp;begin<br/>&nbsp;&nbsp;&nbsp;&nbsp;f&nbsp;&lt;=&nbsp;""0110"";<br/>&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;a&nbsp;=&nbsp;'0'&nbsp;then<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;f&nbsp;&lt;=&nbsp;""0010"";<br/>&nbsp;&nbsp;&nbsp;&nbsp;end&nbsp;if;<br/>end&nbsp;process;<br/></pre>",HTML
+Points,10
+Difficulty,1
+ANSWER,100,[01]*0110$,regexp
+
+
+NewQuestion,SA
+Title,Valid ways in VHDL to specify 8-bit std_logic_vectors
+QuestionText,"<p>Given the VHDL process below. Assume the value of signal <code>a</code> is '<code>0</code>'. What is the value of signal <code>f</code>?</p><pre style='margin:0; padding:0; background:transparent; border:none;font-family:monospace; white-space:pre; line-height:1.2; tab-size:4;'>process(ALL)&nbsp;begin<br/>&nbsp;&nbsp;&nbsp;&nbsp;f&nbsp;&lt;=&nbsp;""0011"";<br/>&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;a&nbsp;=&nbsp;'1'&nbsp;then<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;f&nbsp;&lt;=&nbsp;""1110"";<br/>&nbsp;&nbsp;&nbsp;&nbsp;end&nbsp;if;<br/>end&nbsp;process;<br/></pre>",HTML
 Points,10
 Difficulty,1
 ANSWER,100,[01]*0011$,regexp
@@ -140,13 +88,15 @@ ANSWER,100,[01]*0011$,regexp
 
 NewQuestion,SA
 Title,Valid ways in VHDL to specify 8-bit std_logic_vectors
-QuestionText,"<p>Given the VHDL process below. Assume the value of signal <code>a</code> is '<code>1</code>'. What is the value of signal <code>f</code>?</p><pre style='background:#f6f8fa;padding:10px;border-radius:6px;font-family:monospace;white-space:pre;'><code>
-    process( ALL ) begin
-        f &lt;= ""1110"";
-        if a = '0' then
-            f &lt;= ""1000"";
-        end if;
-    end process;</code></pre>",HTML
+QuestionText,"<p>Given the VHDL process below. Assume the value of signal <code>a</code> is '<code>0</code>'. What is the value of signal <code>f</code>?</p><pre style='margin:0; padding:0; background:transparent; border:none;font-family:monospace; white-space:pre; line-height:1.2; tab-size:4;'>process(ALL)&nbsp;begin<br/>&nbsp;&nbsp;&nbsp;&nbsp;f&nbsp;&lt;=&nbsp;""0110"";<br/>&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;a&nbsp;=&nbsp;'1'&nbsp;then<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;f&nbsp;&lt;=&nbsp;""0101"";<br/>&nbsp;&nbsp;&nbsp;&nbsp;end&nbsp;if;<br/>end&nbsp;process;<br/></pre>",HTML
+Points,10
+Difficulty,1
+ANSWER,100,[01]*0110$,regexp
+
+
+NewQuestion,SA
+Title,Valid ways in VHDL to specify 8-bit std_logic_vectors
+QuestionText,"<p>Given the VHDL process below. Assume the value of signal <code>a</code> is '<code>0</code>'. What is the value of signal <code>f</code>?</p><pre style='margin:0; padding:0; background:transparent; border:none;font-family:monospace; white-space:pre; line-height:1.2; tab-size:4;'>process(ALL)&nbsp;begin<br/>&nbsp;&nbsp;&nbsp;&nbsp;f&nbsp;&lt;=&nbsp;""1110"";<br/>&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;a&nbsp;=&nbsp;'1'&nbsp;then<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;f&nbsp;&lt;=&nbsp;""1010"";<br/>&nbsp;&nbsp;&nbsp;&nbsp;end&nbsp;if;<br/>end&nbsp;process;<br/></pre>",HTML
 Points,10
 Difficulty,1
 ANSWER,100,[01]*1110$,regexp
@@ -154,83 +104,15 @@ ANSWER,100,[01]*1110$,regexp
 
 NewQuestion,SA
 Title,Valid ways in VHDL to specify 8-bit std_logic_vectors
-QuestionText,"<p>Given the VHDL process below. Assume the value of signal <code>a</code> is '<code>1</code>'. What is the value of signal <code>f</code>?</p><pre style='background:#f6f8fa;padding:10px;border-radius:6px;font-family:monospace;white-space:pre;'><code>
-    process( ALL ) begin
-        f &lt;= ""1100"";
-        if a = '1' then
-            f &lt;= ""0001"";
-        end if;
-    end process;</code></pre>",HTML
+QuestionText,"<p>Given the VHDL process below. Assume the value of signal <code>a</code> is '<code>1</code>'. What is the value of signal <code>f</code>?</p><pre style='margin:0; padding:0; background:transparent; border:none;font-family:monospace; white-space:pre; line-height:1.2; tab-size:4;'>process(ALL)&nbsp;begin<br/>&nbsp;&nbsp;&nbsp;&nbsp;f&nbsp;&lt;=&nbsp;""0011"";<br/>&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;a&nbsp;=&nbsp;'0'&nbsp;then<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;f&nbsp;&lt;=&nbsp;""0011"";<br/>&nbsp;&nbsp;&nbsp;&nbsp;end&nbsp;if;<br/>end&nbsp;process;<br/></pre>",HTML
 Points,10
 Difficulty,1
-ANSWER,100,[01]*0001$,regexp
+ANSWER,100,[01]*0011$,regexp
 
 
 NewQuestion,SA
 Title,Valid ways in VHDL to specify 8-bit std_logic_vectors
-QuestionText,"<p>Given the VHDL process below. Assume the value of signal <code>a</code> is '<code>1</code>'. What is the value of signal <code>f</code>?</p><pre style='background:#f6f8fa;padding:10px;border-radius:6px;font-family:monospace;white-space:pre;'><code>
-    process( ALL ) begin
-        f &lt;= ""1000"";
-        if a = '0' then
-            f &lt;= ""1101"";
-        end if;
-    end process;</code></pre>",HTML
-Points,10
-Difficulty,1
-ANSWER,100,[01]*1000$,regexp
-
-
-NewQuestion,SA
-Title,Valid ways in VHDL to specify 8-bit std_logic_vectors
-QuestionText,"<p>Given the VHDL process below. Assume the value of signal <code>a</code> is '<code>0</code>'. What is the value of signal <code>f</code>?</p><pre style='background:#f6f8fa;padding:10px;border-radius:6px;font-family:monospace;white-space:pre;'><code>
-    process( ALL ) begin
-        f &lt;= ""1001"";
-        if a = '0' then
-            f &lt;= ""0010"";
-        end if;
-    end process;</code></pre>",HTML
-Points,10
-Difficulty,1
-ANSWER,100,[01]*0010$,regexp
-
-
-NewQuestion,SA
-Title,Valid ways in VHDL to specify 8-bit std_logic_vectors
-QuestionText,"<p>Given the VHDL process below. Assume the value of signal <code>a</code> is '<code>0</code>'. What is the value of signal <code>f</code>?</p><pre style='background:#f6f8fa;padding:10px;border-radius:6px;font-family:monospace;white-space:pre;'><code>
-    process( ALL ) begin
-        f &lt;= ""1000"";
-        if a = '1' then
-            f &lt;= ""0010"";
-        end if;
-    end process;</code></pre>",HTML
-Points,10
-Difficulty,1
-ANSWER,100,[01]*1000$,regexp
-
-
-NewQuestion,SA
-Title,Valid ways in VHDL to specify 8-bit std_logic_vectors
-QuestionText,"<p>Given the VHDL process below. Assume the value of signal <code>a</code> is '<code>0</code>'. What is the value of signal <code>f</code>?</p><pre style='background:#f6f8fa;padding:10px;border-radius:6px;font-family:monospace;white-space:pre;'><code>
-    process( ALL ) begin
-        f &lt;= ""1100"";
-        if a = '0' then
-            f &lt;= ""1110"";
-        end if;
-    end process;</code></pre>",HTML
-Points,10
-Difficulty,1
-ANSWER,100,[01]*1110$,regexp
-
-
-NewQuestion,SA
-Title,Valid ways in VHDL to specify 8-bit std_logic_vectors
-QuestionText,"<p>Given the VHDL process below. Assume the value of signal <code>a</code> is '<code>1</code>'. What is the value of signal <code>f</code>?</p><pre style='background:#f6f8fa;padding:10px;border-radius:6px;font-family:monospace;white-space:pre;'><code>
-    process( ALL ) begin
-        f &lt;= ""0000"";
-        if a = '0' then
-            f &lt;= ""1111"";
-        end if;
-    end process;</code></pre>",HTML
+QuestionText,"<p>Given the VHDL process below. Assume the value of signal <code>a</code> is '<code>0</code>'. What is the value of signal <code>f</code>?</p><pre style='margin:0; padding:0; background:transparent; border:none;font-family:monospace; white-space:pre; line-height:1.2; tab-size:4;'>process(ALL)&nbsp;begin<br/>&nbsp;&nbsp;&nbsp;&nbsp;f&nbsp;&lt;=&nbsp;""1110"";<br/>&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;a&nbsp;=&nbsp;'0'&nbsp;then<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;f&nbsp;&lt;=&nbsp;""0000"";<br/>&nbsp;&nbsp;&nbsp;&nbsp;end&nbsp;if;<br/>end&nbsp;process;<br/></pre>",HTML
 Points,10
 Difficulty,1
 ANSWER,100,[01]*0000$,regexp
@@ -238,43 +120,41 @@ ANSWER,100,[01]*0000$,regexp
 
 NewQuestion,SA
 Title,Valid ways in VHDL to specify 8-bit std_logic_vectors
-QuestionText,"<p>Given the VHDL process below. Assume the value of signal <code>a</code> is '<code>1</code>'. What is the value of signal <code>f</code>?</p><pre style='background:#f6f8fa;padding:10px;border-radius:6px;font-family:monospace;white-space:pre;'><code>
-    process( ALL ) begin
-        f &lt;= ""1000"";
-        if a = '0' then
-            f &lt;= ""1110"";
-        end if;
-    end process;</code></pre>",HTML
-Points,10
-Difficulty,1
-ANSWER,100,[01]*1000$,regexp
-
-
-NewQuestion,SA
-Title,Valid ways in VHDL to specify 8-bit std_logic_vectors
-QuestionText,"<p>Given the VHDL process below. Assume the value of signal <code>a</code> is '<code>0</code>'. What is the value of signal <code>f</code>?</p><pre style='background:#f6f8fa;padding:10px;border-radius:6px;font-family:monospace;white-space:pre;'><code>
-    process( ALL ) begin
-        f &lt;= ""1100"";
-        if a = '1' then
-            f &lt;= ""0111"";
-        end if;
-    end process;</code></pre>",HTML
-Points,10
-Difficulty,1
-ANSWER,100,[01]*1100$,regexp
-
-
-NewQuestion,SA
-Title,Valid ways in VHDL to specify 8-bit std_logic_vectors
-QuestionText,"<p>Given the VHDL process below. Assume the value of signal <code>a</code> is '<code>1</code>'. What is the value of signal <code>f</code>?</p><pre style='background:#f6f8fa;padding:10px;border-radius:6px;font-family:monospace;white-space:pre;'><code>
-    process( ALL ) begin
-        f &lt;= ""1011"";
-        if a = '1' then
-            f &lt;= ""1010"";
-        end if;
-    end process;</code></pre>",HTML
+QuestionText,"<p>Given the VHDL process below. Assume the value of signal <code>a</code> is '<code>1</code>'. What is the value of signal <code>f</code>?</p><pre style='margin:0; padding:0; background:transparent; border:none;font-family:monospace; white-space:pre; line-height:1.2; tab-size:4;'>process(ALL)&nbsp;begin<br/>&nbsp;&nbsp;&nbsp;&nbsp;f&nbsp;&lt;=&nbsp;""1010"";<br/>&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;a&nbsp;=&nbsp;'0'&nbsp;then<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;f&nbsp;&lt;=&nbsp;""1110"";<br/>&nbsp;&nbsp;&nbsp;&nbsp;end&nbsp;if;<br/>end&nbsp;process;<br/></pre>",HTML
 Points,10
 Difficulty,1
 ANSWER,100,[01]*1010$,regexp
+
+
+NewQuestion,SA
+Title,Valid ways in VHDL to specify 8-bit std_logic_vectors
+QuestionText,"<p>Given the VHDL process below. Assume the value of signal <code>a</code> is '<code>1</code>'. What is the value of signal <code>f</code>?</p><pre style='margin:0; padding:0; background:transparent; border:none;font-family:monospace; white-space:pre; line-height:1.2; tab-size:4;'>process(ALL)&nbsp;begin<br/>&nbsp;&nbsp;&nbsp;&nbsp;f&nbsp;&lt;=&nbsp;""1011"";<br/>&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;a&nbsp;=&nbsp;'0'&nbsp;then<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;f&nbsp;&lt;=&nbsp;""0000"";<br/>&nbsp;&nbsp;&nbsp;&nbsp;end&nbsp;if;<br/>end&nbsp;process;<br/></pre>",HTML
+Points,10
+Difficulty,1
+ANSWER,100,[01]*1011$,regexp
+
+
+NewQuestion,SA
+Title,Valid ways in VHDL to specify 8-bit std_logic_vectors
+QuestionText,"<p>Given the VHDL process below. Assume the value of signal <code>a</code> is '<code>1</code>'. What is the value of signal <code>f</code>?</p><pre style='margin:0; padding:0; background:transparent; border:none;font-family:monospace; white-space:pre; line-height:1.2; tab-size:4;'>process(ALL)&nbsp;begin<br/>&nbsp;&nbsp;&nbsp;&nbsp;f&nbsp;&lt;=&nbsp;""0001"";<br/>&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;a&nbsp;=&nbsp;'0'&nbsp;then<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;f&nbsp;&lt;=&nbsp;""1110"";<br/>&nbsp;&nbsp;&nbsp;&nbsp;end&nbsp;if;<br/>end&nbsp;process;<br/></pre>",HTML
+Points,10
+Difficulty,1
+ANSWER,100,[01]*0001$,regexp
+
+
+NewQuestion,SA
+Title,Valid ways in VHDL to specify 8-bit std_logic_vectors
+QuestionText,"<p>Given the VHDL process below. Assume the value of signal <code>a</code> is '<code>1</code>'. What is the value of signal <code>f</code>?</p><pre style='margin:0; padding:0; background:transparent; border:none;font-family:monospace; white-space:pre; line-height:1.2; tab-size:4;'>process(ALL)&nbsp;begin<br/>&nbsp;&nbsp;&nbsp;&nbsp;f&nbsp;&lt;=&nbsp;""1011"";<br/>&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;a&nbsp;=&nbsp;'1'&nbsp;then<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;f&nbsp;&lt;=&nbsp;""0100"";<br/>&nbsp;&nbsp;&nbsp;&nbsp;end&nbsp;if;<br/>end&nbsp;process;<br/></pre>",HTML
+Points,10
+Difficulty,1
+ANSWER,100,[01]*0100$,regexp
+
+
+NewQuestion,SA
+Title,Valid ways in VHDL to specify 8-bit std_logic_vectors
+QuestionText,"<p>Given the VHDL process below. Assume the value of signal <code>a</code> is '<code>0</code>'. What is the value of signal <code>f</code>?</p><pre style='margin:0; padding:0; background:transparent; border:none;font-family:monospace; white-space:pre; line-height:1.2; tab-size:4;'>process(ALL)&nbsp;begin<br/>&nbsp;&nbsp;&nbsp;&nbsp;f&nbsp;&lt;=&nbsp;""1101"";<br/>&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;a&nbsp;=&nbsp;'1'&nbsp;then<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;f&nbsp;&lt;=&nbsp;""1000"";<br/>&nbsp;&nbsp;&nbsp;&nbsp;end&nbsp;if;<br/>end&nbsp;process;<br/></pre>",HTML
+Points,10
+Difficulty,1
+ANSWER,100,[01]*1101$,regexp
 
 
