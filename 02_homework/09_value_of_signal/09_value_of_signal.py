@@ -50,9 +50,9 @@ for i in range(20):
 
     # Use [01]* and escape the literal bitstrings for regex safety; add as regex answer    
     if signalA == str(randomA):
-        pattern = f"[01]*{re.escape(signalFChange)}$"
+        pattern = f"^[^01]*{signalFChange}[^01]*$"
     else:
-        pattern = f"[01]*{re.escape(signalF)}$"
+        pattern = f"^[^01]*{signalF}[^01]*$"
         
     question.add_answer(pattern, points=100, is_regex=True)
 

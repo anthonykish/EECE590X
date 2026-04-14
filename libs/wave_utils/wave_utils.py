@@ -767,7 +767,62 @@ def make_wavedrom_image_with_buses(title, sig_names, buses, out_filename="image.
     img = wavedrom.render(code)
     img.saveas(out_filename)
 
+def make_wavedrom_link_rows(title, rows, link_text="WaveDrom Link", use_dotless=True):
+    """
+    Build a WaveDrom editor link from structured rows.
 
+    rows is a list like:
+      {"name": "clk", "wave": "p..."}
+      {"name": "state", "wave": "=.=.", "data": ["S0", "S1", "S0"]}
+    """
+    base_link = "https://dougsummerville.github.io/wavedrom"
+    title_html = title.replace(" ", "%20")
 
-    
+    lines_url = []
+    for row in rows:
+        name = row["name"]
+        wave = row["wave"]
 
+        # Convert plain digital signals to dotless if requested.
+        # Bus waves like = and . should be left alone.
+        if use_dotless and all(ch in "01.xhlpnPN" for ch in wave):
+            wave = to_dotless(wave)
+
+        if "data" in row:
+            data_items = ", ".join([f'"{d}"' for d in row["data"]])
+            line = f'{{name: "{name}", wave: "{wave}", data: [{data_items}]}}'
+        else:
+            line = f'{{name: "{name}", wave: "{wave}"}}'
+
+        lines_url.append(line + ",")
+
+    url_gen = urllib.parse.quote("".join(lines_url))
+    link = f"{base_link}/editor.html?%7B%20head%3A%7Btext%3A%27{title_html}%27%7D%2C%0Asignal%3A%0A%5B%0A{url_gen}%5D%2C%0A%20%20foot%3A%7Btick%3A0%7D%0A%7D"
+    return f'<a href="{link}" target="_blank">{link_text}</a>'
+
+def make_wavedrom_image_rows(title, rows, out_filename="image.svg"):
+    """
+    Render a WaveDrom SVG from structured rows.
+    Supports bus rows with data labels.
+    """
+    title_line = f"head:{{text:'{title}'}},"
+
+    lines = []
+    for row in rows:
+        name = row["name"]
+        wave = row["wave"]
+
+        if "data" in row:
+            data = " ".join([f'"{d}",' for d in row["data"]])
+            line = f'{{name: "{name}", wave: "{wave}", data: [{data}]}}'
+        else:
+            sig = to_dotted(wave)
+            sig = sig.replace("1", "h").replace("0", "l")
+            line = f'{{name: "{name}", wave: "{sig}"}}'
+
+        lines.append(line + ",")
+
+    signal_code = " ".join(lines)
+    code = '{' + title_line + ' signal: [ ' + signal_code + '],  foot:{"tick":0},}'
+    img = wavedrom.render(code)
+    img.saveas(out_filename)

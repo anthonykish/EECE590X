@@ -3,6 +3,24 @@ from TruthTableHTML.html_tt import html_tt
 import json
 import re
 import os
+import math
+from urllib.parse import quote
+from pathlib import Path
+import copy
+from itertools import product
+import random
+
+
+
+
+TEMPLATE_DIR = Path(__file__).resolve().parent / "templates"
+
+TEMPLATES = {
+    "2state": TEMPLATE_DIR / "fsm_2state.json",
+    "3state": TEMPLATE_DIR / "fsm_3state.json",
+    "4state": TEMPLATE_DIR / "fsm_4state.json",
+}
+
 
 class FSM():
 
@@ -15,17 +33,15 @@ class FSM():
         state_notation: What to name the bits of the state, default "Q1", "Q0" etc.
         """
 
+        self.state_notation = state_notation
+
         # Get filename without extension
         self.name = os.path.splitext(os.path.basename(filename))[0]
 
         with open(filename, "r") as f:
             self.fsm_json = json.load(f)
 
-        self.get_inputs_from_json()
-        self.get_outputs_from_json()
-        self.get_states_from_json(state_notation)
-        self.get_state_data_from_json()
-        self.evaluate_all_combos()
+        self._rebuild(self.state_notation)
 
     def get_inputs_from_json(self):
         
@@ -136,7 +152,7 @@ class FSM():
             self.state_names.append(node["stateName"])
         self.state_names = sorted(self.state_names)
 
-        self.num_state_bits = len(self.state_names[0])
+        self.num_state_bits = max(1, math.ceil(math.log2(len(self.state_names))))
         # Get all binary strings from 0 to 2^num_state_bits
         self.state_bit_combos = ([f"{i:0{self.num_state_bits}b}" 
                                   for i in range(2 ** self.num_state_bits)])
@@ -623,3 +639,222 @@ class FSM():
         outputs = self.get_mealy_outputs(state_name, input_combo)
         return outputs[output_name]
 
+    def _rebuild(self, state_notation="Q"):
+        """
+        Recompute all derived FSM data after any edit to self.fsm_json.
+        """
+        self.get_inputs_from_json()
+        self.get_outputs_from_json()
+        self.get_states_from_json(state_notation)
+        self.get_state_data_from_json()
+        self.evaluate_all_combos()
+
+    @classmethod
+    def from_template(cls, template_name, state_notation="Q"):
+        if template_name not in TEMPLATES:
+            raise ValueError(f"Unknown template '{template_name}'")
+        return cls(str(TEMPLATES[template_name]), state_notation=state_notation)
+    
+    def _get_node_index(self, state_name):
+        for i, node in enumerate(self.fsm_json["fsmNodes"]):
+            if node["stateName"] == state_name:
+                return i
+        raise ValueError(f"State '{state_name}' not found")
+
+    def _get_state_name_from_index(self, idx):
+        return self.fsm_json["fsmNodes"][idx]["stateName"]
+    
+    def list_arcs(self):
+        arcs = []
+
+        for i, arc in enumerate(self.fsm_json.get("fsmArcs", [])):
+            arcs.append({
+                "kind": "normal",
+                "index": i,
+                "start": self._get_state_name_from_index(arc["startNode"]),
+                "end": self._get_state_name_from_index(arc["endNode"]),
+                "label": arc.get("outputText", "")
+            })
+
+        for i, arc in enumerate(self.fsm_json.get("fsmSelfArcs", [])):
+            state = self._get_state_name_from_index(arc["node"])
+            arcs.append({
+                "kind": "self",
+                "index": i,
+                "start": state,
+                "end": state,
+                "label": arc.get("outputText", "")
+            })
+
+        for i, arc in enumerate(self.fsm_json.get("fsmResetArcs", [])):
+            state = self._get_state_name_from_index(arc["node"])
+            arcs.append({
+                "kind": "reset",
+                "index": i,
+                "start": "RESET",
+                "end": state,
+                "label": arc.get("outputText", "")
+            })
+
+        return arcs
+    
+    def remove_arc(self, start_state, end_state, occurrence=0):
+        """
+        Remove an arc from start_state to end_state.
+        Handles both normal arcs and self-arcs.
+        """
+        count = 0
+
+        if start_state == end_state:
+            node_idx = self._get_node_index(start_state)
+            for i, arc in enumerate(self.fsm_json.get("fsmSelfArcs", [])):
+                if arc["node"] == node_idx:
+                    if count == occurrence:
+                        del self.fsm_json["fsmSelfArcs"][i]
+                        self._rebuild()
+                        return
+                    count += 1
+        else:
+            start_idx = self._get_node_index(start_state)
+            end_idx = self._get_node_index(end_state)
+
+            for i, arc in enumerate(self.fsm_json.get("fsmArcs", [])):
+                if arc["startNode"] == start_idx and arc["endNode"] == end_idx:
+                    if count == occurrence:
+                        del self.fsm_json["fsmArcs"][i]
+                        self._rebuild()
+                        return
+                    count += 1
+
+        raise ValueError(f"No arc found from {start_state} to {end_state}")
+    
+    def label_arc(self, start_state, end_state, new_label, occurrence=0):
+        """
+        Change the outputText of an arc.
+        """
+        count = 0
+
+        if start_state == end_state:
+            node_idx = self._get_node_index(start_state)
+            for arc in self.fsm_json.get("fsmSelfArcs", []):
+                if arc["node"] == node_idx:
+                    if count == occurrence:
+                        arc["outputText"] = new_label
+                        self._rebuild()
+                        return
+                    count += 1
+        else:
+            start_idx = self._get_node_index(start_state)
+            end_idx = self._get_node_index(end_state)
+
+            for arc in self.fsm_json.get("fsmArcs", []):
+                if arc["startNode"] == start_idx and arc["endNode"] == end_idx:
+                    if count == occurrence:
+                        arc["outputText"] = new_label
+                        self._rebuild()
+                        return
+                    count += 1
+
+        raise ValueError(f"No arc found from {start_state} to {end_state}")
+    
+    def remove_reset_arc(self, occurrence=0):
+        if occurrence >= len(self.fsm_json.get("fsmResetArcs", [])):
+            raise ValueError("No reset arc at that occurrence")
+
+        del self.fsm_json["fsmResetArcs"][occurrence]
+        self._rebuild()
+
+    def label_reset_arc(self, new_label, occurrence=0):
+        if occurrence >= len(self.fsm_json.get("fsmResetArcs", [])):
+            raise ValueError("No reset arc at that occurrence")
+
+        self.fsm_json["fsmResetArcs"][occurrence]["outputText"] = new_label
+        self._rebuild()
+
+    def get_json(self):
+        return self.fsm_json
+
+    def get_json_string(self, indent=None):
+        return json.dumps(self.fsm_json, separators=(",", ":")) if indent is None else json.dumps(self.fsm_json, indent=indent)
+    
+    def get_fsm_explorer_url(self):
+        json_string = json.dumps(self.fsm_json, separators=(",", ":"))
+        encoded = quote(json_string, safe="")
+        return f"https://dougsummerville.github.io/FSM-Explorer/fsmexplorer.html?{encoded}"
+    
+    def save_json(self, filename=None, indent=2):
+        if filename is None:
+            filename = f"{self.name}_modified.txt"
+
+        with open(filename, "w") as f:
+            json.dump(self.fsm_json, f, indent=indent)
+
+    def can_remove_arc(self, start_state, end_state, occurrence=0):
+        """
+        Check whether removing an arc would keep the FSM valid,
+        without permanently changing the FSM.
+        """
+        old_json = copy.deepcopy(self.fsm_json)
+
+        try:
+            self.remove_arc(start_state, end_state, occurrence)
+            self.verify()
+            result = True
+        except Exception:
+            result = False
+
+        self.fsm_json = old_json
+        self._rebuild()
+        return result
+    
+    def find_removable_arcs(self):
+        """
+        Return removable non-reset arcs.
+        """
+        removable = []
+        seen = {}
+
+        for arc in self.list_arcs():
+            if arc["kind"] not in ("normal", "self"):
+                continue
+
+            key = (arc["kind"], arc["start"], arc["end"])
+            occurrence = seen.get(key, 0)
+            seen[key] = occurrence + 1
+
+            if self.can_remove_arc(arc["start"], arc["end"], occurrence):
+                arc_copy = dict(arc)
+                arc_copy["occurrence"] = occurrence
+                removable.append(arc_copy)
+
+        return removable
+        
+    def get_outgoing_arcs(self, state_name):
+        arcs = []
+        for arc in self.list_arcs():
+            if arc["kind"] in ("normal", "self") and arc["start"] == state_name:
+                arcs.append(arc)
+        return arcs
+    
+    def make_input_patterns(input_names):
+        patterns = []
+        for bits in product([0, 1], repeat=len(input_names)):
+            parts = []
+            for name, bit in zip(input_names, bits):
+                parts.append(name if bit == 1 else f"{name}'")
+            patterns.append(" ".join(parts))
+        return patterns
+    
+    def choose_random_fsm_type():
+        return random.choice(["moore", "mealy"])
+
+    def assign_random_moore_outputs(self, output_names):
+        for node in self.fsm_json["fsmNodes"]:
+            values = "".join(random.choice(["0", "1"]) for _ in output_names)
+            node["outputText"] = values
+
+    def format_moore_arc_label(input_pattern):
+        return input_pattern
+
+    def format_mealy_arc_label(input_pattern, output_bits):
+        return f"{input_pattern}/{output_bits}"
