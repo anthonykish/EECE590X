@@ -95,8 +95,33 @@ class FSM():
         """
         Sets up lists of Moore and Mealy output names
         """
-    
-        # Parse Moore outputs from states
+
+        output_names = []
+        if "outputs" in self.fsm_json and self.fsm_json["outputs"]:
+            text = self.fsm_json["outputs"].replace(",", " ")
+            output_names = [o for o in text.split(" ") if o]
+
+        self.output_names = output_names
+
+        if output_names:
+            moore_names = []
+            mealy_names = []
+
+            for node in self.fsm_json["fsmNodes"]:
+                if node.get("outputText", "").strip():
+                    moore_names = output_names
+                    break
+
+            for arc in self.fsm_json.get("fsmArcs", []) + self.fsm_json.get("fsmSelfArcs", []):
+                if "/" in arc.get("outputText", "") and arc["outputText"].split("/", 1)[1].strip():
+                    mealy_names = output_names
+                    break
+
+            self.moore_names = moore_names
+            self.mealy_names = mealy_names
+            return
+
+        # Parse Moore outputs from states if JSON does not explicitly declare output names
         outputs = []
         for node in self.fsm_json["fsmNodes"]:
             
@@ -130,7 +155,43 @@ class FSM():
         
         self.mealy_names = outputs
 
-        self.output_names = self.moore_names+ self.mealy_names
+        self.output_names = self.moore_names + self.mealy_names
+
+    def parse_output_values(self, output_text, output_names):
+
+        """
+        Parse an output value string into a dictionary of output bits.
+        Supports explicit name/value pairs like "z 1" and bare bits like "01".
+        """
+
+        outputs = {name: "0" for name in output_names}
+        if not output_text or not output_names:
+            return outputs
+
+        text = re.sub("[^0-9a-zA-Z_-]+", " ", output_text).strip()
+        words = [w for w in text.split(" ") if w]
+        if not words:
+            return outputs
+
+        # If the output names are included explicitly, parse name/value pairs.
+        if any(word in output_names for word in words):
+            for name in output_names:
+                if name in words:
+                    idx = words.index(name)
+                    outputs[name] = words[idx + 1] if idx + 1 < len(words) else "0"
+            return outputs
+
+        # If the bits are provided positionally, either as one string or a list.
+        if len(words) == 1 and all(ch in "01" for ch in words[0]) and len(words[0]) == len(output_names):
+            return {name: words[0][i] for i, name in enumerate(output_names)}
+
+        if len(words) == len(output_names) and all(bit in "01" for bit in words):
+            return {name: words[i] for i, name in enumerate(output_names)}
+
+        if len(output_names) == 1 and len(words) == 1 and words[0] in "01":
+            return {output_names[0]: words[0]}
+
+        return outputs
 
     def get_states_from_json(self, state_notation):
 
@@ -156,7 +217,14 @@ class FSM():
         # Get all binary strings from 0 to 2^num_state_bits
         self.state_bit_combos = ([f"{i:0{self.num_state_bits}b}" 
                                   for i in range(2 ** self.num_state_bits)])
-        
+
+        # Map binary state bit combos to original state names, so FSMs with
+        # stateName values like A/B/C/D can still be translated into truth tables.
+        self.state_name_map = {
+            combo: state for combo, state in zip(self.state_bit_combos, self.state_names)
+        }
+        self.state_combo_map = {state: combo for combo, state in self.state_name_map.items()}
+
         # Make state bit names like Q1, Q0, Q1+, Q0+
         self.state_bit_names = [state_notation + str(i) for i in range(self.num_state_bits)]
         self.state_bit_names.reverse()
@@ -193,20 +261,7 @@ class FSM():
                 if node["stateName"] == state:
                     text = node["outputText"]
 
-            # Get rid of special characters except _ and -
-            text = re.sub("[^0-9a-zA-Z_-]+", " " , text)
-            output_words = text.split(" ")
-            # This brings up a list like ["F", "1", "G", "0"]
-            
-            for output in self.moore_names:
-                # If an output exists under the state name
-                if output in output_words:
-                    # Copy its value to the output dictionary
-                    output_value = output_words[output_words.index(output) + 1]
-                    outputs[output] = str(output_value)
-                # Otherwise assume it's 0
-                else:
-                    outputs[output] = "0"
+            outputs = self.parse_output_values(text, self.moore_names)
             
             # Get expressions, next_states, and Mealy outputs from each arc
             arcs = []
@@ -223,34 +278,25 @@ class FSM():
                     state_arc_leaves = self.fsm_json["fsmNodes"][arc["node"]]["stateName"]
                     state_arc_goes_to = state_arc_leaves
 
-                # Get the expression
-                exp_text = arc["outputText"].split("/")[0]
+                # Split a label with multiple OR terms into separate arc entries.
+                raw_label = arc["outputText"].strip()
+                term_texts = [term.strip() for term in raw_label.split("|") if term.strip()]
 
-                # Get the output values
-                arc_outputs = {}
-                out_text = arc["outputText"].split("/")[1] if "/" in arc["outputText"] else ""
-
-                # Get rid of special characters except _ and -
-                out_text = re.sub("[^0-9a-zA-Z_-]+", " " , out_text)
-                output_words = out_text.split(" ")
-                # This brings up a list like ["F", "1", "G", "0"]
-
-                for output in self.mealy_names:
-                    # If an output exists under the state name
-                    if output in output_words:
-                        # Copy its value to the output dictionary
-                        output_value = output_words[output_words.index(output) + 1]
-                        arc_outputs[output] = str(output_value)
-                    # Otherwise assume it's 0
+                for term_text in term_texts:
+                    if "/" in term_text:
+                        exp_text, out_text = term_text.split("/", 1)
                     else:
-                        arc_outputs[output] = "0"
+                        exp_text = term_text
+                        out_text = ""
 
-                # If on the state we're dealing with, set up and add arc dictionary
-                if state_arc_leaves == state:
-                    arc_dict = {"expression": exp_text,
-                                "next_state": state_arc_goes_to,
-                                "outputs": arc_outputs}
-                    arcs.append(arc_dict)
+                    arc_outputs = self.parse_output_values(out_text, self.mealy_names)
+
+                    # If on the state we're dealing with, set up and add arc dictionary
+                    if state_arc_leaves == state:
+                        arc_dict = {"expression": exp_text.strip(),
+                                    "next_state": state_arc_goes_to,
+                                    "outputs": arc_outputs}
+                        arcs.append(arc_dict)
 
                     
             state_dict = {"state": state, "outputs": outputs, "arcs": arcs}
@@ -265,7 +311,12 @@ class FSM():
         Returns None if no match found
         """
 
-        state = [d for d in self.state_data if d["state"] == state_name]
+        # Allow lookup by either the original state name or the binary state bit combo.
+        if state_name in self.state_name_map:
+            mapped_state = self.state_name_map[state_name]
+            state = [d for d in self.state_data if d["state"] == mapped_state]
+        else:
+            state = [d for d in self.state_data if d["state"] == state_name]
 
         return state[0] if state else None
 
@@ -308,7 +359,10 @@ class FSM():
                         # copy the arc's next state and Mealy outputs
                         # into the list
                         if logic_eval(self.input_names, input_combo, expression):
-                            row["next_states"].append(arc["next_state"])
+                            next_state = arc["next_state"]
+                            row["next_states"].append(
+                                self.state_combo_map.get(next_state, next_state)
+                            )
                             for output in self.mealy_names:
                                 # 8 levels of indentation
                                 # I am the best programmer to walk this earth
