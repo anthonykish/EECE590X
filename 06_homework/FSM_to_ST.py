@@ -53,7 +53,7 @@ def generate_random_fsm():
     for i, arc in enumerate(fsm_json.get("fsmArcs", [])[:2]):  # Just first 2 arcs
         print(f"DEBUG: Arc {i} outputText: '{arc['outputText']}'")
 
-    # Create FSM object to get truth table
+    # Create FSM object to get state table
     # We need to save the JSON to a temp file first since FSM constructor expects a file
     import tempfile
     with tempfile.NamedTemporaryFile(mode='w', suffix='.json', delete=False) as f:
@@ -62,9 +62,10 @@ def generate_random_fsm():
 
     try:
         fsm = FSM(temp_file)
-        return fsm_json, fsm
-    finally:
+        return fsm_json, fsm, temp_file
+    except:
         os.unlink(temp_file)
+        raise
 
 def create_wrong_fsm_by_arc(correct_json):
     """Create a wrong FSM by changing an arc destination."""
@@ -99,62 +100,82 @@ def create_wrong_fsm_by_output(correct_json):
                 node["outputText"] = ('1' if text[0] == '0' else '0') + text[1:]
     return wrong_json
 
-def create_wrong_fsm_by_condition(correct_json):
-    """Create a wrong FSM by changing an arc's condition."""
+def create_wrong_fsm_by_arc_output(correct_json):
+    """Create a wrong FSM by flipping an arc's output."""
     wrong_json = copy.deepcopy(correct_json)
-    if wrong_json.get("fsmArcs"):
-        arc = random.choice(wrong_json["fsmArcs"])
-        if arc["outputText"]:
-            conditions = arc["outputText"].split(" | ")
-            if conditions:
-                condition = random.choice(conditions)
-                if "x" in condition:
-                    new_condition = condition.replace("x", "x'").replace("x''", "x")
-                    arc["outputText"] = arc["outputText"].replace(condition, new_condition)
+    arcs = wrong_json.get("fsmArcs", []) + wrong_json.get("fsmSelfArcs", [])
+    if arcs:
+        arc = random.choice(arcs)
+        if "/" in arc.get("outputText", ""):
+            condition, output_part = arc["outputText"].split("/", 1)
+            output_part = output_part.strip()
+            if output_part and all(ch in "01" for ch in output_part.replace(" ", "")):
+                # Flip a bit
+                bit_idx = random.randint(0, len(output_part)-1)
+                bit = output_part[bit_idx]
+                new_bit = '1' if bit == '0' else '0'
+                new_output_part = output_part[:bit_idx] + new_bit + output_part[bit_idx+1:]
+                arc["outputText"] = f"{condition}/{new_output_part}"
     return wrong_json
+
+def get_state_table_from_json(fsm_json):
+    """Get the HTML state table from FSM JSON."""
+    import tempfile
+    with tempfile.NamedTemporaryFile(mode='w', suffix='.json', delete=False) as f:
+        json.dump(fsm_json, f)
+        temp_file = f.name
+
+    try:
+        fsm = FSM(temp_file)
+        return fsm.make_html_truth_table()
+    finally:
+        os.unlink(temp_file)
 
 def main():
     # Generate a correct FSM
-    correct_json, fsm = generate_random_fsm()
+    correct_json, fsm, temp_file = generate_random_fsm()
+    try:
+        # Get the FSM diagram URL
+        fsm_diagram_url = explorer_url(correct_json)
 
-    # Get the truth table from the FSM
-    truth_table_html = fsm.make_html_truth_table()
+        # Get the correct state table
+        state_table_correct = fsm.make_html_truth_table()
 
-    # Create the correct FSM URL
-    correct_url = explorer_url(correct_json)
+        # Create wrong FSMs and their state tables
+        wrong_state_tables = [
+            get_state_table_from_json(create_wrong_fsm_by_arc(correct_json)),
+            get_state_table_from_json(create_wrong_fsm_by_output(correct_json)),
+            get_state_table_from_json(create_wrong_fsm_by_arc_output(correct_json)),
+        ]
 
-    # Create wrong FSM options
-    wrong_urls = [
-        explorer_url(create_wrong_fsm_by_arc(correct_json)),
-        explorer_url(create_wrong_fsm_by_output(correct_json)),
-        explorer_url(create_wrong_fsm_by_condition(correct_json)),
-    ]
+        # Create the question
+        question_text = f"Given the following FSM diagram: <a href=\"{fsm_diagram_url}\" target=\"_blank\">View FSM Diagram</a><br><br>Select the corresponding truth table:"
 
-    # Create the question
-    question_text = f"Given the following truth table, select the corresponding finite state machine diagram:<br><br>{truth_table_html}"
+        question = MCQuestion(
+            text=question_text,
+            title="FSM to Truth Table Conversion",
+            points=10,
+            difficulty=3
+        )
 
-    question = MCQuestion(
-        text=question_text,
-        title="Truth Table to FSM Conversion",
-        points=10,
-        difficulty=3
-    )
+        # Add correct answer
+        question.add_answer(state_table_correct, 100)
 
-    # Add correct answer
-    question.add_answer(f'<a href="{correct_url}" target="_blank">View FSM Diagram</a>', 100)
+        # Add wrong answers
+        for wrong_st in wrong_state_tables:
+            question.add_answer(wrong_st, 0)
 
-    # Add wrong answers
-    for wrong_url in wrong_urls:
-        question.add_answer(f'<a href="{wrong_url}" target="_blank">View FSM Diagram</a>', 0)
+        # Print the question (for testing)
+        print("Question Text:")
+        print(question_text)
+        print("\nCorrect Truth Table:")
+        print(state_table_correct)
+        print("\nWrong Truth Tables:")
+        for i, wrong_st in enumerate(wrong_state_tables, 1):
+            print(f"Wrong {i}: {wrong_st}")
 
-    # Print the question (for testing)
-    print("Question Text:")
-    print(question_text)
-    print("\nCorrect Answer URL:")
-    print(correct_url)
-    print("\nWrong Answer URLs:")
-    for i, wrong_url in enumerate(wrong_urls, 1):
-        print(f"Wrong {i}: <a href=\"{wrong_url}\" target=\"_blank\">View FSM Diagram</a>")
+    finally:
+        os.unlink(temp_file)
 
 if __name__ == "__main__":
     main()

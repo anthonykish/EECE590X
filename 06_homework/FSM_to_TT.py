@@ -172,7 +172,7 @@ def main():
         print(truth_table_correct)
         print("\nWrong Truth Tables:")
         for i, wrong_tt in enumerate(wrong_truth_tables, 1):
-            print(f"Wrong {i}: {wrong_tt[:100]}...")  # Truncate for readability
+            print(f"Wrong {i}: {wrong_tt}")
 
     finally:
         os.unlink(temp_file)
