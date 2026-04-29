@@ -1,13 +1,20 @@
 import copy
 import json
 import random
+import sys
 from itertools import product
 from pathlib import Path
 from urllib.parse import quote
 
+LIBS_DIR = Path(__file__).resolve().parents[1] / "libs"
+if str(LIBS_DIR) not in sys.path:
+    sys.path.append(str(LIBS_DIR))
+
+from logic_utils.logic_utils import logic_eval, optimized_sop
+
 # ---------------- Config ----------------
 NUM_VARIANTS = 5
-TEMPLATE_NAME = "3state"          # "2state", "3state", or "4state"
+TEMPLATE_NAME = "4state"          # "2state", "3state", or "4state"
 ALLOW_ONE_OR_TWO_INPUTS = True     # if False, always uses one input
 OUTPUT_NAMES = ["z"]              # one output bit for now
 SAVE_DIRNAME = "temp_pools"
@@ -67,6 +74,24 @@ def make_input_patterns(input_names: list[str]) -> list[str]:
             parts.append(name if bit == 1 else f"{name}'")
         patterns.append(" ".join(parts))
     return patterns
+
+
+def input_combos(input_names: list[str]) -> list[str]:
+    return ["".join(str(bit) for bit in bits) for bits in product([0, 1], repeat=len(input_names))]
+
+
+def reduce_patterns(input_names: list[str], assigned_patterns: list[str], all_patterns: list[str]) -> str:
+    """
+    Reduce a list of minterm-style input patterns into optimized SOP form.
+
+    The expression "1" means the condition is always true.
+    """
+    if not assigned_patterns:
+        return ""
+
+    ones = set(assigned_patterns)
+    column = "".join("1" if pattern in ones else "0" for pattern in all_patterns)
+    return optimized_sop(input_names, column) or "1"
 
 
 def random_output_bits(width: int) -> str:
@@ -153,12 +178,17 @@ def generate_state_plan(base_json: dict, state_name: str, patterns: list[str], f
     planned_arcs = []
     for dst, assigned_patterns in grouped.items():
         arc_info = outgoing_by_dest[dst]
-        terms = []
-        for pattern in assigned_patterns:
-            if fsm_type == "moore":
-                terms.append(pattern)
-            else:
-                terms.append(f"{pattern}/{random_output_bits(output_width)}")
+        if fsm_type == "moore":
+            terms = [reduce_patterns(base_json["inputs"].split(), assigned_patterns, patterns)]
+        else:
+            by_output: dict[str, list[str]] = {}
+            for pattern in assigned_patterns:
+                by_output.setdefault(random_output_bits(output_width), []).append(pattern)
+
+            terms = [
+                f"{reduce_patterns(base_json['inputs'].split(), terms_for_output, patterns)}/{output_bits}"
+                for output_bits, terms_for_output in sorted(by_output.items())
+            ]
 
         planned_arcs.append({
             "kind": arc_info["kind"],
@@ -184,7 +214,7 @@ def build_fsm_from_template(base_json: dict, fsm_type: str, input_names: list[st
 
     # Build the outgoing transition set for each state from scratch.
     for state_name in state_names:
-        plan = generate_state_plan(base_json, state_name, patterns, fsm_type, output_width)
+        plan = generate_state_plan(fsm_json, state_name, patterns, fsm_type, output_width)
 
         for item in plan:
             arc = copy.deepcopy(item["template_arc"])
@@ -220,10 +250,10 @@ def build_fsm_from_template(base_json: dict, fsm_type: str, input_names: list[st
 # ---------------- Validation ----------------
 
 def validate_generated_fsm(fsm_json: dict, fsm_type: str, input_names: list[str], output_names: list[str]) -> tuple[bool, str]:
-    expected_patterns = set(make_input_patterns(input_names))
     output_width = len(output_names)
     state_names = [node["stateName"] for node in fsm_json["fsmNodes"]]
     idx_to_name = index_to_state_map(fsm_json)
+    combos = input_combos(input_names)
 
     outgoing_by_state: dict[str, list[str]] = {state: [] for state in state_names}
 
@@ -237,7 +267,7 @@ def validate_generated_fsm(fsm_json: dict, fsm_type: str, input_names: list[str]
         if not labels:
             return False, f"State {state} has no outgoing arcs"
 
-        seen_conditions = set()
+        match_count_by_combo = {combo: 0 for combo in combos}
         for label in labels:
             if not label:
                 return False, f"State {state} has a blank outgoing label"
@@ -245,11 +275,11 @@ def validate_generated_fsm(fsm_json: dict, fsm_type: str, input_names: list[str]
             for raw_term in label.split("|"):
                 cond, out = normalize_term(raw_term)
 
-                if cond not in expected_patterns:
-                    return False, f"State {state} has invalid condition '{cond}'"
-                if cond in seen_conditions:
-                    return False, f"State {state} repeats condition '{cond}'"
-                seen_conditions.add(cond)
+                for combo in combos:
+                    try:
+                        match_count_by_combo[combo] += logic_eval(input_names, combo, cond)
+                    except Exception:
+                        return False, f"State {state} has invalid condition '{cond}'"
 
                 if fsm_type == "mealy":
                     if out is None:
@@ -260,8 +290,11 @@ def validate_generated_fsm(fsm_json: dict, fsm_type: str, input_names: list[str]
                     if out is not None:
                         return False, f"Moore term '{raw_term.strip()}' should not contain a transition output"
 
-        if seen_conditions != expected_patterns:
-            return False, f"State {state} does not cover all input patterns exactly once"
+        for combo, match_count in match_count_by_combo.items():
+            if match_count == 0:
+                return False, f"State {state} has no next state for input {combo}"
+            if match_count > 1:
+                return False, f"State {state} has multiple next states for input {combo}"
 
     for node in fsm_json["fsmNodes"]:
         node_out = node.get("outputText", "").strip()
@@ -337,9 +370,9 @@ def generate_one_variant(base_json):
         output_names = ["z"]
 
         fsm_json = build_fsm_from_template(base_json, fsm_type, input_names, output_names)
-        validate_generated_fsm(fsm_json, fsm_type, input_names, output_names)
+        is_valid, _message = validate_generated_fsm(fsm_json, fsm_type, input_names, output_names)
 
-        if is_fully_connected_fsm(fsm_json):
+        if is_valid and is_fully_connected_fsm(fsm_json):
             return fsm_json, {
                 "fsm_type": fsm_type,
                 "inputs": input_names,
